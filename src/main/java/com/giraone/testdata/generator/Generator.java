@@ -2,6 +2,7 @@ package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,59 +12,118 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 
 public class Generator {
 
-    private static final org.apache.logging.log4j.Logger log = LogManager.getLogger(Generator.class);
+    private static final Logger log = LogManager.getLogger(Generator.class);
 
-    static final String DATA_PATH = "./src/main/resources/data";
+    private static final String DATA_PATH = "./src/main/resources/data";
 
-    static final Random RANDOM = new Random();
+    private static final Random RANDOM = new Random();
+    private static LocalDate fromLocalDate = LocalDate.parse("1930-01-01");
+    private static LocalDate toLocalDate = LocalDate.now().minusYears(16);
+    private static int dayLimit = (int) DAYS.between(fromLocalDate, toLocalDate);
 
-    static final HashMap<String, ArrayList<String>> RANDOM_FROM_FILE = new HashMap<>();
-    static final HashMap<String, ArrayList<String>> RANDOM_FROM_WEIGHTED_FILE = new HashMap<>();
-    static final HashMap<String, HashMap<Integer, Integer>> WEIGHT_FROM_WEIGHTED_FILE = new HashMap<>();
-
-    public static Random random() {
-        return RANDOM;
-    }
+    private static final HashMap<String, ArrayList<String>> RANDOM_FROM_FILE = new HashMap<>();
+    private static final HashMap<String, ArrayList<String>> RANDOM_FROM_WEIGHTED_FILE = new HashMap<>();
+    private static final HashMap<String, HashMap<Integer, Integer>> WEIGHT_FROM_WEIGHTED_FILE = new HashMap<>();
 
     private EnumLanguage language;
     private boolean withIndex;
     private EnumIdType idType = EnumIdType.none;
+    private Set<EnumField> additionalFields = new HashSet<>();
+
+    //- Constructor and getter/setters ---------------------------------------------------------------------------------
 
     public Generator(EnumLanguage language) {
         this.language = language;
+    }
+
+    public EnumLanguage getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(EnumLanguage language) {
+        this.language = language;
+    }
+
+    public boolean isWithIndex() {
+        return withIndex;
     }
 
     public void setWithIndex(boolean withIndex) {
         this.withIndex = withIndex;
     }
 
+    public EnumIdType getIdType() {
+        return idType;
+    }
+
     public void setIdType(EnumIdType idType) {
         this.idType = idType;
     }
 
+    public Set<EnumField> getAdditionalFields() {
+        return additionalFields;
+    }
+
+    public void setAdditionalFields(Set<EnumField> additionalFields) {
+        this.additionalFields = additionalFields;
+    }
+
+    public void addAdditionalField(EnumField additionalField) {
+        this.additionalFields.add(additionalField);
+    }
+
+    //- PUBLIC ---------------------------------------------------------------------------------------------------------
+
     public int getNumberOfEntriesGivenName(EnumGender gender) {
         return valueListFromWeightedFile(getFileForGivenName(gender)).size();
+
     }
 
     public int getNumberOfEntriesSurname() {
         return valueListFromWeightedFile(getFileForSurname()).size();
+
+    }
+
+    public Person randomPerson(long index) {
+
+        final EnumGender gender = randomGender();
+        final Person person = new Person(randomGivenName(gender), randomSurname(), gender);
+
+        if (this.withIndex && (index >= 0)) {
+            person.setIndex(index);
+        }
+
+        if (this.idType == EnumIdType.sequence) {
+            person.setId(Long.toUnsignedString(index));
+        } else if (this.idType == EnumIdType.uuid) {
+            person.setId(UUID.randomUUID().toString());
+        }
+
+        for (EnumField field : this.additionalFields) {
+            final String value = randomDateOfBirthAsIsoString();
+            person.setAdditionalField(field, value);
+        }
+
+        return person;
     }
 
     public Person randomPerson() {
-        final EnumGender gender = randomGender();
-        return new Person(randomGivenName(gender), randomSurname(), gender);
+        return randomPerson(this.withIndex ? System.currentTimeMillis() : -1);
     }
 
     public List<Person> randomPersons(int startIndex, int endIndex) {
-        final EnumGender gender = randomGender();
+
         ArrayList<Person> ret = new ArrayList<>();
-        for (int index = startIndex; index < endIndex; index++)
-        {
-            final Person person = new Person(randomGivenName(gender), randomSurname(), gender);
+        for (int index = startIndex; index < endIndex; index++) {
+            final Person person = randomPerson(index);
             ret.add(person);
         }
         return ret;
@@ -73,10 +133,8 @@ public class Generator {
         return RANDOM.nextBoolean() ? EnumGender.male : EnumGender.female;
     }
 
-    public Calendar randomDateOfBirth() {
-        Calendar d = GregorianCalendar.getInstance();
-        d.set(RANDOM.nextInt(50) + 1935, RANDOM.nextInt(12), RANDOM.nextInt(29));
-        return d;
+    public String randomDateOfBirthAsIsoString() {
+        return DateTimeFormatter.BASIC_ISO_DATE.format(fromLocalDate.plusDays(RANDOM.nextInt(dayLimit)));
     }
 
     public String randomGivenName(EnumGender gender) {
@@ -86,6 +144,8 @@ public class Generator {
     public String randomSurname() {
         return randomFromWeightedFile(getFileForSurname());
     }
+
+    //- PRIVATE --------------------------------------------------------------------------------------------------------
 
     private String randomFromFile(String file) {
         ArrayList<String> valueList = RANDOM_FROM_FILE.get(file);

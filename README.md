@@ -14,19 +14,15 @@ If your are in this situation, this library can help. It generates names from we
 Such a file looks like this:
 
 ```
-Emily,25953
+Mary,25000
+Emily,24953
 Hannah,23080
-Madison,19967
-Ashley,17997
-Sarah,17697
+Sarah,22697
 ...
-Lamarion,5
 Lamine,5
-...
-Zyra,5
 ```
 
-Using this file for generating female given names, will result in generating the name *Emily* 5000 times more often
+Using this file for generating female given names, will result in generating the name *Mary* 5000 times more often
 than the name *Lamine*.
 
 ## Included data files
@@ -52,27 +48,46 @@ mvn package
 ```
 $ java -jar target/testdata-generator-1.0.jar
 usage: java -jar testdata-generator-1.0.jar
- -h,--help             print usage help
- -i,--items <arg>      the number of items, that should be produced
- -l,--language <arg>   the language for which the test data is generated
-                       (either "en" or "de")
+ -h,--help                        print usage help
+ -w,--withIndex                   create also a sequence number (index)
+ -d,--numberOfDirectories <arg>   the number of directories
+ -f,--filesPerDirectory <arg>     the number of files per directory
+ -i,--items <arg>                 the number of items, that should be produced in total or in a file
+ -l,--language <arg>              the language for which the test data is generated (either "en" or "de")
+ -p,--personId <arg>              type of additional person id (none, uuid, sequence)
+ -s,--serialize <arg>             the serialization mode: either json or csv
+
 
 $ java -jar target/testdata-generator-1.0.jar
-Person{givenName='Thomas', surname='Schmidt', gender=male}
+[{"givenName":"Klaus-Dieter","surname":"Schmidt","gender":"m"}]
 
 $ java -jar target/testdata-generator-1.0.jar -l en
-Person{givenName='John', surname='Smith', gender=female}
+[{"givenName":"John","surname":"Smith","gender":"m"}]
 
 $ java -jar target/testdata-generator-1.0.jar --language en --items 3
-Person{givenName='Michael', surname='Miller', gender=male}
-Person{givenName='John', surname='Watson', gender=male}
-Person{givenName='Patricia', surname='Smith', gender=female}
+[
+ {"givenName":"Michael","surname":"Miller","gender":"m"},
+ {"givenName":"John","surname":"Watson","gender":"m"},
+ {"givenName":"Patricia","surname":"Smith","gender":"f"}
+]
 
-$ java -jar target/testdata-generator-1.0.jar --language en --items 4 -- serialize CSV
-index,id,surname,givenName,gender
-,,Miller,Michael,male
-,,Watson,John,male
-,,Smith,Patricia,male
+$ java -jar target/testdata-generator-1.0.jar --language en --items 4 --serialize CSV
+index,id,surname,givenName,gender,
+,,Miller,Michael,male,
+,,Watson,John,male,
+,,Smith,Patricia,male,
+
+$ java -jar target/testdata-generator-1.0.jar --language en --items 4 --withIndex --personId uuid --serialize CSV
+0,"fbab5e53-aa9a-43e6-a76d-b70b24087460",Richardson,Allison,female,19550919
+1,"6c7a824c-291b-4e50-8660-9d2e880098e8",Mitchell,Tamar,female,19301220
+2,"a604083d-e472-44ab-8a8d-e985e5ed9880",Taylor,Martha,female,19751030
+3,"5a69a0cb-6890-428d-bd57-9c701b84b9ef",Hall,Michael,male,19420103
+
+$ java -jar target/testdata-generator-1.0.jar --withIndex --personId uuid
+[{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"id":"26fb0ec5-7bef-4275-9f0a-d5fdcda9c349"}]
+
+$ java -jar target/testdata-generator-1.0.jar --withIndex --additionalField dateOfBirth
+[{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"dateOfBirth":"19610722"}]
 ```
 
 ### Blockwise mode

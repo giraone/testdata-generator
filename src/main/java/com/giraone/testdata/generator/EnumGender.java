@@ -35,6 +35,6 @@ public enum EnumGender
     @Override
     public String toString()
     {
-        return this.str;
+        return str;
     }
 }
