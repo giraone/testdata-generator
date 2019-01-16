@@ -1,4 +1,4 @@
-package com.giraone.testdata;
+package com.giraone.testdata.generator;
 
 public enum EnumLanguage {
 

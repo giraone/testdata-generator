@@ -3,6 +3,7 @@ package com.giraone.testdata.tools;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FilenameFilter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.*;
@@ -24,7 +25,12 @@ public class ReadUsSsaData {
         HashMap<String, Integer> m = new HashMap<>();
         HashMap<String, Integer> f = new HashMap<>();
 
-        File[] files = (new File("data")).listFiles();
+        File[] files = (new File("ssa.gov/names")).listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File file, String s) {
+                return s.endsWith(".txt");
+            }
+        });
         if (files == null) return;
 
         for (File file : files) {
@@ -71,7 +77,7 @@ public class ReadUsSsaData {
             }
         }
 
-        File outputFemale = new File(dataDirectory, "givenname-male-weighted-en.txt");
+        File outputFemale = new File(dataDirectory, "givenname-female-weighted-en.txt");
         try (BufferedWriter writer = Files.newBufferedWriter(outputFemale.toPath(), StandardCharsets.UTF_8)) {
             for (Map.Entry<String, Integer> e : fl) {
                 writer.write(e.getKey() + "," + e.getValue() + "\r\n");

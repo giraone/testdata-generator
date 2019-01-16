@@ -21,11 +21,8 @@ Ashley,17997
 Sarah,17697
 ...
 Lamarion,5
-Lamell,5
 Lamine,5
 ...
-Zykiera,5
-Zyonna,5
 Zyra,5
 ```
 
@@ -36,13 +33,21 @@ than the name *Lamine*.
 
 The library contains data files for english and german names.
 
+Sources:
+- English surnames: https://names.mongabay.com/most_common_surnames.htm
+- English given names: https://www.ssa.gov/OACT/babynames/names.zip
+- German surnames: Austria
+- German given names: ?
+
 ### Build
 
 ```
 mvn package
 ```
 
-### Run
+## Run
+
+### Simple usages of the command line
 
 ```
 $ java -jar target/testdata-generator-1.0.jar
@@ -58,15 +63,31 @@ Person{givenName='Thomas', surname='Schmidt', gender=male}
 $ java -jar target/testdata-generator-1.0.jar -l en
 Person{givenName='John', surname='Smith', gender=female}
 
-$ java -jar target/testdata-generator-1.0.jar --language en --items 4
+$ java -jar target/testdata-generator-1.0.jar --language en --items 3
 Person{givenName='Michael', surname='Miller', gender=male}
 Person{givenName='John', surname='Watson', gender=male}
-Person{givenName='Sarina', surname='Smith', gender=female}
-Person{givenName='Patricia', surname='Doyle', gender=female}
+Person{givenName='Patricia', surname='Smith', gender=female}
+
+$ java -jar target/testdata-generator-1.0.jar --language en --items 4 -- serialize CSV
+index,id,surname,givenName,gender
+,,Miller,Michael,male
+,,Watson,John,male
+,,Smith,Patricia,male
 ```
 
+### Blockwise mode
+
+For generating large amounts of data, the generated data is organized in directories and files.
+
+```
+java -jar target/testdata-generator-1.0.jar --items 100 --filesPerDirectory 10 --numberOfDirectories 5
+=> Will generate 100 items per file, 10 files items per directory and 5 directories - in total 5000 persons 
+java -jar target/testdata-generator-1.0.jar --items 1000 --filesPerDirectory 1000 --numberOfDirectories 10
+=> Will generate 1000 items per file, 1000 files items per directory and 10 directories - in total 10 million persons 
+=> If you tar this output, this will be approx. 560 MByte uncompressed and 70 MByte compressed.
+```
 ### Open Issues
 
-- Jackson stream output
+- Blockwise output
 - English surnames
 

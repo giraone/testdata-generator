@@ -1,11 +1,11 @@
-package com.giraone.testdata;
+package com.giraone.testdata.generator;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public enum EnumGender
 {
-    unknown("unknown"), male("male"), female("female");
+    unknown("u"), male("m"), female("f");
 
     private static Map<String, EnumGender> stringToEnum = new HashMap<>();
 
@@ -21,7 +21,7 @@ public enum EnumGender
 
     private final String str;
 
-    private EnumGender(String str)
+    EnumGender(String str)
     {
         this.str = str;
     }

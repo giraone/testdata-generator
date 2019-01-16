@@ -1,5 +1,6 @@
-package com.giraone.testdata;
+package com.giraone.testdata.generator;
 
+import com.giraone.testdata.Person;
 import org.apache.logging.log4j.LogManager;
 
 import java.io.BufferedReader;
@@ -29,9 +30,19 @@ public class Generator {
     }
 
     private EnumLanguage language;
+    private boolean withIndex;
+    private EnumIdType idType = EnumIdType.none;
 
     public Generator(EnumLanguage language) {
         this.language = language;
+    }
+
+    public void setWithIndex(boolean withIndex) {
+        this.withIndex = withIndex;
+    }
+
+    public void setIdType(EnumIdType idType) {
+        this.idType = idType;
     }
 
     public int getNumberOfEntriesGivenName(EnumGender gender) {
@@ -45,6 +56,17 @@ public class Generator {
     public Person randomPerson() {
         final EnumGender gender = randomGender();
         return new Person(randomGivenName(gender), randomSurname(), gender);
+    }
+
+    public List<Person> randomPersons(int startIndex, int endIndex) {
+        final EnumGender gender = randomGender();
+        ArrayList<Person> ret = new ArrayList<>();
+        for (int index = startIndex; index < endIndex; index++)
+        {
+            final Person person = new Person(randomGivenName(gender), randomSurname(), gender);
+            ret.add(person);
+        }
+        return ret;
     }
 
     public EnumGender randomGender() {
