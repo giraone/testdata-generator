@@ -1,32 +1,22 @@
 package com.giraone.testdata;
 
-import com.giraone.testdata.generator.EnumField;
+import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.generator.EnumIdType;
 import com.giraone.testdata.generator.EnumLanguage;
 import com.giraone.testdata.generator.Generator;
-import com.giraone.testdata.output.PersonListWriter;
+import com.giraone.testdata.generator.GeneratorConfiguration;
 import com.giraone.testdata.output.PersonListWriterCsv;
-import com.giraone.testdata.output.PersonListWriterJson;
 import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 public class GeneratorMain {
 
-    private boolean withIndex = false;
-    private int numberOfItems = 1;
-    private int filesPerDirectory = -1;
-    private int numberOfDirectories = -1;
-    private PersonListWriter listWriter = new PersonListWriterJson();
-    private EnumLanguage language = EnumLanguage.de;
-    private EnumIdType personIdType = EnumIdType.none;
-    private Set<EnumField> fields = new HashSet<>();
-    private File parentDirectory = new File(".");
+    private GeneratorConfiguration configuration = new GeneratorConfiguration();
 
     public static void main(String[] args) throws Exception {
 
@@ -37,14 +27,17 @@ public class GeneratorMain {
 
         Options options = new Options();
         options.addOption("h", "help", false, "print usage help");
-        options.addOption("w", "withIndex", false, "create also a sequence number (index)");
+        options.addOption("w", "withIndex", false, "create also a sequence number (index) for each created item");
+        options.addOption("b", "startIndex", false, "if withIndex is used, this is the start index");
         options.addOption("l", "language", true, "the language for which the test data is generated (either \"en\" or \"de\")");
         options.addOption("s", "serialize", true, "the serialization mode: either json or csv");
         options.addOption("p", "personId", true, "type of additional person id: none, uuid, sequence");
         options.addOption("a", "additionalFields", true, "comma separated list of additional fields");
-        options.addOption("i", "items", true, "the number of items, that should be produced in total or in a file");
+        options.addOption("n", "numberOfItems", true, "the number of items, that should be produced in total or in a file");
         options.addOption("f", "filesPerDirectory", true, "the number of files per directory");
-        options.addOption("d", "numberOfDirectories", true, "the number of directories");
+        options.addOption("d", "numberOfDirectories", true, "the number of directories for splitting the output");
+        options.addOption("r", "rootDirectory", true, "the root directory, where the output is written (default = .)");
+
 
         CommandLineParser parser = new DefaultParser();
         try {
@@ -53,17 +46,18 @@ public class GeneratorMain {
                 usage(options);
                 System.exit(1);
             }
-            language = EnumLanguage.valueOf(cmd.getOptionValue("language", language.toString()));
-            withIndex = cmd.hasOption("withIndex");
+            configuration.language = EnumLanguage.valueOf(cmd.getOptionValue("language", configuration.language.toString()));
+            configuration.withIndex = cmd.hasOption("withIndex");
+            configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
             if ("csv".equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {
-                listWriter = new PersonListWriterCsv();
+                configuration.listWriter = new PersonListWriterCsv();
             }
-            personIdType = EnumIdType.valueOf(cmd.getOptionValue("personId", personIdType.toString()));
-            parseFields(cmd.getOptionValue("additionalFields", ""), fields);
-            numberOfItems = Integer.parseInt(cmd.getOptionValue("items", "" + numberOfItems));
-            filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + filesPerDirectory));
-            numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + numberOfDirectories));
-
+            configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
+            parseFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
+            configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
+            configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
+            configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
+            configuration.rootDirectory = new File(cmd.getOptionValue("rootDirectory", "."));
             run();
 
         } catch (ParseException e) {
@@ -74,12 +68,9 @@ public class GeneratorMain {
 
     private void run() throws Exception {
 
-        Generator generator = new Generator(language);
-        generator.setWithIndex(withIndex);
-        generator.setIdType(personIdType);
-        generator.setAdditionalFields(fields);
+        Generator generator = new Generator(configuration);
 
-        if (filesPerDirectory > 0 || numberOfDirectories > 0) {
+        if (configuration.filesPerDirectory > 0 || configuration.numberOfDirectories > 0) {
             runBlockwise(generator);
         } else {
             runOneList(generator, System.out);
@@ -88,19 +79,23 @@ public class GeneratorMain {
 
     private void runOneList(Generator generator, PrintStream out) throws Exception {
 
-        List<Person> personList = generator.randomPersons(0, numberOfItems);
-        listWriter.write(personList, out);
+        List<Person> personList = generator.randomPersons(
+                configuration.startIndex, configuration.numberOfItems - configuration.startIndex);
+        configuration.listWriter.write(personList, out);
     }
 
     private void runBlockwise(Generator generator) throws Exception {
 
-        final String extension = listWriter instanceof PersonListWriterCsv ? ".csv" : ".json";
-        for (int directoryIndex = 0; directoryIndex < numberOfDirectories; directoryIndex++) {
+        final String extension = configuration.listWriter instanceof PersonListWriterCsv ? ".csv" : ".json";
+        for (int directoryIndex = 0; directoryIndex < configuration.numberOfDirectories; directoryIndex++) {
             final String directoryName = String.format("d-%08d", directoryIndex);
-            final File directory = new File(parentDirectory, directoryName);
-            for (int fileIndex = 0; fileIndex < filesPerDirectory; fileIndex++) {
+            final File directory = new File(configuration.rootDirectory, directoryName);
+            for (int fileIndex = 0; fileIndex < configuration.filesPerDirectory; fileIndex++) {
                 if (fileIndex == 0) {
-                    directory.mkdirs();
+                    boolean done = directory.mkdirs();
+                    if (!done) {
+                        throw new IllegalStateException("Directory " + directory + " cannot be created!");
+                    }
                 }
                 final String fileName = String.format("f-%08d.%s", fileIndex, extension);
                 final File file = new File(directory, fileName);
@@ -111,10 +106,18 @@ public class GeneratorMain {
         }
     }
 
-    private void parseFields(String fieldCommaList, Set<EnumField> result) {
+    private void parseFields(String fieldCommaList, Map<String, FieldEnhancer> result) {
 
-        if (fieldCommaList.trim().length() > 0) { // TODO
-            result.add(EnumField.dateOfBirth);
+        for (String fieldName : fieldCommaList.trim().split(",")) {
+            String className = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+            FieldEnhancer fieldEnhancer;
+            try {
+                fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className).newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
+            }
+            result.put(fieldName, fieldEnhancer);
         }
     }
 

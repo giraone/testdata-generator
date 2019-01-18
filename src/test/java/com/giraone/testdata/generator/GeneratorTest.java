@@ -6,12 +6,19 @@ import org.junit.Test;
 
 public class GeneratorTest {
 
-    private static Generator generator_de = new Generator(EnumLanguage.de);
-    private static Generator generator_en = new Generator(EnumLanguage.en);
+    private static Generator generator_de;
+    private static Generator generator_en;
 
     @BeforeClass
     public static void init()
     {
+        GeneratorConfiguration de = new GeneratorConfiguration();
+        de.language = EnumLanguage.de;
+        generator_de = new Generator(de);
+
+        GeneratorConfiguration en = new GeneratorConfiguration();
+        en.language = EnumLanguage.en;
+        generator_en = new Generator(en);
     }
 
     //- counting entries test ------------------------------------------------------------------------------------------

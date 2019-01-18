@@ -51,7 +51,6 @@ Abboweg
 ABC-Straße
 Abdenastraße
 Abeggstraße
-Abel
 Abelmannstraße
 Abelnkarre
 Abelsbergsteige
@@ -73,7 +72,7 @@ Aberlestraße
 Aberlin-Jörg-Straße
 Abernettistraße
 Abfallzentrum
-Abfindungen Weg 1
+Abfindungen Weg
 Abich-Thiele-Straße
 Abigstraße
 Åbjerg
@@ -283,7 +282,6 @@ Ackerweg
 Ackfelder Straße
 Adackerstraße
 ADAC-Straße
-ADAC-Straße (5 Ladesäulen)
 Adalbert-Eisenhuth-Straße
 Adalbert-Falk-Straße
 Adalbert-Lindner-Straße
@@ -300,7 +298,6 @@ Adalbert-Stifter-Strraße
 Adalbert-Stifter-Weg
 Adalbert-Stifter-Zeile
 Adalbertstraße
-Adalbertstraße/Isabellastraße
 Adalhardstraße
 Adalmundstraße
 Adalperostraße
@@ -330,7 +327,7 @@ Adam-Opel-Weg
 Adam-Opeö-Straße
 Adam-Pfeuffer-Straße
 Adam-Riese-Straße
-Adam Riese Straße 2,
+Adam Riese Straße
 Adam-Ries-Straße
 Adam-Rückert-Straße
 Adam-Scharrer-Weg
@@ -418,7 +415,6 @@ Adlerfelsenweg
 Adlerflychtstraße
 Adlergasse
 Adlergestell
-Adlergestell/ Wassersportallee
 Adlerhof
 Adlerhorst
 Adlerring
@@ -545,7 +541,6 @@ Adonisröschenweg
 Adorfer Straße
 Adornostraße
 Adresse
-AdresseFuchshofener Straße
 Adrian-Bohlen-Straße
 Adrian-Kiels-Straße
 Adrian-Stoop-Straße
@@ -606,7 +601,6 @@ Agavenstraße
 Agavenweg
 Agendorfer Weg
 Agethenstraße
-Agg
 Aggensteinstraße
 Aggensteinweg
 Aggerbrücke
@@ -658,7 +652,6 @@ Agrippinaufer
 Agrippinawerft
 Agritiusstraße
 AG-Weser-Straße
-Aham
 Ahamer Straße
 Ahauserstraße
 Ahauser Straße
@@ -754,7 +747,6 @@ Aibinger Straße
 Aiblinger Au
 Aiblinger Straße
 Aibweg
-Aich
 Aicha
 Aichachacher Straße
 Aichacher Straße
@@ -779,7 +771,6 @@ Aidostraße
 Aidseestraße
 Aigenfeld
 Aigidiistraße
-Aign
 Aigner
 Aignerstraße
 Ailinger Straße
@@ -881,10 +872,8 @@ Albert-Ebert-Straße
 Albert-Einstein-Allee
 Albert-Einstein Ring
 Albert-Einstein-Ring
-Albert-Einstein-Str.2
 Albert Einstein Straße
 Albert-Einstein-Straße
-Albert-EInstein-Straße
 Albert-Einstein-Weg
 Albert-Eise-Weg
 Albert-Florath-Straße
@@ -962,7 +951,6 @@ Albert-Schweitzer-Lager
 Albert-Schweitzer-Ring
 Albert-Schweitzer Straße
 Albert-Schweitzer-Straße
-Albert - Schweitzer - Straße;Albertus - Magnus - Straße
 Albert-Schweitzer-Weg
 Albert-Schweizer-Siedlung
 Albert-Schweizer-Straße
@@ -981,7 +969,6 @@ Albert-Tanneur-Straße
 Albert-Ueberle-Straße
 Albertus-Magnus-Platz
 Albertus-Magnus-Straße
-Albertus-Magnus-Straße;Albert- Schweitzer - Straße
 Albertus-Magnus-Weg
 Albertusstraße
 Albertusweg
@@ -1035,7 +1022,7 @@ Albrechtskoppel
 Albrechtsstraße
 Albrechts Teerofen
 Albrechtstraße
-Albrechtstraße 30a
+Albrechtstraße
 Albrecht-Thaer-Ring
 Albrecht-Thaer-Straße
 Albrecht-Thaer-Weg
@@ -1263,7 +1250,6 @@ Allee
 Allee am Forsthaus
 Allee am Röthelheimpark
 Allee der Kosmonauten
-Allee der Kosmonauten/ Märkische Allee
 Allée des Chasseurs
 Alleehof
 Allee La Chapelle-St.-Luc
@@ -1272,7 +1258,6 @@ Alleenstraße
 Alleenweg
 Alleestraße
 Allee Straße
-Alleestraße (direkt am Parkplatz Bleichdamm)
 Alleeweg
 Allemanenstraße
 Allemannenstraße
@@ -1338,7 +1323,6 @@ Allmendsweg
 Allmendweg
 Allmering
 Allmersstraße
-Allmersstraße/Hildesheimer Straße
 Allmersweg
 Allmisried
 Allmuser Straße
@@ -1347,7 +1331,6 @@ Allofskamp
 Allstedter Straße
 Allweggasse
 Allwördener Straße
-Alm
 Alma-Mahler-Werfel-Straße
 Almarinstraße
 Alma-Rogge-Straße
@@ -1523,12 +1506,11 @@ Altdölzschen
 Altdorfer Mühle
 Altdorferstraße
 Altdorfer Straße
-Altdorferstraße 30 , 87640 Biessenhofen / Ebenhofen
+Altdorferstraße
 Altdorfer Weg
 Altdorfplatz
 Altdorfstraße
 Altdrossenfeld
-Alte
 Alte Akademie
 Alte Allee
 Alte Amberger Straße
@@ -1987,7 +1969,6 @@ Alter Gassenweg
 Alter Gleisweg
 Alter Göbricher Weg
 Alter Graben
-Alter GravenAlter Gravenbrucher Wegbrucher Weg
 Alter Gravenbrucher Weg
 Alter Grenzweg
 Alter Güterbahnhof
@@ -2067,7 +2048,6 @@ Alter Sachsenweg
 Alter Sankt-Georgs-Platz
 Alter Schachtweg
 Alter Schießplatz
-Alter Schießplatz 2/3
 Alter Schlachthof
 Alter Schulhof
 Alter Schulplatz
@@ -2107,7 +2087,7 @@ Alter Zeughof
 Alter Zollweg
 Alte Saline
 Alte Salzdahlumer Straße
-Alte Salzdahlumer Straße 210
+Alte Salzdahlumer Straße10
 Alte Salzstraße
 Alte Sandkaul
 Alte Sandtrift
@@ -2224,7 +2204,6 @@ Alte Wipperfürther Straße
 Alte Wisch
 Alte Wittenberger Straße
 Alte Wittener Straße
-Alte Wittener Straße 18
 Alte Wolterdinger Straße
 Alte Zeilen
 Alte Ziegelei
@@ -2476,7 +2455,6 @@ Alwineweg
 Alwin-Lippert-Weg
 Alwin-Lonke-Straße
 Alwin-Micklisch-Weg
-alzenauer Straße
 Alzenauer Straße
 Alzener Landstraße
 Alzener Weg
@@ -2488,7 +2466,6 @@ Alzeyer Nebenstraße
 Alzeyer Straße
 Alzeyer-Straße
 Alzstraße
-Am
 Am Aachener Tor
 Am Aalbek
 Am Aalfleet
@@ -3269,7 +3246,6 @@ Am Bruchgraben
 Am Bruchheck
 Am Bruchkamp
 Am Bruchsee
-Am  Bruchsee
 Am Bruchtor
 Am Bruchweg
 Am Brückbusch
@@ -3471,7 +3447,7 @@ Am Coesfeld
 Am Cölnhöfen
 Am Coloneum
 Am Comeniusplatz
-Am  Cordsbusch
+Am Cordsbusch
 Am Coulombwall
 Am Cracauer Tor
 Am Cronsbach
@@ -3927,7 +3903,7 @@ Am Falkplatz
 Am Fallenholz
 Am Fallersleber Tore
 Am Falltor
-Am Falltor 1
+Am Falltor
 Am Fallturm
 Am Falter
 Am Faltergrund
@@ -4229,7 +4205,6 @@ Am Gassl
 Am Gasspeicher
 Am Gasteig
 Am Gastronom
-am Gaswerk
 Am Gaswerk
 Am Gatherfeld
 Am Gatherhof
@@ -4287,7 +4262,6 @@ Am Gerhardsdamm
 Am Gerhardsfelsen
 Am Gerhardsplatz
 Am Gericht
-Am Gericht;Hauptstraße
 Am Gerkenstein
 Am Gerlingbach
 Am Germanenring
@@ -4351,7 +4325,7 @@ Am Glockenturm
 Am Glockenzehnt
 Am Glocklappen
 Am Gobbershof
-Am Gobbershof 33
+Am Gobbershof
 Am Göbel
 Am Gocher Berg
 Am Gockelberg
@@ -4408,7 +4382,6 @@ Am Grasberg
 Am Graseteich
 Am Grashof
 Am Grashoff
-am grasigen Weg
 Am grasigen Weg
 Am Gräslein
 Am Grasplatz
@@ -4641,7 +4614,7 @@ Am Hambkebach
 Am Hamerich
 Am Hamjebusch
 Am Hammelberg Weg
-Am Hammelberg Weg 1
+Am Hammelberg Weg
 Am Hammer
 Am Hammerbach
 Am Hammergraben
@@ -4964,7 +4937,6 @@ Am Hippelborn
 Am Hirnach
 Am Hirschanger
 Am Hirschberg
-Am Hirschberg, Haus Nr. 44
 Am Hirschbichl
 Am Hirschenstein
 Am Hirschfeld
@@ -5215,7 +5187,6 @@ Am Hünenstein
 Am Hunert
 Am Hungerbach
 Am Hungerberg
-Am Hungerberg 15
 Am Hungersberg
 Am Hüpfsteig
 Am Husemeshof
@@ -5380,7 +5351,6 @@ Am Kämpen
 Am Kamphof
 Am Kamp-Kanal
 Am Kämpken
-am Kanal
 Am Kanal
 Am Kanalbach
 Am Kanalschuppen
@@ -5976,7 +5946,6 @@ Am Langen Kampe
 Am langen Land
 Am Langen Land
 Am Langen Lande
-am Langen Luch
 Am Langenmorgen
 Am langen Rain
 Am Langen Rain
@@ -6295,7 +6264,7 @@ Am Marksbach
 Am Markstein
 Am Markt
 Am Markte
-Am Markt, Eingang Weserstraße
+Am Markt Eingang Weserstraße
 Am Marktfeld
 Am Marktpfad
 Am Marktplatz
@@ -7685,7 +7654,6 @@ Am Schilf
 Am Schillergarten
 Am Schillerpark
 Am Schillerplatz
-Am Schillerplatz B2
 Am Schillgarten
 Am Schindberg
 Am Schindele
@@ -7938,7 +7906,7 @@ Am Schweriner See
 Am Schwesternheim
 Am Schwibbogen
 Am Schwimmbad
-Am Schwimmbad, Seehäuser Straße
+Am Schwimmbad Seehäuser Straße
 Am Schwindelbaum
 Amsdorfstraße
 Am Sebnitzbach
@@ -8243,7 +8211,6 @@ Am Stege
 Am Stegebach
 Am Steglesgraben
 Am Steig
-Am  Steig
 Am Steigacker
 Am Steigenwäldchen
 Am Steiger
@@ -8386,7 +8353,6 @@ Am Stövenhof
 Am Strahlberg
 Am Stranbach
 Am Strand
-Am  Strand
 Am Strandbad
 Am Strande
 Am Strandweg
@@ -8441,8 +8407,6 @@ Am Südersoll
 Am Südfeld
 Am Südfriedhof
 Am Südhang
-Am SÜdhang
-Am Südhang 19e
 Am Sudholz
 Am Südkamp
 Am Südlichen Burgfrieden
@@ -8478,7 +8442,6 @@ Am Süstedter Bach
 Am Suurhuser Tief
 Am Sweenhof
 Am Swistbach
-Amt
 Am Tabakfeld
 Am Talberg
 Am Talblick
@@ -8521,7 +8484,6 @@ Am Teeberg
 Am Teehaus
 Am Tegelbusch
 Am Tegeler Hafen
-AmTeich
 Am Teich
 Am Teichdamm
 Am Teichdamme
@@ -9345,7 +9307,6 @@ Am Zwingel
 Am Zwinger
 Am Zwirngraben
 Am Zwönitzufer
-An 44
 Anastasiastraße
 Anatomiestraße
 An Bahnhof
@@ -9369,8 +9330,8 @@ An de Füerwehr
 An de Grüpp
 An de Klus
 Andelsbachstraße
-An den 10 Eichen
-An den 24 Hallen
+An den0 Eichen
+An den4 Hallen
 An den 30 Morgen
 An den 4 Ruten
 An den Abtshöfen
@@ -9472,7 +9433,6 @@ An den Linden
 An den Loddenbüschen
 An den Lohden
 An den Lübbensteinen
-an den Märkten
 An den Märkten
 An den Maschwiesen
 An den Mauerwiesen
@@ -9560,7 +9520,6 @@ An der A5
 An der A6
 An der A61
 An der A65
-An der Aa
 An der Aach
 An der Aalbeek
 An der Abens
@@ -9590,7 +9549,6 @@ An der alten Bleiche
 An der alten Brauerei
 An der Alten Brauerei
 An der Alten Burg
-An der alten F99
 An der alten Glashütte
 An der alten Kirche
 An der alten Köhlerei
@@ -9636,46 +9594,21 @@ An der Auenschanze
 An der Aumatalsperre
 An der Aumunder Kirche
 An der Autobahn
-An der Autobahn A 14
-An der Autobahn (Bezirk K)
+An der Autobahn A4
 An der Automeile
 An der Auwisch
 An der B1
 An der B10
-An der B 100
 An der B101
-An der B 104
-An der B 105
-An der B 106
-An der B 107
-An der B 115
+An der B04
+An der B06
+An der B07
+An der B15
 An der B167
-An der B 169
-An der B 176
+An der B69
+An der B76
 An der B187
-An der B 201
-An der B 285
-An der B3
-An der B312
-An der B 320
-An der B4
-An der B 4
-An der B 404
-An der B 414
-An der B 416
-An der B427
-An der B43
-An der B 5
-An der B5/Notraßef
-An der B6
-An der B 6
-An der B64
-An der B 76
-An der B87
-An der B 96
-An der BAB 1
-An der BAB 117
-An der BAB 5
+An der B85
 An der Babe
 An der Bach
 An der Badeanstalt
@@ -9800,7 +9733,6 @@ An der Deichgrube
 An der Deininger Mauer
 An der Deipenbeck
 An der Dellen
-An der der Wollebahn  - neben Medimax-Kundenparkplatz (Döhren)
 An der Diana
 An der Diemel
 An der Dittersdorfer Höhe
@@ -10105,7 +10037,6 @@ An der Jugendherberge
 An der Juliushöhe
 An der Junkernwiese
 An der Junkersmühle
-An der K 66
 An der Käbnitz
 An der Kaiseraue
 An der Kaiserburg
@@ -10148,7 +10079,6 @@ An der Klanze
 An der Klappbrücke
 An der Klauskirche
 An der Kleewiese
-An der Kleimannbrücke 52
 An der Kleinbahn
 An der Kleinen Aue
 An der kleinen Donau
@@ -10187,7 +10117,6 @@ An der Kranenweide
 An der Krebslache
 An der Krebswiese
 An der Kreisstraße
-An der Kreisstraße 114
 An der Kremsche
 An der Kreppe
 An der Kreuzbreite
@@ -10218,9 +10147,6 @@ Ander-Kupfer-Platz
 An der Küppe
 An der Kürassierkaserne
 An der Kurhessenhalle
-An der L 103
-An der L 26
-An der L 3278
 An der Laach
 An der Laag
 An der Laak
@@ -10231,7 +10157,6 @@ An der Lände
 An der Landesgrenze
 An der Landesstraße
 An der Landstraße
-An der Landstraße L
 An der Landwehr
 An der Langenfuhr
 An der langen Wiese
@@ -10261,7 +10186,6 @@ An der Leithe
 An der Leitn
 An der Leke
 An der Lesumer Kirche
-an der Lethe
 An der Lettkaut
 An der Letze
 An der Lewitz
@@ -10404,7 +10328,6 @@ An der Osterburg
 An der Osterleite
 An der Osternohe
 An der Paas
-an der Packhalle IV
 An der Palmweide
 An der Panne
 An der Pappelstraße
@@ -10443,7 +10366,7 @@ An der Prießnitz
 An der Prießnitzaue
 An der Priesterkoppel
 An der Priormühle
-An der Probstei 2
+An der Probstei
 An der Promenade
 An der Promnitz
 An der Pulverhütte
@@ -10459,7 +10382,6 @@ An der Rainmühle
 An der Rampe
 An der Rast
 An der Rasthecke
-An der RaumFabrik
 An der Realschule
 An der Rechten Wiese
 An der Rechtschule
@@ -10471,7 +10393,7 @@ An der REHA-Klinik
 An der Rehhecke
 An der Rehwiese
 An der Reichelbleiche
-An der Reichenbach 6
+An der Reichenbach
 An der Reichen Ebrach
 An der Reichsbank
 An der Reick
@@ -10506,7 +10428,7 @@ An der Rolle
 An der Römerbrücke
 An der Römerstraße
 An der Römervilla
-An der Römervilla 10
+An der Römervilla0
 An der Rosenhelle
 An der Röste
 An der Rotbuche
@@ -10828,7 +10750,7 @@ An der Weed
 An der Wegscheider Heck
 An der Wehrmauer
 An der Weide
-An der Weide 2
+An der Weide
 An der Weiherleite
 An der Weilstraße
 An der Weinstraße
@@ -10881,7 +10803,6 @@ An der Wolfsgrube
 An der Wolfskaul
 An der Wolfsweide
 An der Wollebahn
-An der  Wollebahn
 An der Woort
 An der Worthe
 An der Wöste
@@ -10968,8 +10889,8 @@ Andresenstraße
 Andrestraße
 Andréstraße
 André-Träger-Straße
-An d'r Hahnepooz
-An d'r Kapell
+An der Hahnepooz
+An der Kapell
 Andromedastraße
 Andruper Weg
 Anebosweg
@@ -11165,7 +11086,6 @@ Annette-von Droste-Hülshoff-Weg
 Annette-von-Droste-Hülshoff-Weg
 Annette-von-Droste-Straße
 Anneweihstraße
-An'n Graaben
 Anni-Albers-Straße
 Anning
 Anni-Siepe-Straße
@@ -11224,7 +11144,6 @@ An St. Pius
 An St. Sebastian
 An St. Servatius
 An St. Stephan
-an St. Swidbert
 An St. Swidbert
 An St. Theresia
 An St. Urban
@@ -11473,7 +11392,6 @@ Arberstein
 Arberstraße
 Arberweg
 Arbotstraße
-ArcelorMittal-Straße
 Archenbecke
 Archenholdstraße
 Archenholdweg
@@ -11801,7 +11719,6 @@ Asperdener Straße
 Asperger Straße
 Aspertsham
 Aspeystraße
-asphalt weg
 Aspichlerweg
 Asreg
 Assamstadter Weg
@@ -11829,7 +11746,6 @@ Aßlkofener Straße
 Aßmannshauser Straße
 Assmannstraße
 Aßmannstraße
-Ast
 Astallerstraße
 Asta-Nielsen-Straße
 Astede
@@ -11843,7 +11759,6 @@ Asternstraße
 Asternweg
 Asterstraße
 Asterweg
-AsterwegUnset
 Asterwisch
 Astfelderstraße
 Astfelder Straße
@@ -11905,7 +11820,6 @@ Atzlerner Straße
 Atzlrichter Weg
 Atzpodienstraße
 Atzumer Weg
-Au
 Aubachblick
 Aubachstraße
 Auberg
@@ -11933,7 +11847,6 @@ Au der Heide
 Audigaster Straße
 Audorfer Straße
 Audorfstraße
-Aue
 Aueblick
 Auebogen
 Auedamm
@@ -12502,7 +12415,6 @@ Auf der Bloß
 Auf der Böck
 Auf der Bockhorst
 Auf der Bockshahn
-auf der Böge
 Auf der Bokkenbredde
 Auf der Bommerbank
 Auf der Börse
@@ -12886,7 +12798,6 @@ Auf´m Heidfeld
 Auf m Hennekamp
 Auf'm Hennekamp
 Auf'm Hofacker
-auf'm Hügelchen
 Auf Mittelhardt
 Auf'm Kamp
 Auf'm Kampe
@@ -13341,24 +13252,6 @@ Azenbachstraße
 Azenbergstraße
 Azendorf
 Azorenstraße
-B
-B101
-B102
-B105
-B 173
-B 210
-B 224
-B 224 (Nordseite Richtung Essen)
-B236
-B 318
-B 427
-B 44
-B501
-B53
-B54
-B54; B55
-B 70
-B 80
 Baaber Weg
 Baackskamp
 Baackweg
@@ -13368,7 +13261,6 @@ Baaderstraße
 Baaderweg
 Baakenesch
 Baakweg
-Baal
 Baaler Deich
 Baalsdorfer Straße
 Baantjebur
@@ -13377,11 +13269,6 @@ Baarkamp
 Baarstraße
 Baasdorfer Straße
 Baasenmeersstraße
-BAB 13
-BAB 24 Südseite
-BAB44 Nord
-BAB A
-BAB A93
 Babberger Straße
 Babbestraße
 Babcockallee
@@ -13410,7 +13297,6 @@ Baccenroder Stieg
 Bacchusring
 Bacchusstraße
 Bacchusweg
-Bach
 Bachackerweg
 Bachanger
 Bachbauernstraße
@@ -13499,7 +13385,7 @@ Bäckerzeile
 Backeshof
 Backesweg
 Backeswiese
-Backgasse 13a
+Backgasse3a
 Backhausberg
 Backhausgasse
 Backhausplatz
@@ -13658,7 +13544,6 @@ Bahnhof Hochdorf
 Bahnhof Jagstfeld
 Bahnhof Kottenforst
 Bahnhofplatz
-Bahnhofplatz 3,  Lenggries
 Bahnhofsalle
 Bahnhofsallee
 Bahnhofsanlage
@@ -13674,9 +13559,7 @@ Bahnhofstraaße
 Bahnhofstrasse
 Bahnhofstraße
 BAHNHOFSTRAßE
-Bahnhofstraße 23A
 Bahnhofstraße/Dornstraße
-Bahnhofstraße;Robert-Blum-Straße
 Bahnhofsvorplatz
 Bahnhofsweg
 Bahnhofswg
@@ -14023,7 +13906,6 @@ Barfüßerstraße
 Barfüßertor
 Barfußgäßchen
 Barfusstraße
-Barg
 Bargackerdamm
 Bärgasse
 Bargauer Straße
@@ -14168,12 +14050,11 @@ Bartningallee
 Bartningstraße
 Bartokstraße
 Bartókstraße
-bartold knaust Straße
+Bartold knaust Straße
 Bartolt-Kastrop-Weg
 Bartruper Straße
 Bartschendorfer Straße
 Bartscherstraße
-Baruther Stra9e
 Baruther Straße
 Barver Straße
 Barvířská
@@ -14260,7 +14141,6 @@ Batzenhäuselweg
 Batzenhoferstraße
 Batzenhofweg
 Bätznerstraße
-Bau
 Bauamtsgasse
 Baubergerstraße
 Bauchwitzstraße
@@ -14332,7 +14212,6 @@ Baukhorst
 Bauksheide
 Baulandstraße
 Bauleuteweg
-Baum
 Baumacker
 Baumäcker
 Baumannshof
@@ -14569,7 +14448,6 @@ Beecker Straße
 Beeckstraße
 Beedenbosteler Straße
 Beegerstraße
-Beek
 Beekedamm
 Beekefeldsweg
 Beekehof
@@ -14958,8 +14836,6 @@ Bei St. Johannis
 Bei St. Jost
 Bei St. Petraße
 Beiswanger Straße
-Beite Straße
-Bei  Thesings Kreuz
 Beitterstraße
 Beiweg
 Bejaiaweg
@@ -15250,7 +15126,6 @@ Berenbrock
 Berendsohnstraße
 Berengaria Straße
 Berenhorststraße
-Berg
 Bergach
 Bergacker
 Bergäcker
@@ -15486,16 +15361,12 @@ Berliner Freiheit
 Berliner Heerstraße
 Berliner Höhe
 Berliner Platz
-Berliner Platz 1a
+Berliner Platza
 Berliner Promenade
 Berliner Ring
-berliner Straße
 Berlinerstraße
-Berliner Straße?
 Berliner Straße
 Berliner-Straße
-Berliner Straße 3
-Berlinerstraße 62
 Berliner Tor
 Berlinertordamm
 Berliner-Tor-Platz
@@ -15772,7 +15643,6 @@ Bethlehemplatz
 Bethlehem rechts
 Bethlehemstraße
 Bethmannstraße
-bethovenstraße
 Betonstraße
 Betonwerk
 Betpfad
@@ -16196,7 +16066,6 @@ Bindlacher Straße
 Bindower Straße
 Bindsachsener Straße
 Bindstraße
-Bing
 Bingener Straße
 Bingener Weg
 Bingenheimer Straße
@@ -16246,7 +16115,6 @@ Bircher-Benner-Straße
 Birenbacher Straße
 Birgeler Straße
 Birgidstraße
-Birk
 Birkach
 Birkacher Hauptstraße
 Birkacher Straße
@@ -16308,8 +16176,8 @@ Birkenwaldstraße
 Birkenweg
 Birkenweiher
 Birkenweiler
-Birkenweiler 1.Gartenweg
-Birkenweiler 2.Gartenweg
+Birkenweiler.Gartenweg
+Birkenweiler.Gartenweg
 Birkenweiler 3.Gartenweg
 Birkenweiler 4.Gartenweg
 Birkenweiler 5.Gartenweg
@@ -16325,8 +16193,6 @@ Birkenzeller Straße
 Birkerfeld
 Birkerstraße
 Birkesdorfer Straße
-birket
-Birket
 Birketstraße
 Birkhahnstraße
 Birkhahnweg
@@ -16474,7 +16340,6 @@ Bissingstraße
 Bissingzeile
 Bistard
 Bistritzer Gasse
-Bistritzer Gasse 4
 Bistritzer Straße
 Bistritzer Weg
 Bistruper Straße
@@ -16627,7 +16492,6 @@ Bleibtreuplatz
 Bleibtreustraße
 Bleich
 Bleichanger
-bleiche
 Bleiche
 Bleichel
 Bleichen
@@ -16856,7 +16720,6 @@ Bocholder Esch
 Bocholder Straße
 Bocholter Weg
 Bochumer Landstraße
-bochumer Straße
 Bochumer Straße
 Bochumer Weg
 Bockampstraße
@@ -17041,7 +16904,6 @@ Boettgerstraße
 Boettingerweg
 Boffertsweg
 Böfinger Weg
-Böge
 Bøgelhusvej
 Bögelstraße
 Bogenallee
@@ -17079,7 +16941,6 @@ Bohlerstraße
 Böhler Straße
 Böhlgasse
 Bohligstraße
-Bohligstraße;Johannes-Sefrit-Straße;Johannes-Sefrit-Straße
 Böhligweg
 Bohlinger Straße
 Böhlitzer Mühle
@@ -17316,7 +17177,6 @@ Bongert
 Bongertstraße
 Bongertwasen
 Bongertweg
-bonhoeferstraße
 Bonhoefferplatz
 Bonhoefferstraße
 Bonhoeffer Straße
@@ -17403,7 +17263,7 @@ Bopfinger Weg
 Bopparder Straße
 Boppenhausenstraße
 Boppstraße
-Bopseräcker, Gewann
+Bopseräcker Gewann
 Bopserklinge
 Bopserstraße
 Bopserwaldstraße
@@ -17431,7 +17291,6 @@ Bordesholmer Weg
 Bördestraße
 Bordighera Allee
 Borenweg
-Borg
 Borgäcker
 Borgelts Kamp
 Borgenfeldstraße
@@ -17497,16 +17356,13 @@ Borlefzen
 Borlinghauser Straße
 Borlinghauser Weg
 Börlingstraße
-Börm
 Bormannspfad
 Bormkoppel
 Bormsdorf
-Börn
 Bornaer Chausee / Silberschacht
 Bornaer Chaussee
 Bornaer Straße
 Bornaische Straße
-Bornaische Straße 63-69
 Bornbarch
 Bornbarg
 Bornberg
@@ -17698,7 +17554,7 @@ Böttchergäßchen
 Böttchergasse
 Böttcherkamp
 Böttcherstraße
-Böttchers  Weg
+Böttchers Weg
 Böttcherweg
 Bottenäckerstraße
 Bottenbacher Gasse
@@ -17729,7 +17585,6 @@ Botzlöher Weg
 Bötzowstraße
 Botzstraße
 Bouchéstraße
-Bouchéstraße 79a
 Boulevard
 Bourg-de-Péage-Straße
 Bourger Platz
@@ -17907,7 +17762,6 @@ Brandenburger Straße
 Brandenburger Tor
 Brandenburger Weg
 Brandenburgische Straße
-Brandenburgische Straße 38
 Brandenburgische Straße / Lübecker Straße
 Brandenburgstraße
 Brandenburgweg
@@ -18151,13 +18005,11 @@ Bredenwinder Straße
 Bredestraße
 Bredeweg
 Bredin
-breding
 Breding
 Bredkamp
 Bredower Weg
 Bredowstraße
 Bredstedter Koog
-Bree
 Breedenhagen
 Breedenweg
 Breedeweg
@@ -18278,7 +18130,6 @@ Breites Tal
 Breites Tor
 Breitestraße
 Breite Straße
-Breite Straße (Dedendorf)
 Breiteweg
 Breite Wiese
 Breitgasse
@@ -18674,7 +18525,6 @@ Brook
 Brookauweg
 Brookdiek
 Brooker Feld
-brooker Weg
 Brookgang
 Brookkamp
 Brooklandstraße
@@ -19013,9 +18863,7 @@ Brunnenstr.
 Brunnenstrasse
 Brunnenstraße
 Brunnenstra
-ße
 Brunnen Straße
-Brunnenstraße;Roseller Kirchstraße
 Brunnenweg
 Brunnenwiese
 Brunnenwiesen
@@ -19138,7 +18986,6 @@ Buber-Neumann-Weg
 Bubertstraße
 Buberweg
 Bublitzer Straße
-Buch
 Buchäckergasse
 Buchäckerring
 Buchackerstraße
@@ -19381,7 +19228,6 @@ Büdnerstraße
 Büdnerweg
 Budweiser Straße
 Budweiser Weg
-Bue
 Bueckstraße
 Buerbarg
 Buerer Straße
@@ -19411,7 +19257,6 @@ Bugscharrn
 Bugstraße
 Bügstraße
 Bühelweg
-Bühl
 Bühlackerstraße
 Bühläckerweg
 Bühlallee
@@ -19493,7 +19338,6 @@ Bülowstraße
 Bülsebeckstraße
 Bülsestraße
 Bülstringer Straße
-Bült
 Bültbek
 Bülte
 Bültenweg
@@ -19512,8 +19356,6 @@ Bunastraße
 Bunatwiete
 Bünauplatz
 Bünaustraße
-Bünd
-Bünde
 Bünder Fußweg
 Bünder Straße
 Bundesallee
@@ -19524,12 +19366,6 @@ Bundeskanzlerplatz
 Bundesplatz
 Bundesratufer
 Bundesstraße
-Bundesstraße257
-Bundesstraße 257
-Bundesstraße 5
-Bundesstraße 96
-Bundesstraße B
-Bundestraße 5
 Bundesweg
 Bundhorst
 Bundschuhstraße
@@ -19539,7 +19375,6 @@ Bündtlistrasse
 Bündtwiete
 Bunendorp
 Bunerbergweg
-Büng
 Bungalowsiedlung
 Bungartenstraße
 Büngerstraße
@@ -19607,7 +19442,6 @@ Bürenstraße
 Burenweg
 Burenweg Nord
 Burfehner Weg
-Burg
 Burgacker
 Burgäckerstraße
 Burgackerweg
@@ -19678,7 +19512,7 @@ Bürgermeister-Barth-Straße
 Bürgermeister-Batzer-Straße
 Bürgermeister-Bellersen-Straße
 Bürgermeister-Beninga-Straße
-Bürgermeister_Bessert-Weg
+Bürgermeister-Bessert-Weg
 Bürgermeister-Betz-Straße
 Bürgermeister-Bieber-Straße
 Bürgermeister-Bohl-Straße
@@ -19871,7 +19705,6 @@ Burggraben
 Burggrabenstraße
 Burggräfenröder Straße
 Burggrafenstraße
-Burggrafenstraße;Luegallee
 Burggrafenweg
 Burggraf-Friedrich-Straße
 Burg Gretesch
@@ -19957,7 +19790,6 @@ Burgsteinstraße
 Burgstelle
 Burgstieg
 Burgstiegstraße
-burgstraße
 Burgstraße
 Bürgstraße
 Burgtal
@@ -20203,7 +20035,6 @@ Buttenwegle
 Butterberg
 Buttergasse
 Butterkamp
-buttermarkt
 Buttermarkt
 Buttermelcherstraße
 Butterstieg
@@ -20251,8 +20082,6 @@ Byhlener Dorfstraße
 Byhlener Weg
 Byinkstraße
 Byk-Gulden-Straße
-C
-C6
 Cabeler Berg
 Cabourgweg
 Cachanring
@@ -20669,7 +20498,6 @@ Celsiusstraße
 Celsiusweg
 Celtisplatz
 Celtisstraße
-Cent
 Centgasse
 Centgrafenweg
 Cent-Hoheneich-Straße
@@ -20834,7 +20662,6 @@ Christian-Knayer-Straße
 Christian-Kreuzer-Straße
 Christian-Kruse-Straße
 Christian-Lassen-Straße
-Christian-Lassen-Straße;Ernst-Robert-Curtius-Straße
 Christian-Leichtle-Straße
 Christian-Lohse-Straße
 Christian-Ludwig-Bosse-Straße
@@ -21080,7 +20907,6 @@ Clörath
 Closenanger
 Closewitzer Straße
 Clostermannstraße
-Clus
 Clußstraße
 Cluswinkel
 Cobbelsdorfer Hauptstraße
@@ -21095,7 +20921,7 @@ Cochemer Weg
 Cochlaeusweg
 Cockerillstraße
 Codmanstraße
-Coerder Liekweg 80
+Coerder Liekweg
 Coerdestraße
 Coermühle
 Coesfelder Berg
@@ -21309,7 +21135,6 @@ Crivitzer Weg
 Cröbernsche Straße
 Crojegarten
 Crombachstraße
-Crön
 Cronbergergasse
 Cronbergstraße
 Cronenberger Straße
@@ -21366,7 +21191,6 @@ Curieweg
 Curiostraße
 Curlandstraße
 Curschmannstraße
-curslacker deich
 Curslacker Deich
 Curslacker Neuer Deich
 Curt-Frenzel-Straße
@@ -21396,10 +21220,6 @@ Czarnikauer Straße
 Czeminskistraße
 Czernyring
 Czornebohstraße
-D
-D15
-D2-Park
-D6
 Daalerweg
 Daberger Höhe
 Daberger Weg
@@ -21470,7 +21290,7 @@ Dahler Weg
 Dahlgasse
 Dahlhauser Straße
 Dahlhok
-Dahlhok 22A
+Dahlhok2A
 Dahliengasse
 Dahlienpfad
 Dahlienring
@@ -21568,7 +21388,6 @@ Damerowsweg
 Damgartener CHausse
 Damgartener Chaussee
 Damian-Ritz-Straße
-Damm
 Dammallee
 Dammannkoppel
 Dammannstraße
@@ -21676,7 +21495,6 @@ Danzerweg
 Danzierstraße
 Danziger Platz
 Danziger Ring
-danziger Straße
 Danzigerstraße
 Danziger Straße
 Danziger Weg
@@ -21684,7 +21502,6 @@ Danzigstraße
 Danzigweg
 Danzingerstraße
 Danzinger Straße
-Danzinger StraßeDeutscher Weg
 Danzweg
 Dapferstraße
 Daphnestraße
@@ -21794,13 +21611,11 @@ Davidstraße
 Davoser Klause
 Davoser Straße
 Dawesbreite
-Daxa
 Daxau
 Daxenäckerweg
 Daxetstraße
 Daxlander Straße
 Ddr. Konrad-Adenauer Straße
-dead-end
 De-Bary-Straße
 Debberoder Straße
 Debersdorf
@@ -21952,7 +21767,6 @@ Deichreihe
 Deichslerstraße
 Deichsticker-Straße
 Deichstraße
-Deichstraße 12
 Deichtorstraße
 Deichwaldstraße
 Deichweg
@@ -22167,7 +21981,6 @@ Derendorfweg
 Derenthalstraße
 Derfflingerstraße
 Der Gartenweg
-der große Joachimsthal
 Der Hanfsack
 Der Heidkamp
 Der Heinerpfad
@@ -22190,7 +22003,6 @@ Deroystraße
 Der Scheitrain
 Dersumer Straße
 Derweinstraße
-DerWuppi
 Deschinger Straße
 Descostraße
 Desenbergstraße
@@ -22806,7 +22618,6 @@ Dobernitz
 Döbernsche Straße
 Doberquitz
 Doberweg
-Dobl
 Doblerstraße
 Dobler Straße
 Dobmannstraße
@@ -22962,7 +22773,6 @@ Doldenäcker
 Doldenweg
 Dolgenseestraße
 Dölitzer Straße
-Doll
 Dollahner Straße
 Dollartstraße
 Dollberger Straße
@@ -23179,7 +22989,6 @@ Dörenstraße
 Dörenwaldstraße
 Dorenwinkel
 Dorette-von-Stern-Straße
-Dorf
 Dorfäcker
 Dorfackerstraße
 Dorfäckerstraße
@@ -23252,7 +23061,6 @@ Dorfwiesn
 Dorfwinkel
 Dörgen
 Dörgestraße
-Dörgestraße 18 -14
 Dorheimer Straße
 Dörhoffstraße
 Dorhofweg
@@ -23560,7 +23368,6 @@ Dreeskamp
 Dreesstraße
 Dreffdonk
 Dregerhoffstraße
-Dreh
 Drehbahn
 Drehbrückenstraße
 Drehergasse
@@ -23694,8 +23501,8 @@ Dresdener Straße
 Dresdenweg
 Dresdner Platz
 Dresdner Straße
-Dresdner Tor Nord / A
-Dresdner Tor Süd / A
+Dresdner Tor Nord
+Dresdner Tor Süd
 Dresdner Weg
 Dreslinger Straße
 Dresselstraße
@@ -23765,7 +23572,7 @@ Dr.-Haas-Straße
 Dr.-Hahn-Straße
 Dr.-Hammacher-Straße
 Dr.-Hans-Böckler-Platz
-Dr.-Hans-Boeckler-PlatZ
+Dr.-Hans-Boeckler-Platz
 Dr.-Hans-Ehard-Straße
 Dr.-Hans-Eisenmann-Straße
 Dr.-Hans-Güthlein-Weg
@@ -24159,7 +23966,6 @@ Duffenterstraße
 Duffernbachstraße
 Dufkampstraße
 Dufourstraße
-Duft
 Dühnefehnstraße
 Dühnenstraße
 Duhner Strandstraße
@@ -24200,17 +24006,14 @@ Dunantstraße
 Dunarvöldvarer Allee
 Dunckerstraße
 Dunckersweg
-Dune
 Dünemwai
 Dünenfährstraße
 Dünenpark
-dünenstraße
 Dünenstraße
 Dünental
 Dünenwall
 Dünenweg
 Düngelstraße
-Düngelstraße 31
 Düngelweg
 Dungenstraße
 Dunger Straße
@@ -24242,7 +24045,6 @@ Dünweg
 Dünzlauer Straße
 Düpenhöhe
 Düpestraße
-Düpp
 Düppelstraße
 Düppenbäckerweg
 Düppenberg
@@ -24272,7 +24074,7 @@ Dürerweg
 Duringstraße
 Dürkheimer Straße
 Durlacher Allee
-Durlacher Allee 62 - Alte Schlachthalle / S13
+Durlacher Allee - Alte Schlachthalle
 Durlacher Straße
 Durlacher Weg
 Durlachstraße
@@ -24389,7 +24191,6 @@ Dwerfeld
 Dwokuhlenweg
 Dwoweg
 Dybwadstraße
-Dyck
 Dyckburgstraße
 Dycker Feld
 Dycker Straße
@@ -24401,13 +24202,6 @@ Dyroffstraße
 Dyrotzer Weg
 Dyrotzer Winkel
 Dzondistraße
-E
-E1
-E2
-E4
-E5
-E50 booth
-Eagle Way
 Earl-H.-Wood-Straße
 Eaubonner Straße
 Ebbendorfstraße
@@ -24425,7 +24219,6 @@ Ebelingweg
 Ebellstraße
 Ebel-Privatweg
 Ebelstraße
-Eben
 Ebenanger
 Ebenau
 Ebenböckstraße
@@ -24541,7 +24334,6 @@ Ebratsweiler
 Ebrostraße
 Ebsdorfer Straße
 Ebstorfer Straße
-Ebstorfer Straße 6
 Eburonenweg
 Echardinger Straße
 Echazstraße
@@ -24551,7 +24343,6 @@ Echelsbach
 Echemer Straße
 Echinger Straße
 Echinger Weg
-Echo
 Echostraße
 Echsheimer Straße
 Echterdinger Hof
@@ -24568,7 +24359,6 @@ Echtraßeper Weg
 Echtwortweg
 Echtzer Straße
 Echzeller Weg
-Eck
 Eckampstraße
 Eckardistraße
 Eckardsberg
@@ -24588,7 +24378,6 @@ Eckdahl
 Eckdorfer Mühlenweg
 Eckdorfer Straße
 Eckdrift
-Ecke
 Eckei
 Eckelboomtrift
 Eckele
@@ -24667,7 +24456,6 @@ Ecksweg
 Eckweg
 Eckweilerstraße
 Econova-Allee
-Ed
 Edamer Straße
 Edammer Straße
 Eddastraße
@@ -24766,7 +24554,6 @@ Edmund-von-Lippmann-Straße
 Edmund-Weber-Straße
 Edmund-Zimmermann-Straße
 Edo-Wiemken-Straße
-Edt
 Eduard-Ahlborn-Straße
 Eduard-Authes-Straße
 Eduard-Bayerlein-Straße
@@ -24780,8 +24567,6 @@ Eduard-Frank-Straße
 Eduard-Fritze-Straße
 Eduard-Fritz-Straße
 Eduard-Gräf-Straße
-eduard-Haber-Straße
-Eduard-HaberStraße
 Eduard-Haber-Straße
 Eduard-Haßloch-Weg
 Eduard-Heis-Straße
@@ -24888,7 +24673,6 @@ Egestorffstraße
 Egestraße
 Egetterstraße
 Eggartenstraße
-Egge
 Eggebæk Kærvej
 Eggebrechthang
 Eggebrechtstrasse
@@ -24970,7 +24754,6 @@ Egon-Tschirch-Weg
 Egstedter Trift
 Ehbachstraße
 Ehbühl
-Ehe
 Ehegasse
 Ehemannstraße
 Ehenbachstraße
@@ -25040,7 +24823,6 @@ Ehrenzeller Straße
 Ehrenzug
 Ehrhartstraße
 Ehringshäuser Straße
-Ehrl
 Ehrlicherstraße
 Ehrlichstraße
 Ehrlichweg
@@ -25060,7 +24842,6 @@ Eibergweg
 Eibinger Oberstraße
 Eibischweg
 Eibseestraße
-Eich
 Eichäcker
 Eichäckerstraße
 Eichäckerweg
@@ -25271,7 +25052,6 @@ Eichweg
 Eichwiese
 Eichwiesweg
 Eichzagel
-Eick
 Eickedorfer Straße
 Eickelbecktal
 Eickeler Bruch
@@ -25326,7 +25106,6 @@ Eiermarkt
 Eiershäuser Straße
 Eierstraße
 Eierwiesenstraße
-Eifel-Ardennen-Straße (Nürburgring)
 Eifeldomstraße
 Eifeler Straße
 Eifel-Maar-Park
@@ -25442,7 +25221,6 @@ Einsteinring
 Einsteinstraße
 Einsteinufer
 Einsteinweg
-Einsteinweg 9
 Einstetting
 Eintaler Weg
 Einthal
@@ -25461,7 +25239,6 @@ Eisborner Dorfstraße
 Eisbrunnenweg
 Eisdorfer Straße
 Eisenacher Straße
-Eisenacher Straße;Hohenstaufenstraße
 Eisenacher Weg
 Eisenachweg
 Eisenackerhof
@@ -25585,7 +25362,6 @@ Ekkehardstraße
 Ekkehartstraße
 Elandstraße
 Elastogranstraße
-Elba
 Elballee
 Elbberg
 Elbblick
@@ -25848,13 +25624,11 @@ Elly-Heuss-Weg
 Elly-Kutscher-Straße
 Elly-Linden-Straße
 Elly-Ney-Straße
-Elm
 Elmar-Sierp-Platz
 Elmatried
 Elmauer Weg
 Elmbergstraße
 Elmblick
-Elme
 Elmendonk
 Elmendorfer Straße
 Elmener Straße
@@ -26345,7 +26119,7 @@ Enneper Straße
 Ennepestraße
 Ennepeufer
 Ennepeweg
-Ennerbachstraße 28
+Ennerbachstraße
 Ennester Weg
 Ennigerstraße
 Ennigerweg
@@ -26956,7 +26730,6 @@ Ernst-Thälmannstraße
 Ernst Thälmann Straße
 Ernst-Thälmann Straße
 Ernst-Thälmann-Straße
-Ernst-Thälmann-Straße;Am Bahnhof
 Ernst-Thälmann-Weg
 Ernst-Thämann-Straße
 Ernst-Toepfer-Straße
@@ -27070,7 +26843,6 @@ Esbaum
 Esbecker Straße
 Esbjergweg
 Escad-Straße
-Esch
 Eschachberg
 Eschacher Straße
 Eschbach
@@ -27396,7 +27168,6 @@ Europa-Allee
 Europa-Park-Straße
 Europaplatz
 Europa Platz
-Europaplatz (vor NVV Kundencenter)
 Europaratstraße
 Europaring
 Europark Fichtenhain A
@@ -27491,7 +27262,6 @@ Extumer Trift
 Exzellenzstraße
 Eyachbrücke
 Eyachstraße
-Eyba
 Eybacher Straße
 Eycksche Straße
 Eyendorfer Straße
@@ -27500,7 +27270,6 @@ Eyke-von-Repkow-Platz
 Eylauer Straße
 Eylaustraße
 Eylertstraße
-Eyll
 Eylsbergweg
 Eymühle
 Eynattener Straße
@@ -27514,8 +27283,6 @@ Eythstraße
 Eywiesenstraße
 Ezzestraße
 Ezzostraße
-F
-F4
 Faaderhuuch
 Faaßweg
 Fabbenstedter Straße
@@ -27571,7 +27338,6 @@ Fahnerscher Weg
 Fahnestraße
 Fahnmühle
 Fähnrichstraße
-Fähr
 Fahräcker
 Fähranger
 Fahrberg
@@ -28044,7 +27810,6 @@ Feldstraße / Hildesheimer Straße
 Feldtange
 Feldtor
 Feldweg
-Feldweg 65
 Feldwiesenstraße
 Feldwiesenweg
 Feldzeugmeisterstraße
@@ -28094,7 +27859,6 @@ Fellhornweg
 Fellinghausener Straße
 Fellnerstraße
 Felmicke
-Fels
 Felsbachstraße
 Felsbergstraße
 Felseckerstraße
@@ -28381,8 +28145,6 @@ Filderstraße
 Filder Straße
 Filderweg
 Fildeweg
-Filiale Scharnhauser ParkBonhoefferstraße 2/2
-Filipovská
 Filkuhlweg
 Fillerbrunnen
 Filsallee
@@ -28590,10 +28352,6 @@ Fiskusstraße
 Fismerstraße
 Fitzplei
 Fiuggiring
-fix
-Fix
-fixme
-FJägergang
 Fjordvejen
 F.-J.-Remlinger-Straße
 Flaches Feld
@@ -28880,7 +28638,6 @@ Fluhrstraße
 Flundernweg
 Flunkgasse
 Flünnertzdyk
-Flur
 Fluräckerstraße
 Flürener Weg
 Flurenwende
@@ -28896,9 +28653,6 @@ Flurpeute
 Flurscheide
 Flursteige
 Flurstraße
-Flurstück1/20
-Flurstück 14/12
-Flurstück 205/11
 Flurteil Eule
 Flurweg
 Flurystraße
@@ -29089,7 +28843,6 @@ Forsthaus
 Forsthausallee
 Forsthaus am See
 Forsthaus Bovenberg
-Forsthaus \Hohe Linde\
 Forsthaus Remstecken
 Forsthausstraße
 Forsthausweg
@@ -29919,7 +29672,6 @@ Friedhofsgässchen
 Friedhofsgasse
 Friedhofsstraße
 Friedhofstraße
-Friedhofstraße; Wiedenangerweg
 Friedhofsweg
 Friedhofweg
 Friedinger Straße
@@ -30084,7 +29836,7 @@ Friedrich-Lutzmann-Ring
 Friedrich-Marstatt-Straße
 Friedrich-Maurer-Weg
 Friedrich-Menges-Gasse
-Friedrich-Menzefricke-Straße 6
+Friedrich-Menzefricke-Straße
 Friedrich-Menze-Weg
 Friedrich-Metzger-Straße
 Friedrich-Mohr-Straße
@@ -30531,7 +30283,7 @@ Frohnhäuser Straße
 Frohnhauser Weg
 Frohnhecken
 Frohnhof
-Frohnhofstraße 33
+Frohnhofstraße
 Frohnklinger Straße
 Frohnleitener Straße
 Frohnradstraße
@@ -30623,7 +30375,6 @@ Frundsbergstraße
 Frustbergstraße
 Fruteweg
 Frutolfstraße
-Frydagstr.22
 Frydagstraße
 Frz.-u. Joh.-Wallach-Straße
 Fuchsacker
@@ -30637,7 +30388,7 @@ Fuchsbergstraße
 Fuchsbergweg
 Fuchsbühlstraße
 Fuchsengarten
-Fuchsengasse6
+Fuchsengasse
 Fuchsengäßle
 Fuchsenstraße
 Fuchsenweg
@@ -30758,7 +30509,6 @@ Fünfhausenstraße
 Fünfhäuserweg
 Fünfkirchener Straße
 Fünfkirchener Weg
-Fünfkirchener Weg 3 (Am Berliner Platz)
 Fünf-Seen-Allee
 Fünfseenblickstraße
 Fünfstück
@@ -30894,12 +30644,9 @@ Fütterseer Straße
 Futterstraße
 Futterwiesenweg
 F.-W.-Raiffeisen-Straße
-G
-G7
 Gaade
 Gaadt
 Gaardener Ring
-Gaat
 Gabeläcker
 Gabelentzstraße
 Gabelenzstraße
@@ -30948,7 +30695,6 @@ Gadderbaumer Straße
 Gadebuscher Straße
 Gadelander Straße
 Gademannstraße
-gademow
 Gademow
 Gaden
 Gaderner-Straße
@@ -31348,7 +31094,6 @@ Gasteriege
 Gastfeldstraße
 Gasthauskanal
 Gasthausstraße
-Gasthof \Haselbach\Schleusinger Straße
 Gastkamp
 Gaststiege
 Gaststraße
@@ -31365,7 +31110,6 @@ Gatjeweg
 Gatower Straße
 Gatowweg
 Gatrenstraße
-Gatt
 Gattenhöfer Weg
 Gattern
 Gatterweg
@@ -31484,7 +31228,6 @@ Gedser Fyrvej
 Gedser Straße
 Geelbeksdamm
 Geenenstraße
-Geer
 Geersstraße
 Geert-Bakker-Straße
 Geertsfeld
@@ -31858,7 +31601,6 @@ Georgenschwaigstraße
 Georgenstraße
 Georgenstraße / Ecke Friedrichstraße
 Georgenstraße/Ecke Nordendstraße
-Georgenstraße;Kirschweg
 Georgenthaler Straße
 Georgenweg
 Georg-Ertel-Straße
@@ -32024,7 +31766,6 @@ Georg-von-Mayr-Straße
 Georg-Walther-Straße
 Georg-Weerth-Straße
 Georg-Werner-Straße
-Georg-Westermann_allee
 Georg-Westermann-Allee
 Georg-Wichtermann-Platz
 Georg-Wiesböck-Platz
@@ -32379,7 +32120,7 @@ Gewandhausstraße
 Gewanneweg
 Gewann Großer und Kleiner Saum
 Gewann Gründe
-Gewann Rammelplatz, Am Sonnenfelsen
+Gewann Rammelplatz Am Sonnenfelsen
 Gewann Schläuchen
 Gewann Wanne
 Gewebering
@@ -32402,7 +32143,7 @@ Gewerbegebietsstraße
 Gewerbegebiet Steinbach
 Gewerbegebiet Süd
 Gewerbegebiet Tiefenhäusern
-Gewerbegebiet West,28816 Stuhr / Seckenhausen
+Gewerbegebiet West
 Gewerbegebiet zum Wasserwerk
 Gewerbegebiet Zum Wasserwerk
 Gewerbehallenstraße
@@ -32412,7 +32153,6 @@ Gewerbekamp
 Gewerbemuseumsplatz
 Gewerbepark
 Gewerbepark am Stausee
-Gewerbepark \Am Wald\
 Gewerbepark Cité
 Gewerbepark Grünerweg
 Gewerbepark Lindach A
@@ -32637,7 +32377,6 @@ Ginstserweg
 Gintofter Straße
 Ginzing
 Giordano-Bruno-Weg
-Gipf
 Gipfelstraße
 Gipsstraße
 Gipswerkstraße
@@ -32904,7 +32643,7 @@ Glonntalstraße
 Glonnweg
 Glörscheid
 Glörtalsperre
-Glossen, Mügelner Straße
+Glossen Mügelner Straße
 Glosterstraße
 Glottertalstraße
 Glotterweg
@@ -32997,7 +32736,6 @@ Gocher Weg
 Gochsheimer Straße
 Gochsheimerweg
 Gochsheimer Weg
-Gochsheimer  Weg
 Gochsheiner Weg
 Gochtstraße
 Gockelstieg
@@ -33057,7 +32795,6 @@ Goetheatraße
 Goetheplatz
 Goethering
 Goethesteig
-goethestraße
 Goethestraße
 Goetheweg
 Goetzplatz
@@ -33082,7 +32819,6 @@ Göhlenkamp
 Göhler Straße
 Gohliser Straße
 Göhlsdorfer Weg
-Göhr
 Göhrdestr.
 Göhrener Straße
 Göhrener Weg
@@ -33728,7 +33464,6 @@ Graf-Rasso-Straße
 Gräfrather Markt
 Grafrather Straße
 Gräfrather Straße
-Gräfrather Straße 145
 Graf-Rechberg-Straße
 Graf-Recke-Straße
 Graf-Rhena-Straße
@@ -34245,7 +33980,6 @@ Gröbmühlstraße
 Grochlitzer Straße
 Gröchteweg
 Grochwitzer Straße
-Grod
 Grödener Straße
 Gröden Nord
 Gröditzer Straße
@@ -34263,7 +33997,6 @@ Grohplatz
 Grohwiesenweg
 Groitzscher Fußweg
 Groitzscher Straße
-Grol
 Grolandstraße
 Grollmannsweg
 Grollstraße
@@ -34338,7 +34071,6 @@ Gröpperheide
 Groppstraße
 Groschenweg
 Grosjeanstraße
-Groß
 Großaitinger Straße
 Groß Aschen
 Großaustraße
@@ -34371,7 +34103,6 @@ Groß Dörgen
 Großdornberger Straße
 Großdraxdorf
 Großdubrauer Straße
-große Achter-Straße
 Große Ackerhofsgasse
 Große Allee
 Große Alleestraße
@@ -34799,7 +34530,6 @@ Grottkauer Straße
 Grötzinger Straße
 Grouvener Straße
 Grovestraße
-Grub
 Grubacker
 Grubäcker
 Grube
@@ -35182,7 +34912,6 @@ Gumppenbergstraße
 Gumppenstraße
 Gumppstraße
 Gumpratsried
-Gund
 Gundekarstraße
 Gundelandstraße
 Gündelbacher Straße
@@ -35302,7 +35031,6 @@ Gustav-Fimpel-Straße
 Gustav-Fischer-Straße
 Gustav-Freytag-Straße
 Gustav-Freytag-Weg
-Gustav-Freytag-Weg 17
 Gustav-Friedrich-Weg
 Gustav-Getto-Straße
 Gustav-Görner-Allee
@@ -35408,7 +35136,6 @@ Güstow
 Güstrower Chaussee
 Güstrower Straße
 Güstrower Weg
-Gut
 Gutachstraße
 Gutachweg
 Gut Ahlhausen
@@ -35436,7 +35163,6 @@ Gutenbergring
 Gutenbergstr.
 Gutenbergstraße
 Gutenberg-Straße
-Gutenberg-Straße;Johannes-Sefrit-Straße
 Gutenbergweg
 Gutenburg
 Gutendorf
@@ -35511,7 +35237,6 @@ Gutshofring
 Gutshofstraße
 Gutsmüthlstraße
 Gutsmuthsstraße
-GutsMuths-Straße
 Guts-Muths-Straße
 Guts-Muths-Weg
 Gutsstraße
@@ -35554,8 +35279,6 @@ Gynettistraße
 Gyrhofstraße
 Gysemans-Weg
 Gyßlingstraße
-H7
-Haag
 Haagener Straße
 Haagerfeld
 Haager Straße
@@ -35573,7 +35296,6 @@ Haaler Straße
 Haalstraße
 Haaner Straße
 Haansahl
-Haar
 Haarbergstraße
 Haarbergweg
 Haarbrücker Weg
@@ -35728,7 +35450,6 @@ Hackländerstraße
 Hackstedtsweg
 Hackstraße
 Hadäckerstraße
-Hadäckerstraße 14
 Hadamarstraße
 Haddamarstraße
 Haddebyer Chaussee
@@ -35783,7 +35504,6 @@ Hafenmarkt
 Hafenmühlweg
 Hafenplatz
 Hafen Plaue
-hafenstraße
 Hafenstrasse
 Hafenstraße
 Hafen Straße
@@ -35828,7 +35548,6 @@ Hafnerstraße
 Häfnerstraße
 Häfnersweg
 Hafnerweg
-Haft
 Hagäcker
 Hagäckerstraße
 Hagard
@@ -36017,7 +35736,6 @@ Hahnweidstraße
 Haholdweg
 Haibacher Schweiz
 Haichera
-Haid
 Haidach
 Haidachstraße
 Haidaer Straße
@@ -36177,7 +35895,7 @@ Halbuschstraße
 Halbwaldstraße
 Halchtersche Straße
 Halde
-Halde, Gewann
+Halde Gewann
 Häldeleweg
 Haldenbergerstraße
 Haldenbergstraße
@@ -36359,7 +36077,6 @@ Hamey
 Hamfeldstraße
 Hamfhofsweg/Borgfelder Allee
 Hamletstraße
-Hamm
 Hammannsgasse
 Hammanstraße
 Hammarskjöldring
@@ -36465,7 +36182,6 @@ Hamtekamp
 Hamtorstraße
 Hamtorwall
 Hamweg
-HanauerLandstraße
 Hanauer Landstraße
 Hanauer Straße
 Hanauer Weg
@@ -37014,7 +36730,6 @@ Harenburg
 Harfenstraße
 Harffstraße
 Hargard
-HargardHargard
 Hargardsgasse
 Hargassen
 Harheimer Weg
@@ -37022,7 +36737,6 @@ Harikseeweg
 Haring
 Haringstraße
 Harjes Straße
-Hark
 Harkærvej
 Harkampsheide
 Hark-Olufs-Wai
@@ -37110,7 +36824,6 @@ Harslebener Straße
 Harsleber Torstraße
 Harster Straße
 Harsumer Weg
-Hart
 Hartauer Straße
 Hartavská
 Hartbaumpfad
@@ -37203,7 +36916,6 @@ Hartzbeeker Mark
 Hartzlohplatz
 Harvestehuder Weg
 Harxheimer Weg
-Harz
 Harzberg
 Harzberger Straße
 Harzblick
@@ -37473,7 +37185,6 @@ Hatzfelder Straße
 Hatzfeldstraße
 Hatzper Straße
 Hatzter Straße
-Hau
 Haubachstraße
 Haubachweg
 Haubenlerchenweg
@@ -37575,18 +37286,9 @@ Hauptstätterstraße
 Hauptstätter Straße
 Hauptstr.
 Hauptstr
-Hauptstraß3
-hauptstraße
 Hauptstrasse
-Hauptstraße.
 Hauptstraße
 Haupt Straße
-Hauptstraße.1
-Hauptstraße 12
-Hauptstraße; Häuserhofer Straße
-Hauptstraße;In den Osterwiesen
-Hauptstraße; Schäferberg
-HauptstraßeUnset
 Hauptübergang
 Hauptwachstraße
 Hauptweg
@@ -37594,7 +37296,6 @@ Hauptwieke
 Hauptwieke Nord
 Hauptwieke Süd
 Hauröder Straße
-Haus
 Hausäcker
 Hausackerstraße
 Hausäckerstraße
@@ -37820,7 +37521,6 @@ Hechtskuhl
 Hechtsprung
 Hechtstraße
 Hechtweg
-Hechtweg (Edersee)
 Heckäckerweg
 Heckelbeckstraße
 Heckelberger Ring
@@ -37867,7 +37567,6 @@ Heckscherstraße
 Heckstraße
 Heckteichstraße
 Heckweg
-Heckweg2
 Heckwiesenweg
 Hectorstraße
 Hedda-Zinner-Weg
@@ -37879,7 +37578,6 @@ Heddesheim
 Heddesheimer Straße
 Heddinghausen
 Heddinghäuser Straße
-HeddingheimerStraße
 Heddingheimer Straße
 Heddinghovener Straße
 Hedebyvej
@@ -37917,7 +37615,6 @@ Heeder Gartenstraße
 Heeder Straße
 Heedweg
 Heefwai
-Heeg
 Heegbarg
 Heegermühler Straße
 Heegerstraße
@@ -37962,7 +37659,6 @@ Heerstraßenbenden
 Heerwagenstraße
 Heerweg
 Heerwinkel
-Hees
 Heescheck
 Heesenstraße
 Heeserstraße
@@ -37991,7 +37687,6 @@ Hegarstraße
 Hegaublick
 Hegaustraße
 Hegauweg
-Hege
 Hegebachweg
 Hegeberg
 Hegebergstraße
@@ -38051,14 +37746,12 @@ Hehlertstraße
 Hehlestraße
 Hehlinger Straße
 Hehlingsgrund
-Hehn
 Hehnerholt
 Hehner Straße
 Hehnkamp
 Hehnstraße
 Heiblmühle
 Heichrichstraße
-Heid
 Heidacker
 Heidäckerstraße
 Heidbendenstraße
@@ -38193,7 +37886,7 @@ Heidetränkstraße
 Heidewald
 Heidewaldstraße
 Heideweg
-Heideweg 1
+Heideweg
 Heidewickchen
 Heidewinkel
 Heidewisch
@@ -38254,7 +37947,6 @@ Heiduferweg
 Heidweg
 Heidweiher
 Heidweiher Straße
-Heie
 Heiersstraße
 Heierstraße
 Heierswall
@@ -38580,7 +38272,6 @@ Heinrich-Hecht-Platz
 Heinrich-Heidner-Straße
 Heinrich-Heine-Allee
 Heinrich-Heine-Anlage
-Heinrich-Heine  Platz
 Heinrich-Heine-Platz
 Heinrich-Heine-Ring
 Heinrich-Heine-Siedlung
@@ -38768,7 +38459,6 @@ Heinrichsthaler Straße
 Heinrich-Stoll-Straße
 Heinrich-Störrle-Straße
 Heinrich-Stranka-Straße
-heinrichstraße
 Heinrichstraße
 Heinrich-Sträter-Straße
 Heinrich-Streidl-Straße
@@ -39100,7 +38790,6 @@ Hellriegelstraße
 Hellsternstraße
 Hellstiege
 Hellstraße
-hellweg
 Hellweg
 Hellwege-Alle
 Hellwig Straße
@@ -39362,7 +39051,6 @@ Hepperleweg
 Heppertsweg
 Heppstraße
 Heraweg
-Herb
 Herbartgang
 Herbartstraße
 Herbartweg
@@ -39461,7 +39149,6 @@ Herforderstraße
 Herforder Straße
 Herforder Weg
 Hergartweg
-hergatz
 Hergatz
 Hergenrather Weg
 Hergertswiesen
@@ -39583,7 +39270,6 @@ Hermann-Henrich-Meier-Allee
 Hermann-Herder-Straße
 Hermann-Hesse-Platz
 Hermann-Hesse-Straße
-Hermann-Hesse_Weg
 Hermann-Hesse-Weg
 Hermann-Hetzel-Straße
 Hermann-Heyen-Straße
@@ -39739,7 +39425,6 @@ Hermann-Veit-Straße
 Hermann-Vogel-Straße
 Hermann-Voland-Straße
 Hermann-Volz-Straße
-Hermann-vonBarth-Straße
 Hermann-von-Barth-Straße
 Hermann-von-Helmholtz-Straße
 Hermann-von-Salza-Straße
@@ -40387,7 +40072,6 @@ Hilderath
 Hildesheimer Stieg
 Hildesheimerstraße
 Hildesheimer Straße
-Hildesheimer Straße 238 / Bernwardstraße
 Hildesheimer Straße / Abelmannstraße
 Hildesheimer Straße / Aegi
 Hildesheimer Straße / Altenbekener Damm
@@ -41214,7 +40898,6 @@ Höckelmer
 Hockenbergstraße
 Höckendorfer Weg
 Hockenheimer Landstraße
-Hockenheimer Landstraße 7a
 Hockenheimer Straße
 Hockenkamp
 Höckergasse
@@ -41249,7 +40932,6 @@ Hoeschplatz
 Hoeteweg
 Hoetmarer Straße
 Hoevelstraße
-Hof
 Hofacker
 Hofäcker
 Hofäckerallee
@@ -41341,7 +41023,6 @@ Hoffschultestraße
 Hoffstraße
 Hofgarten
 Hofgärten
-hofgartenstraße
 Hofgartenstraße
 Hofgartenweg
 Hofgasse
@@ -41478,7 +41159,6 @@ Hofzaunweg
 Hofzeichendamm
 Hof zum Rheinblick
 Hof zur Schanze
-Höge
 Hogelandweg
 Högemannsweg
 Högenauer Weg
@@ -41513,7 +41193,6 @@ Höhbuck
 Hohburger Straße
 Hohburgstraße
 Hohbusch
-Höhe
 Hohe Ähren
 Hohe August-Bebel-Straße
 Hohebarger Straße
@@ -41766,7 +41445,6 @@ Hoher Garten
 Hoher Geestweg
 Hoher Graben
 Hoher Heckenweg
-Hoher Heckenweg 31
 Höherhofstraße
 Hoher Holzweg
 Hoher Kamp
@@ -41956,7 +41634,6 @@ Hölker Feld
 Hölkeringer Straße
 Hölkers Kamp
 Hölkeskampring
-Höll
 Hollager Straße
 Hollandbrink
 Holländergang
@@ -42041,7 +41718,6 @@ Höllwiesenweg
 Höllwinkel
 Hollwören
 Hollystraße
-Holm
 Holmblick
 Holmbrook
 Holmecker Weg
@@ -42088,7 +41764,7 @@ Holstenhofweg
 Holstenkamp
 Holstenplatz
 Holstenring
-holstenstraße
+Holstenstraße
 Holstenstrasse
 Holstenstraße
 Holstentorplatz
@@ -42175,7 +41851,6 @@ Holunderweg
 Holunderwinkel
 Holwedestraße
 Holweider Straße
-Holz
 Holzäckerweg
 Holzapfelkreuther Straße
 Holzappel
@@ -42499,7 +42174,7 @@ Horchheimer Höhe
 Horchlerstraße
 Horchstraße
 Horch-Straße
-Hordeler Heide 109
+Hordeler Heide
 Hordeler Straße
 Hördemannshof
 Hördenstraße
@@ -42551,8 +42226,6 @@ Horlofftalstraße
 Hörmannsdorf
 Hormersdorfer Hauptstraße
 Hormer Weg
-Horn
-Hörn
 Hornachweg
 Hornackerplatz
 Hornackerstraße
@@ -42630,8 +42303,6 @@ Hörnumweg
 Hornungstraße
 Hornusstraße
 Hornweg
-Hornweg 21
-Hornweg 26
 Horn-Werner Straße
 Hornwiesenstraße
 Horrackerstraße
@@ -42761,7 +42432,6 @@ Hotzerweg
 Hötzingen
 Houbenstraße
 Houbirgstraße
-house
 Houverather Mühle
 Houverather Straße
 Hövel
@@ -42785,7 +42455,6 @@ Hovestadtstraße
 Hovestraße
 Hövischestraße
 Hovmosevej
-Hövt
 Howaldtstraße
 Howardestraße
 Howesträßchen
@@ -42826,7 +42495,6 @@ Hřbitovní
 Hrch-v.-Brentano-Straße
 Hřensko
 Hrnčířská
-Hub
 Hubäckerring
 Hubbauerweg
 Hubbelrather Straße
@@ -42929,7 +42597,6 @@ Huelsmannstraße
 Hüerbaasweg
 Huestraße
 Hüetlinstraße
-Hufe
 Hufeisen
 Hufeisenstraße
 Hufeisenweg
@@ -43292,12 +42959,10 @@ Hursterhofstraße
 Hursterstraße
 Hurststraße
 Hurstweg
-Hurt
 Hürtgener Straße
 Hürtgenweg
 Hürth
 Hürth Park
-Hürth-Park L011
 Husarenhof
 Husarenpark
 Husarenstraße
@@ -43347,7 +43012,6 @@ Hutfiltern
 Hutfilterstraße
 Hutgasse
 Hütgasse
-Huth
 Hutha
 Huthausplatz
 Huthausweg
@@ -43421,7 +43085,6 @@ Hutungsweg
 Hutweide
 Hütwiesstraße
 Hutwigsgrundweg
-Hütz
 Hutzelbrunnen
 Hützeler Damm
 Hützeler Straße
@@ -43445,7 +43108,6 @@ Huyssenallee
 Hyazinthenfeld
 Hyazinthenstraße
 Hyazinthenweg
-Hye
 Hyères-Straße
 Hygstetter Straße
 Hyldtofte Strandvej
@@ -43499,9 +43161,7 @@ Iffiegarten
 Iffigheim
 Ifflandstraße
 I.Fließstraße
-ifm-Straße
 Ifteweg
-iga-Blick
 Igelbachstraße
 Igeldiek
 Igelgarten
@@ -43758,7 +43418,6 @@ Im Bannholz
 Im Bärle
 Im Bastaugrund
 Im Bastholz
-(im Bau)
 Im Bauernfeld
 Im Baukelsfeld
 Im Baumgarten
@@ -43998,7 +43657,6 @@ Im Drohn
 Im Drostebusch
 Im Druseltal
 Im Dullert
-im Dülskamp
 Im Dülskamp
 Im Dümpel
 Im Dunster
@@ -44238,71 +43896,6 @@ Im Gespann
 Im Gettelhagen
 Im Gewann
 Im Gewenn
-im Gewerbegebiet
-Im Gewerbegebiet
-Im Gewerbepark
-Im Gewerbepark II
-Im Gewerbepark Seedoche
-Im Gewerbepark Unterallgäu
-Im Gewergebiet
-Im Ghai
-Im Gibitzental
-Im Giesenfeld
-Im Gießgraben
-Im Gillesbachtal
-Im Ginsterbusch
-Im Gitter
-Im Glasloch
-Im Gleisbogen
-Im Gleisdreieck
-Im Glinde
-Im Glockenziel
-Im Glöckleswies
-Im Göhlen
-Im Göhren
-Im Golddorf
-Im Goldenen Ring
-Im Goldenen Tal
-ImGoldgrund
-Im Goldgrund
-Im Görn
-Im Gosewinkel
-Im Götzmann
-Im Graben
-Im Grafenwald
-Im Grammapesch
-Im Grandsgarten
-Im Grasgarten
-Im Grashof
-Im Graskamp
-Im Greinenkamp
-Im Grengel
-Im Greut
-Im Greutle
-Im Gries
-Im Griesgrund
-Im Grimm
-Im Grimmle
-Im Gröbling
-Im Großen Esch
-Im großen Feld
-Im Großengarten
-Im Großen Garten
-Im Großen Moore
-Im Großen Sande
-Im Großen Teiche
-Im großen Winkel
-Im Großfeld
-Im Grotten
-Im Grubenfeld
-Im Grubengarten
-Im Grüble
-Im Grün
-Im Grund
-Im  Grund
-Im Grund / Am Riesenberg
-Im Gründchen
-im Grunde
 Im Grunde
 Im Gründel
 Im Gründewald
@@ -44570,7 +44163,7 @@ Im Josental
 Im Jungen
 Im Junkerngarten
 Im Junkersrott
-im Junkholz
+Im Junkholz
 Im Kaiser
 Im Kälberbruch
 Im Kalberkamp
@@ -44649,7 +44242,6 @@ Im Klatenberg
 Im Klauenfuß
 Im Klausenstück
 Im Kleefeld
-im kleegarten
 Im Kleegarten
 Im Kleekamp
 Im Kleifeld
@@ -44839,7 +44431,6 @@ Im Loch
 Im Löffelholz
 Im Loh
 Im Löhenbusch
-Im  Löhenbusch
 Im Lohenfeld
 Im Lohfeld
 Im Löhken
@@ -45293,7 +44884,7 @@ Im Schierholz
 Im Schießgärtle
 Im Schießhaus
 Im Schiff
-im Schiffels
+Im Schiffels
 Im Schiffswinkel
 Im Schiffwinkel
 Im Schildchen
@@ -45442,7 +45033,6 @@ Im Stebich
 Im Stecken
 Imstedt
 Im Steenesch
-im steiffeld
 Im Steigbachtal
 Im Steiggarten
 Im Steiggässle
@@ -45754,7 +45344,6 @@ Im WInkel
 Im Winkele
 Im Winkelmoor
 Im Winkelrain
-Im Winkel;Schwalbenweg
 Im Winkelsgarten
 Im Winkfeld
 Im Winterrot
@@ -46127,7 +45716,6 @@ In der Else
 In der Emisau
 In der Emmet
 In der Ennert
-in der Erdbrügge
 In der Erdbrügge
 In der Esch
 In der Esche
@@ -46257,7 +45845,6 @@ In der Kleinen Otterbach
 In der Klemme
 In der Kling
 In der Klinge
-In der Kohlgrube 5
 In der Kolling
 In der Komm
 In der Kornwies
@@ -46534,16 +46121,9 @@ Industrieparkstraße
 Industriering
 Industriering Ost
 Industriestraat
-Industriestraß2
 Industriestraße
-Industriestraße A
 Industriestraße/Blumenstraße
-Industriestraße C
-Industriestraße D
-Industriestraße E
-Industriestraße K
 Industriestraße Möhnetal
-Industrietraße
 Industrie- und Gewerbegebiet
 Industrie- und Gewerbepark
 Industrieweg
@@ -46553,7 +46133,6 @@ Industriezubringer
 Industrivej
 In Ellinghoven
 In Ettischleben
-INF
 Infanteriestraße
 Infanterieweg
 In Flassenberg
@@ -46664,7 +46243,6 @@ Innwerkstraße
 In Oberwiesen
 In Petersholz
 In Pfalzen
-in railway buildig
 Inrather Straße
 In Rohräcker
 Insbachstraße
@@ -46725,8 +46303,6 @@ In Wahlemd
 In Wibbese
 In Witzerath
 Inzeller Weg
-I. Parallelstraße
-i-Park Tauberfranken
 Ipfweg
 Iphöfer Straße
 Ippendorfer Allee
@@ -46770,7 +46346,6 @@ Irrlenwiese
 Irrlichterweg
 Irrlrinnig
 Irrmannsberg
-Irrn
 Irscheider Weg
 Irschenhauser Straße
 Irscher Straße
@@ -46904,8 +46479,6 @@ Ivestraße
 Ivo-Beucker-Straße
 IV. Vereinsstraße
 I.Weberstraße
-J1
-J5
 Jaardenhuug
 Jabachstraße
 Jablonecer Straße
@@ -46953,7 +46526,6 @@ Jadeberger Straße
 Jadebusenweg
 Jadelehstraße
 Jadestraße
-Jadestraße 75/77
 Jadeweg
 Jaeckelsgraben
 Jaegersstraße
@@ -47237,7 +46809,6 @@ Jean-Inselsberger-Straße
 Jean-Jaurès-Straße
 Jean-Mathieu-Straße
 Jean-Paul-Straße
-Jean-Paul-Straße;Vinckestraße
 Jean-Paul-Weg
 Jean-Pullen-Weg
 Jean-Ritzert-Straße
@@ -47407,7 +46978,6 @@ Jödemannstraße
 Jodokus-Temme-Straße
 Jodutenstraße
 Joe-Duty-Weg
-Joerg_Sirling_Weg
 Joergstraße
 Joerresstraße
 Johan-Fugmann-Straße
@@ -47558,7 +47128,6 @@ Johannes-Schlaf-Straße
 Johannes-Schmidt-Straße
 Johannes-Schult-Weg
 Johannes-Sefrit-Straße
-Johannes-Sefrit-Straße;Keltenstraße
 Johannes-Stelling-Straße
 Johannesstraße
 Johannes-Stumpf-Straße
@@ -47626,7 +47195,6 @@ Johannisbrunnenweg
 Johannisburger Stieg
 Johannisburger Straße
 Johannisfreiheit
-JohannIsgarten
 Johannisgasse
 Johannishofer Straße
 Johannishöhe
@@ -48347,9 +47915,6 @@ Juttaweg
 Jüttenplatz
 Jüttkenmoor
 Juvenellstraße
-K 12n
-K4
-K43
 Kaadener Straße
 Kaakslande
 Kaakstedter Straße
@@ -48547,7 +48112,6 @@ Kaistraße
 Kaitersbergstraße
 Kaitlestraße
 Kaitzer Straße
-Kaje
 Kajen
 Kajepadd
 Kakabellenweg
@@ -48796,7 +48360,6 @@ Kammstraße
 Kammweg
 Kamnitzstraße
 Kamorstraße
-Kamp
 Kampackersweg
 Kämpchen
 Kämpchenstiege
@@ -48847,7 +48410,6 @@ Kanalstraße Nord
 Kanalstraße-Nord
 Kanalstraße Süd
 Kanalstraße-Süd
-KanalstraßeSüd
 Kanaltorplatz
 Kanaluferstraße
 Kanalweg
@@ -48914,7 +48476,7 @@ Kantorsweg
 Kantorweg
 Kantor-Wurm-Straße
 Kantstraße
-Kantstraße 12/Karlstraße
+Kantstraße2/Karlstraße
 Kantweg
 Kanusstraße
 Kanutenstraße
@@ -48929,7 +48491,6 @@ Kanzleigasse
 Kanzleihof
 Kanzleistrasse
 Kanzleistraße
-Kanzleistrasse 4
 Kanzlerstraße
 Kanzler-Stürtzel-Straße
 Kanzlers Weide
@@ -48965,7 +48526,6 @@ Kapeller Straße
 Kapellplatz
 Kapellstraße
 Kapersburgstraße
-Kapf
 Kapfenberg
 Kapfenberger Weg
 Kapfenburgstraße
@@ -49466,7 +49026,6 @@ Karlsmark
 Karlsmindevej
 Karl-Späth-Straße
 Karlsplatz
-Karlsplatz (Stachus)
 Karl-Spörl-Straße
 Karl-Sprengel-Straße
 Karl-Springer-Straße
@@ -49484,7 +49043,6 @@ Karlsteinstraße
 Karl-Stieler-Straße
 Karl-Stier-Straße
 Karl-Sting-Straße
-karlstraße
 Karlstraße
 Karlsweg
 Karl-Tauchnitz-Straße
@@ -49782,7 +49340,6 @@ Katharinenheimstraße
 Katharinenhof
 Katharinenkirchhof
 Katharinenkirchplatz
-Katharinenkreisel (Opelrondell)
 Katharinenplatz
 Katharinenstraße
 Katharinenweg
@@ -50016,7 +49573,6 @@ Kehlhof
 Kehlhofgartenstraße
 Kehlingsdorf
 Kehlstraße
-Kehn
 Kehner Straße
 Kehnerter Weg
 Kehnmoorweg
@@ -50033,7 +49589,6 @@ Kehrwiederstraße
 Keibelstraße
 Keidäckerstraße
 Keidlandweg
-Keil
 Keilberger Hauptstraße
 Keilberger Schulweg
 Keilberthstraße
@@ -50416,7 +49971,6 @@ Kiekebuscher Weg
 Kiek in de Sün
 Kiek över
 Kiek Ut
-Kiel
 Kielblockstraße
 Kieler Chaussee
 Kieler Kamp
@@ -50786,7 +50340,6 @@ Kirchsteig
 Kirchsteige
 Kirchsteigweg
 Kirchstieg
-kirchstraße
 Kirchstraße
 Kirchstrasße
 Kirchtal
@@ -51047,7 +50600,6 @@ Klebstraße
 Klebweg
 Klecker Waldweg
 Klecker Weg
-Klee
 Kleeacker
 Kleeackerweg
 Kleeanger
@@ -51067,7 +50619,6 @@ Kleehofstraße
 Kleekamp
 Kleekoppel
 Kleemannstraße
-kleenerich
 Kleenskamp
 Kleersstraße
 Kleestraße
@@ -51118,7 +50669,6 @@ Kleinbüllesheim
 Kleinburgforder Straße
 Klein Dörgen
 Klein Drinhausen
-kleine Achter-Straße
 Kleine Adlerstraße
 Kleine Alexanderstraße
 Kleine Alleestraße
@@ -51230,7 +50780,6 @@ Kleine Lönsstraße
 Kleine Lücke
 Kleine Maingasse
 Kleine Markstraße
-kleine Marktstraße
 Kleine Marktstraße
 Kleine Masch
 Kleine Mauer
@@ -51520,7 +51069,6 @@ Kleinweidenmühle
 Kleinweitzschen
 Kleinwelka
 Klein Welzheimer Straße
-KleinwendernKleinwendern
 Klein Westerbeck
 Klein Wisch
 Kleinwolmsdorfer Straße
@@ -51587,7 +51135,6 @@ Klevstraße
 Klewergarten
 Klewitzstraße
 Klewitzweg
-Kley
 Kleybergstraße
 Kleybredde
 Kleyer Dorfstraße
@@ -51596,7 +51143,6 @@ Kleyerstraße
 Kleyer Straße
 Kleyer Weg
 Kleymannsweg
-KlgV 748
 Kliedbruchstraße
 Kliekener Bahnhofstraße
 Kliekener Hauptstraße
@@ -51844,7 +51390,6 @@ Klumpertalstraße
 Klumpwiese
 Klunkau
 Klünnerberg
-Klus
 Klüschenberg
 Klüschenbergstraße
 Klüschenweg
@@ -52039,7 +51584,6 @@ Koberner Straße
 Koberner Weg
 Köbisstraße
 Kobitzschwalder Straße
-Kobl
 Koblberg
 Koblenzerstraße
 Koblenzer Straße
@@ -52050,7 +51594,6 @@ Köblitzer Straße
 Koboldstraße
 Kobser Weg
 Koburger Straße
-Koch
 Kocheler Straße
 Kochelseestraße
 Kochenbütteler Weg
@@ -52113,7 +51656,6 @@ Kogelhof
 Kögel-Willms-Straße
 Kogge
 Koggenweg
-Kogl
 Koglweg
 Köglweg
 Kohbachweg
@@ -52224,13 +51766,11 @@ Köhnstraße
 Köhn's Übergang
 Kohrbleiche
 Kohrener Straße
-Kohrener Straße 6-12
 Kohrweg
 Kohschietgang
 Kohues
 Koindekstraße
 Koinstatt
-Kök
 Kokainz
 Kökelsum
 Kökelsumer Straße
@@ -52253,7 +51793,7 @@ Kolbenstraße
 Kolbenzeil
 Kolbeplatz
 Kolberg
-Kolberger Allee 1
+Kolberger Allee
 Kolberger Platz
 Kolbergerstraße
 Kolberger Straße
@@ -52286,7 +51826,6 @@ Kolibriweg
 Koling
 Kolingesstraße
 Kolínská
-Kolk
 Kolkauer Straße
 Kölkebecker Straße
 Kolkende
@@ -52331,7 +51870,6 @@ Kollweg
 Kollwitzsstraße
 Kollwitzstraße
 Kollwitzweg
-Kolm
 Kolmarer Straße
 Kolmergasse
 Kolmesfeld
@@ -52447,7 +51985,6 @@ König-Rudolf-Straße
 Königsacker
 Königsäcker
 Königsallee
-KönigsAllee
 Königsaue
 Königsbacher Landstraße
 Königsbacher Straße
@@ -52459,7 +51996,6 @@ Königsberger Allee
 Königsberger Platz
 Königsberger Ring
 Königsberger Steige
-königsberger Straße
 Königsbergerstraße
 Königsberger Straße
 Königsberger Weg
@@ -52636,7 +52172,7 @@ Konrad-Zuse-Allee
 Konrad-Zuse-Platz
 Konrad-Zuse-Ring
 Konrad-Zuse-Straße
-Konrad-Zuse-Straße 1
+Konrad-Zuse-Straße
 Konrad-Zuse-Weg
 Konrottstraße
 Konstantinbader Straße
@@ -53037,7 +52573,7 @@ Krafft-Ebing-Straße
 Krafftstraße
 Kräfftstraße
 Kraftsbucher Straße
-Kraftsdorfer  Straße
+Kraftsdorfer Straße
 Kraftshofer Hauptstraße
 Kraftstraße
 Kraftwerk-Privatweg
@@ -53455,7 +52991,6 @@ Kreuzseign
 Kreuzsteinallee
 Kreuzsteinstraße
 Kreuzsteinweg
-Kreuzstr.17
 Kreuzstraße
 Kreuztaler Straße
 Kreuztanne
@@ -53555,7 +53090,6 @@ Kröckelbacher Straße
 Kroenstraße
 Krofdorfer Straße
 Kröfteler Straße
-Krog
 Krögelsteiner Straße
 Krögen
 Kroger Pickerweg
@@ -53913,7 +53447,6 @@ Kuhholzweg
 Kühhornshofweg
 Kuhkampweg
 Kuhkoppel
-Kuhl
 Kuhlacker
 Kuhlackerweg
 Kuhlbornstraße
@@ -54171,7 +53704,6 @@ Kurbrunnenstraße
 Kurbrunnenweg
 Kurdamm
 Kürenweg
-Kurf
 Kurfürst-Dietrich-Straße
 Kurfürstenallee
 Kurfürsten-Anlage
@@ -54429,33 +53961,6 @@ Kynastweg
 Kyotostraße
 Kyreinstraße
 Kyritzer Straße
-L10, 7
-L12
-L12, 6
-L14
-L15
-L182
-L 199
-L 239
-L3
-L 3007
-L3114
-L 332
-L4
-L5, 1
-L5, 2
-L5, 3
-L5, 4
-L 549
-L5, 5
-L5, 6
-L740
-L8
-L8, 4
-L8, 5
-L8, 6
-L8, 8
-L9
 Laaberweg
 Laacher-See-Straße
 Laacher Weg
@@ -54467,7 +53972,6 @@ Laake
 Laakeweg
 Laakmannsfeld
 Laakstraße
-Laar
 Laarer Straße
 Laarmannstraße
 Laarstraße
@@ -54478,7 +53982,7 @@ Laasensteig
 Laasower Straße
 Laaspher Straße
 Laaßstraße
-Labacherstraße, Stößerstraße
+Labacherstraße Stößerstraße
 Labandstraße
 Labauer Straße
 Labbecker Straße
@@ -54489,7 +53993,6 @@ Labhardsweg
 Laboer Weg
 Laboratoriumstraße
 Laborstraße
-Lach
 Lachäcker
 Lachemer Dorfstraße
 Lachen
@@ -54609,7 +54112,6 @@ Laimbachsmühle
 Laimenstraße
 Laimeringer Straße
 Laimgrub
-Lain
 Lainecker Straße
 Lainenweg
 Laintalstraße
@@ -54621,7 +54123,6 @@ Laitenhof
 Laitenhofstraße
 Laiter
 Laizer Weg
-Lake
 Lakefeldstraße
 Lakemannstraße
 Lakomaer Chaussee
@@ -54778,14 +54279,14 @@ Landner Wäsche
 Landoisweg
 Landoltweg
 Landorfer Straße
-Landorf, Ichenberger Weg
+Landorf Ichenberger Weg
 Landoweg
 Landrain
 Landrat-Christians-Straße
 Landrat-Görg Straße
 Landrat-Hahne-Weg
 Landrat-Kaptain-Straße
-Landrat-Krug-Straße 9
+Landrat-Krug-Straße
 Landrat-Predeick-Allee
 Landrat Schultz Straße
 Landrat-von-Laer-Straße
@@ -54816,9 +54317,6 @@ Landskronastraße
 Landskroner Straße
 Landskroner Weg
 Landskronstraße
-Landstrasse
-Landstraße
-Landstraße203
 Landstraße nach Großpörthen
 Landstuhler Straße
 Landteilstraße
@@ -54830,7 +54328,6 @@ Landungsplatz
 Landvogtstraße
 Landwaisenhausstraße
 Landweg
-landwehr
 Landwehr
 Landwehrdamm
 Landwehrgraben
@@ -55278,7 +54775,6 @@ Lattenkamp
 Lattichweg
 Lattichwiesenweg
 Latumer Straße
-Laub
 Laubacherstraße
 Laubacher Straße
 Laubacher Weg
@@ -55331,7 +54827,6 @@ Laudaer Straße
 Laudenauer Weg
 Laudenbacher Straße
 Laudenberger Straße
-Laue
 Lauenauer Allee
 Lauenbach
 Lauenberg
@@ -55573,7 +55068,6 @@ Leegmoorstraße
 Leegweg
 Leehopweg
 Leekenweg
-Leer
 Leeraner Straße
 Leeraue
 Leerbacherweg
@@ -55646,7 +55140,6 @@ Lehe Weg
 Lehfeld
 Lehjenweg
 Lehlestraße
-Lehm
 Lehmacker
 Lehmannstraße
 Lehmbarg
@@ -55793,7 +55286,6 @@ Leimenrode
 Leimentalstraße
 Leimenweg
 Leimetsbaum
-Leimfeld K5349
 Leimgardtsfeld
 Leimgrubengasse
 Leimgrubenweg
@@ -56135,15 +55627,12 @@ Leopold-Spiegel-Weg
 Leopoldstalerstraße
 Leopoldstaler Straße
 Leopoldstraße
-Leopoldstraße 5 / Ecke Georgenstraße
 Leopoldstraße / Ainmillerstraße
-Leopoldstraße bzw. Ludwigstraße
 Leopoldstraße / Ecke Ainmillerstraße
 Leopoldstraße / Ecke Georgenstraße
 Leopoldstraße/ Ecke Hohenzollernstraße
 Leopoldstraße / Ecke Kaiserstraße
 Leopoldstraße / Ecke Trautenwolfstraße
-Leopoldstraße ( Hohenzollernpassage )
 Leopoldsweg
 Leopold-von-Ranke-Straße
 Leopold-Ziegler-Straße
@@ -56249,7 +55738,6 @@ Lettenbachstraße
 Lettengasse
 Lettenpark
 Lettenstraße
-lettenweg
 Lettenweg
 Letter Berg
 Letter Bruch
@@ -56749,7 +56237,6 @@ Lina-Wehrle-Straße
 Linckensstraße
 Linckestraße
 Lincolnstraße
-Lind
 Lindach
 Lindacher Feld
 Lindacher Ring
@@ -56854,7 +56341,6 @@ Lindenschusterweg
 Lindenspürstraße
 Lindensteig
 Lindenstraat
-lindenstraße
 Lindenstrasse
 Lindenstraße
 Lindenstruther Weg
@@ -56959,7 +56445,6 @@ Linkgasse
 Links der Alb
 Links der Werse
 Linkstraße
-linkstraße / auf der liet
 Linnebachweg
 Linnenbacher Weg
 Linnenbachweg
@@ -57138,7 +56623,6 @@ Lixfelder Weg
 Lixstraße
 Lloydstraße
 Loachwiesenweg
-Loah
 Löbauer Berg
 Löbauer Straße
 Lobbe
@@ -57184,7 +56668,6 @@ Loburger Kamp
 Loburger Straße
 Lobuschstraße
 Loccumer Straße
-Loch
 Lochackerstraße
 Lochäckerstraße
 Lochackerweg
@@ -57284,9 +56767,6 @@ Loggergang
 Loggerstraße
 Loggster Pad
 Logumer Straße
-loh
-Loh
-Löh
 Lohacker
 Lohäckerstraße
 Lohauser Dorfstraße
@@ -57316,7 +56796,6 @@ Lohburger Straße
 Lohbuscher Weg
 Lohdieksweg
 Löhdorfer Straße
-Lohe
 Lohebergweg
 Loheide
 Lohengrinstraße
@@ -57997,7 +57476,6 @@ Ludwig-Merk-Straße
 Ludwig-Mohr-Straße
 Ludwig-Mönch-Straße
 Ludwig-Mond-Straße
-Ludwig-Mond-Straße 37A
 Ludwig-Müller-Uri-Straße
 Ludwig-Murr-Straße
 Ludwig-Neck-Straße
@@ -58025,7 +57503,6 @@ Ludwigsberg
 Ludwigsburger Steige
 Ludwigsburger Straße
 Ludwig-Schauß-Straße
-Ludwig-Schmank-Str.11
 Ludwig-Schmank-Straße
 Ludwig-Schmid-Straße
 Ludwig-Schöffel-Straße
@@ -58268,7 +57745,6 @@ Luruper Chaussee
 Luruper Drift
 Luruper Hauptstraße
 Luruper Weg
-Lus
 Lusaner Straße
 Lusatia
 Lüsbacher Weg
@@ -58470,17 +57946,9 @@ Lyonerring
 Lyoner Straße
 Lyrenstraße
 Lyserstraße
-Lyst
 Lystvej
 Lyttesholmvej
 Lyzeumstraße
-M2
-M3, 6
-M4
-M5
-M6
-M7
-MÃ¼nchhausenstraÃŸe
 Maadestraße
 Maagshofstraße
 Maakenhofwinkel
@@ -58603,7 +58071,6 @@ Magstadter Straße
 Mähdachstraße
 Mahdeler Hirtenfeld
 Mahden
-Mahdentalstr.112
 Mahdentalstraße
 Mähderklinge
 Mähderweg
@@ -58760,7 +58227,6 @@ Mainzer Weg
 Mainzlarer Straße
 Mainzlohe
 Maiplatz
-Mais
 Maisacher Straße
 Maisacher Weg
 Maischützenstraße
@@ -58904,7 +58370,7 @@ Manfredstraße
 Manfred-von-Ardenne-Ring
 Manfred-von-Richthofen-Straße
 Mangelsdorf
-Mangelsdorf 2
+Mangelsdorf
 Mangelsdorfstraße
 Mangerstraße
 Mangfallstraße
@@ -58940,7 +58406,6 @@ Mannheimer Straße
 Mannheimer Weg
 Mannheimplatz
 Mannheimstraße
-MannheimViehhofstraße
 Mannhofer Straße
 Mannholzer Straße
 Manningaweg
@@ -59237,7 +58702,6 @@ Mariensieler Straße
 Marienstätter Straße
 Marienstieg
 Marienstraße
-Marienstraße 9a
 Mariental
 Marientaler Straße
 Marientalweg
@@ -59343,7 +58807,6 @@ Markscheiderstraße
 Marksteiner
 Markstockstraße
 Markstraße
-Markstraße;Kemnader Straße
 Markststraße
 Marksweg
 Markt
@@ -59364,8 +58827,6 @@ Marktgäßle
 Markthallenstraße
 Marktheidenfelder Straße
 Marktheidenfelder Weg
-Markt (im Schloss)
-Markt  (Kavalierhaus)
 Marktkirchhof
 Marktler Straße
 Markt Nordheim
@@ -59386,7 +58847,6 @@ Markttorstraße
 Markttwiete
 Mark-Twain-Straße
 Marktwasserweg
-Markt; Weender Straße
 Marktweg
 Marktweide
 Marktwinkl
@@ -59403,7 +58863,6 @@ Markweg
 Markwerbener Straße
 Markwiesenstraße
 Markwiesenweg
-Marl
 Marlborough Road
 Marleber Straße
 Marlene-Dietrich-Allee
@@ -59918,7 +59377,6 @@ Max-Eichholz-Ring
 Max-Emanuel-Platz
 Maxener Straße
 Max-Ernst-Straße
-Max - Ernst - Straße;August - Macke - Straße
 Max-Eyth-Allee
 Max Eyth Straße
 Max-Eyth-Straße
@@ -60066,7 +59524,6 @@ Max-Sens-Platz
 Max-Steenbeck-Straße
 Max-Steinke-Straße
 Maxstraße
-Maxstraße / Burgstraße
 Max-Stromeyer-Straße
 Max-Tau-Straße
 Maxtorgraben
@@ -60538,7 +59995,6 @@ Mendelssohnallee
 Mendelssohn-Bartholdy-Straße
 Mendelssohnstraße
 Mendelstraße
-Mendelstraße/Corrensstraße
 Mendelweg
 Mendener Straße
 Mendener Weg
@@ -60664,7 +60120,6 @@ Merkurring
 Merkurstraße
 Merkurweg
 Merlauer Straße
-m Erlengrund
 Merlinweg
 Merlitzstraße
 Merlostraße
@@ -61064,7 +60519,6 @@ Millöckerweg
 Millrather Straße
 Millrather Weg
 Milmersdorfer Weg
-Milower Landstr. 7
 Milower Landstraße
 Milower Straße
 Milseburgstraße
@@ -61245,7 +60699,6 @@ Mittelstetter Weg
 Mittelstieg
 Mittelstrand
 Mittelstraße
-Mittelstraße (268 234 267)
 Mittelstroth
 Mittelteichweg
 Mitteltor
@@ -61306,7 +60759,7 @@ Mittlerer Geisberg
 Mittlerer Graben
 Mittlerer Hauser Weg
 Mittlerer Hauswang
-Mittlerer Hauswang 2
+Mittlerer Hauswang
 Mittlerer Heegweg
 Mittlerer Katzenbergweg
 Mittlerer Kaulberg
@@ -61413,7 +60866,6 @@ Mohnstraße
 Mohnstrauch
 Mohnweg
 Mohorner Straße
-Mohr
 Möhrenbachstraße
 Möhrenbachtal
 Möhrenbachweg
@@ -61593,7 +61045,7 @@ Mönchweilerstraße
 Mönchweiler Straße
 Mönchwörthstraße
 Mönchzeller Steg
-Mönchzeller Weg 6
+Mönchzeller Weg
 Mönckebergstraße
 Mönckedieckstraße
 Mondorfer Straße
@@ -61663,7 +61115,6 @@ Monyvong
 Monzastraße
 Mookweg
 Moolsfeld
-Moor
 Mooräcker
 Mooranger
 Moorbachstraße
@@ -61729,7 +61180,6 @@ Moorweidenstraße
 Moorwerder Hauptdeich
 Moorwiese
 Moorwinkel
-Moos
 Moosacher St.-Martins-Platz
 Moosacher Straße
 Moosäcker
@@ -61883,7 +61333,6 @@ Mörnerstraße
 Mornewegstraße
 Moroweg
 Morper Straße
-Morr
 Morretalstraße
 Morsbachallee
 Morsbacherstraße
@@ -62008,7 +61457,6 @@ Mozartova
 Mozartplatz
 Mozartring
 Mozartstraße
-mozartweg
 Mozartweg
 Mrabellenweg
 Mragowo-Straße
@@ -62164,7 +61612,6 @@ Mühlenholzweg
 Mühlenkamp
 Mühlenkämpchen
 Mühlenkampstr.
-Mühlenkampstr. 24
 Mühlenkampstraße
 Mühlenknippstraße
 Mühlenkopfstraße
@@ -62181,7 +61628,6 @@ Mühlensiefen
 Mühlensteg
 Mühlensteig
 Mühlenstieg
-mühlenstraße
 Mühlenstrasse
 Mühlenstraße
 Mühlental
@@ -62388,7 +61834,6 @@ Müncheberger Straße
 Münchehagenstraße
 Münchener
 Münchener Freiheit
-Münchener Freiheit ( Untergeschoss Nordausgang )
 Münchener Straße
 Münchener Vormarkt
 Münchenstraße
@@ -62406,7 +61851,6 @@ Münchinger Weg
 Münchnerau
 Münchner Bundesstraße
 Münchner Freiheit
-Münchner Freiheit ( Untergeschoss )
 Münchner Platz
 Münchner Ring
 Münchnerstraße
@@ -62517,9 +61961,7 @@ Müritzpromenade
 Müritzstraße
 Müritzweg
 Mürlenbacher Straße
-Murmansker Stra9e
 Murmansker Straße
-Murn
 Murnauer Straße
 Murnauer Weg
 Murnaustraße
@@ -62601,10 +62043,6 @@ Myliusstraße
 Myllendonker Straße
 Myrtenweg
 Myslivecká
-N1
-N5
-N6
-N7
 Naabstraße
 Naabtalpark
 Nabburger Straße
@@ -62720,7 +62158,6 @@ Na Kopci
 Nalepastraße
 Na Měkovině
 Namenlose Straße
-náměstí
 Náměstí
 Nammer Weg
 Namslauer Straße
@@ -62799,7 +62236,6 @@ Natroper Weg
 Natrup
 Natruper Straße
 Natruper-Tor-Wall
-Natt
 Nattenhauser Straße
 Nattenheimer Straße
 Natternberg
@@ -63059,7 +62495,6 @@ Neschwitzer Straße
 Nesenbachstraße
 Nesenstraße
 Nespelerstraße
-Neß
 Nessegrund
 Nesselberg
 Nesselbuschstraße
@@ -63364,7 +62799,7 @@ Neuerburger Straße
 Neuerburgstraße
 Neuer Burgweg
 Neuer Damm
-Neuer Damm, Buddeskamp
+Neuer Damm Buddeskamp
 Neuer Diek
 Neue Reihe
 Neuer Faulenhoop
@@ -63374,9 +62809,6 @@ Neuer Friedhofweg
 Neuer Gang
 Neuer Garten
 Neuer Graben
-Neuer Graben/Schloss
-Neuer Graben/Schloss (Hauptgebäude)
-Neuer Graben/Schloss (Westflügel)
 Neuer Haidkrug
 Neuer Hamm
 Neuer Heidkamp
@@ -63482,7 +62914,7 @@ Neugässchen
 Neugasse
 Neugeorgenfeld
 Neugereut
-Neugereut, Gewann
+Neugereut Gewann
 Neuglücker Weg
 Neugnewitzer Weg
 Neugöggenhofen
@@ -63540,7 +62972,6 @@ Neukalener Straße
 Neukamp
 Neukirchen
 Neukirchener Straße
-Neukirchener Straße; Malvenweg
 Neukirchener Weg
 Neukircher Straße
 Neukircher Weg
@@ -63582,9 +63013,7 @@ Neumannstraße
 Neumannsweg
 Neumärker Straße
 Neumarkstraße
-Neumarkt
 Neumarkter Straße
-Neumarkter Straße 27a
 Neumarktplatz
 Neumarktstraße
 Neumattenweg
@@ -63700,7 +63129,6 @@ Neustädter Kirchenplatz
 Neustädter Markt
 Neustädter Neuer Weg
 Neustädter Passage
-Neustädter Passage Bl.024
 Neustädter Platz
 Neustädter Ring
 Neustadter Straße
@@ -63722,7 +63150,6 @@ Neustrelitzer Straße
 Neustückweg
 Neusüdender Weg
 Neusurenland
-Neut
 Neutorallee
 Neutorgasse
 Neutorgraben
@@ -64221,7 +63648,6 @@ Nindorf
 Nindorfer Eichende
 Nindorfer Straße
 Nininghove
-NINO-Allee  (im NINO-Hochbau)
 Niobestraße
 Niobeweg
 Niorter Straße
@@ -64253,8 +63679,6 @@ Nixhütter Weg
 Nizzaallee
 Nizzastraße
 Nizzatal
-no
-No.33
 Nobbin
 Nobelstraße
 Nobistor
@@ -64297,7 +63721,6 @@ Nömerberg
 Nomi-Rubel-Straße
 Nonengrund
 Nonenstraße
-Nonn
 Nonnenaue
 Nonnenbacher Weg
 Nonnenberg
@@ -64394,7 +63817,7 @@ Norderhafenweg
 Norderhofenden
 Norderholm
 Norderholz
-Norderländer Straße, Oldenburger Straße
+Norderländer Straße Oldenburger Straße
 Norderloog
 Norderlück
 Nordermarkt
@@ -64564,9 +63987,7 @@ Nößlerstraße
 NOSTA-Straße
 Nosthoffenstraße
 Nostitzstraße
--- no street --
 Notburgastraße
-not defined
 Notenau
 Nöthen
 Nöthener Straße
@@ -64618,7 +64039,6 @@ Nufringer Straße
 Nuhnestraße
 Nuhtetalstraße
 Nuitsstraße
-null
 Nüllbergweg
 Numbacher Hof
 Numbachstraße
@@ -64698,15 +64118,11 @@ Nymburská
 Nympheaweg
 Nymphenburger Straße
 Nymphenweg
-O2-Platz
-O6
-O7
 Oakham Way
 Obbornhofener Straße
 Obdamer Straße
 Ob dem Burgtal
 Ob dem tiefen Weg
-Ob demViehweidle
 Ob dem Viehweidle
 Ob den Bergen
 Ob den Gärten
@@ -65359,7 +64775,6 @@ Oberlestraße
 Oberlether Straße
 Ober-Liebersbach
 Oberlindau
-Oberlinden/ Gerberau
 Oberlinder Straße
 Oberlinstraße
 Oberlinweg
@@ -65659,7 +65074,6 @@ Ockerwitzer Straße
 Ocklenburgs Ried
 Ockstädter Straße
 Octavie Allee
-Öd
 Ödammershüll
 Odastraße
 Oddernskamp
@@ -65711,7 +65125,6 @@ Odrellstraße
 Oebisfelder Straße
 Oebisfelder Weg
 Oechelhaeuser Straße
-Oed
 Oedemer Weg
 Oedenberger Hauptstraße
 Oedenberger Straße
@@ -65860,11 +65273,9 @@ Offinger Straße
 Offizial-Schmid-Straße
 Offleber Straße
 Offlumer Straße
-Offsteiner Straße / Außerhalb
 Ogenbarger Kirchweg
 Oggenhausenerstraße
 Oggenhausener Straße
-oggenhauser Straße
 Oggenhauser Straße
 Oggenrieder Weg
 Oggersheimer Straße
@@ -65939,7 +65350,6 @@ Ohrenbergstraße
 Ohrestraße
 Öhringer Straße
 Öhringer Weg
-ohrmooser Straße
 Ohrnbach
 Ohrnberger Straße
 Ohrnsweg
@@ -65954,7 +65364,6 @@ Oistraße
 Öjendorfer Weg
 Okapiweg
 Okarinastraße
-Oken
 Okenstraße
 Okeraue
 Okerblick
@@ -66076,7 +65485,6 @@ Olof-Palme-Platz
 Olof Palme-Straße
 Olof-Palme-Straße
 Olomoucká
-Olpe
 Olpener Straße
 Olpenitzer Dorfstraße
 Olper Hütte
@@ -66279,7 +65687,6 @@ Orscheider Straße
 Orsfeldweg
 Orsoyer Straße
 Orspachweg
-Ort
 Ortbeckstraße
 Ortdieck
 Örtelsbruch
@@ -66303,7 +65710,6 @@ Orthweg
 Ortinstraße
 Ortkampsweg
 Ortkruger Weg
-Örtl
 Örtleinsweg
 Ortlerstraße
 Ortlfinger Straße
@@ -66406,7 +65812,6 @@ Oslebshauser Landstraße
 Oslebshauser Tor
 Oslebshauser Wurth
 Osloer Straße
-Osloer Straße/Prinzenallee
 Osloring
 Oslostraße
 Osmiastraße
@@ -66443,7 +65848,6 @@ Ossum
 Ossumer Straße
 Oßwaldstraße
 Oßweiler Weg
-Ost
 Ostackerweg
 Ostallee
 Ostanlage
@@ -66599,7 +66003,6 @@ Ostersteg
 Osterstiege
 Osterstraße
 Österstraße
-Osterstraße (Cityring)
 Ostertagstraße
 Ostertalstraße
 Ostertalweg
@@ -66735,7 +66138,7 @@ Oswald-Zobel-Straße
 Oswaltstraße
 Otawistraße
 Otawiweg
-OT Baruth, Cortnitzer Straße
+OT Baruth Cortnitzer Straße
 Otfried-Müller-Straße
 Otfried-Preußler-Straße
 Othellostraße
@@ -66752,7 +66155,7 @@ OT Laasche
 Otlerstraße
 Ötlinger Weg
 OT. Pielitz Nr.
-OT Preititz, Malschwitzer Straße
+OT Preititz Malschwitzer Straße
 Ötscher Straße
 Ottacker
 Ottenbacher Straße
@@ -66873,7 +66276,6 @@ Otto-Dix-Straße
 Otto-Dix-Weg
 Otto-Doeffer-Straße
 Otto-Eckerle-Straße
-otto-Engert-Straße
 Otto-Engert-Straße
 Otto-Engl-Platz
 Otto-Erbe-Weg
@@ -67088,12 +66490,6 @@ Oyterdamm
 Oytermühle
 Oyter See
 Oythe
-P4 Auf den Planken
-P5
-P6
-P7
-P7, 1
-P7, 24
 Paarau
 Paarener Dorfstraße
 Paarener Mühlenweg
@@ -67348,7 +66744,6 @@ Pariner Straße
 Pariser Platz
 Pariser Ring
 Pariser Straße
-Park
 Parkacker
 Parkackerstraße
 Parkallee
@@ -67364,7 +66759,6 @@ Parkgrund
 Parkgürtel
 Parkhaus Bonifaziusplatz
 Parkhaus Media Markt
-Parkhaus Messeturm; Friedrich Ebert Anlage
 Parkhaus Peiner Straße
 Parkhausweg
 Parkhofstraße
@@ -67561,7 +66955,6 @@ Patronatsstraße
 Patronatstraße
 Patronatsweg
 Patschinserstraße
-Patt
 Pattenhofener Straße
 Patternhof
 Pattland
@@ -67829,14 +67222,12 @@ Peddenöder Straße
 Peddinghausstraße
 Pedettistraße
 Pedingworth
-Peel
 Peeneberg
 Peenestraße
 Peenstraße
 Peerkamp
 Peerkoppel
 Peermoor
-Peez
 Pegasusstraße
 Pegasustraße
 Pegauer
@@ -67906,7 +67297,6 @@ Penningskamp
 Pennricher Straße
 Pennrichstraße
 Pennstraße
-Penny Kundenparkplatz - An der Wollebahn (Döhren)
 Pentelingstraße
 Pentenhofener Straße
 Pentenriederstraße
@@ -68142,7 +67532,6 @@ Peter-Sengl-Straße
 Petersenplatz
 Petersfeld
 Petersfelder Straße
-petersgasse
 Petersgasse
 Petersgässle
 Petersgmünder Straße
@@ -69007,7 +68396,6 @@ Plaggenweg
 Plaggestraße
 Plaidterstraße
 Plambeckskamp
-Plan
 Planatenweg
 Planberg
 Planckstraße
@@ -69034,7 +68422,6 @@ Plankerdyk
 Plankstadter Straße
 Plankstraße
 Plankweg
-planplatz
 Planplatz
 Planstraße
 Plantage
@@ -69049,7 +68436,6 @@ Planufer
 Planweg
 Plappsteinweg
 Plärrer
-Plas
 Pläsken
 Plass
 Plasseweg
@@ -69510,7 +68896,6 @@ Possartstraße
 Possecker Straße
 Possehlstraße
 Posseltstraße
-possen
 Possenallee
 Possendorfer Straße
 Possenheimer Straße
@@ -69527,8 +68912,6 @@ Postdamm
 Postdeich
 Post Einödsbach
 Postenweg
-Postfach
-Postfach 15
 Postfelder Straße
 Postfelder Weg
 Postfeldstraße
@@ -69589,7 +68972,6 @@ Potsdam
 Potsdamer Allee
 Potsdamer Chausee
 Potsdamer Chaussee
-Potsdamer  Chaussee
 Potsdamer Platz
 Potsdamer Ring
 Potsdamerstraße
@@ -69674,7 +69056,6 @@ Prälat-Subtil-Ring
 Prälat-Werthmann-Ring
 Prälat-Zistl-Straße
 Pralleweg
-Pram
 Prämäckerweg
 Pramenweg
 Prämienstraße
@@ -69804,7 +69185,6 @@ Priemitzstraße
 Priener Straße
 Prienfeldhof
 Prierosser Straße
-Prierosser Straße 61 12357 Berlin
 Priesdorfer Straße
 Priesen
 Prießallee
@@ -69888,14 +69268,6 @@ Prittwitzstraße
 Pritzl
 Pritzwalker Straße
 Privatstraße
-Privatstraße 10
-Privatstraße 3
-Privatstraße 4
-Privatstraße 5
-Privatstraße 6
-Privatstraße 7
-Privatstraße 8
-Privatstraße 9
 Privatweg
 Priwallstraße
 Probbacher Straße
@@ -70064,7 +69436,6 @@ Prösten
 Prostewardsweg
 Protestraße
 Prötzeler Chaussee
-Prötzeler Chaussee 25
 Prötzeler Ring
 Provenceweg
 Provianstraße
@@ -70173,7 +69544,6 @@ Puppberg
 Puppendorfer Privatweg
 Puppenweg
 Purchhauserstraße
-Purd
 Puricellistraße
 Purkshof
 Pürnerstraße
@@ -70184,7 +69554,7 @@ Pürstlingstraße
 Purtschellerstr-
 Püscheldorf
 Puschkinallee
-Puschkinallee/ Elsenstraße
+Puschkinallee/Elsenstraße
 Puschkingstraße
 Puschkinplatz
 Puschkin-Platz
@@ -70193,7 +69563,6 @@ Puschkinstraße
 Puschkinweg
 Puschmannstraße
 Puschstraße
-pusckinplatz
 Puslweg
 Pußta
 Putbuser Straße
@@ -70248,12 +69617,6 @@ Pyritzer Straße
 Pyrmonter Straße
 Pyrnaer Straße
 Pythagoweg
-Q1
-Q5
-Q6
-Q7
-Q7, 17
-Q7, 21
 Quade-Foelke-Weg
 Quadenhofstraße
 Quadfliegstraße
@@ -70362,10 +69725,6 @@ Quittenweg
 Quitzowstraße
 Quohrener Straße
 Quosdorfstraße
-R1
-R2, 2
-R27 R28
-R5
 Raabengasse
 Raabestraße
 Raabeweg
@@ -70445,7 +69804,6 @@ Radbruchstraße
 Radbrunnengasse
 Raddasstraße
 Raddeweg
-Rade
 Radeberg
 Radeberger Landstraße
 Radeberger Straße
@@ -70493,7 +69851,6 @@ Radilostraße
 Radiser Straße
 Radiumstraße
 Radkuhl
-Radl
 Radlerstraße
 Radler Straße
 Radlkoferstraße
@@ -70553,7 +69910,6 @@ Rahlstedter Stieg
 Rahlstedter Straße
 Rahlstedter Weg
 Rählwiese
-Rahm
 Rahmannstraße
 Rahmbruchsweg
 Rahmdörne
@@ -70586,10 +69942,9 @@ Raiffeisenallee
 Raiffeisengasse
 Raiffeisenplatz
 Raiffeisenring
-Raiffeisenstr,
+Raiffeisenstr
 Raiffeisenstraße
 Raiffeisen Straße
-RAIFFEISENStraße (EHEMALS \IHRE KETTE MARKT\)
 Raiffeisentraße
 Raiffeisenweg
 Raiffeisnstraße
@@ -70865,8 +70220,6 @@ Rathgeberhof
 Rathgeberstraße
 Rathhausplatz
 Rathjenweg
-Rathjenweg 1 u.
-Rathjenweg 1 u. 3
 Rathmannsdorfer Schleuse
 Rathmannsdorfer Weg
 Rathmannstraße
@@ -70977,7 +70330,6 @@ Raulfskamp
 Raumannskaul
 Raumersgasse
 Raumerstraße
-Raun
 Raunerstraße
 Raunheim
 Raunstraße
@@ -71380,7 +70732,6 @@ Reichensächser Straße
 Reichensand
 Reichenschwander Straße
 Reichenspergerplatz
-Reichensteiner Straße (?)
 Reichensteiner Straße
 Reichensteinstraße
 Reichenstraße
@@ -71454,7 +70805,6 @@ Reihenstraße
 Reiherbergstraße
 Reiherbusch
 Reiherhorst
-Reiherhorstweg 22
 Reihersteg
 Reihersteige
 Reiherstieg
@@ -71787,7 +71137,7 @@ Rennplatzstraße
 Rennsahl
 Rennsteig
 Rennsteigstraße
-Rennstieg, Nienburger Straße
+Rennstieg Nienburger Straße
 Rennstraße
 Renntalstraße
 Renntormauer
@@ -71923,7 +71273,6 @@ Reußenweg
 Reußische Gasse
 Reußstraße
 Reußweg
-Reut
 Reute
 Reutebacher Höfe
 Reutegartenweg
@@ -71976,12 +71325,10 @@ Reventloustraße
 Reventlowstraße
 Revierstraße
 Revoluční
-REWE - An der Wollebahn (Döhren)
 Rewestraße
 Rewitzerstraße
 Rexinger Weg
 Rexrothstraße
-Reye
 Reyerhütte
 Reyerhütter Straße
 Reyerstraße
@@ -72058,7 +71405,6 @@ Rheinischer Platz
 Rheinischer Ring
 Rheinische Straße
 Rheinlanddamm
-RheinLandplatz
 Rheinlandstraße
 Rhein-Maas-Straße
 Rhein-Mosel-Straße
@@ -72078,8 +71424,8 @@ Rheinsteig
 Rheinsträßchen
 Rheinstrasse
 Rheinstraße
-Rheinstraße 122a
-Rheinstraße 16a
+Rheinstraße22a
+Rheinstraße6a
 Rheintalbahnstraße
 Rheintalstraße
 Rheintörchenstraße
@@ -72281,7 +71627,6 @@ Ridbacher Straße
 Ridderade
 Ridderstraße
 Ridlerstraße
-Rieb
 Riebauer Straße
 Riebeckplatz
 Riebeckstraße
@@ -72292,7 +71637,6 @@ Rieckherstraße
 Rieckhoffstraße
 Rieckstraße
 Riecksweg
-Ried
 Riedäcker
 Riedackerstraße
 Riedbachstraße
@@ -72552,7 +71896,6 @@ Rindertanzstraße
 Rindhofgarten
 Rindsberger Mühle
 Rindweg
-Ring
 Ringallee
 Ringbahnstraße
 Ringberg
@@ -72679,7 +72022,6 @@ Ritterbrunnen
 Ritterbüschel
 Ritter-Chorus-Straße
 Ritterfelddamm
-rittergasse
 Rittergasse
 Rittergut
 Rittergutsgasse
@@ -72700,7 +72042,6 @@ Rittermannshagen
 Ritter-Merz-Straße
 Ritterpassage
 Ritterplan
-Ritterplan; Burgstraße
 Ritterplatz
 Ritter-Raschen-Straße
 Rittersbachstraße
@@ -73178,7 +72519,6 @@ Roidestraße
 Roidham
 Roisdorfer Straße
 Roisdorfer Weg
-Roit
 Roith
 Roither Weg
 Roitzheimer Straße
@@ -73360,7 +72700,7 @@ Rönnstraße
 Rönsahler Straße
 Ronsbergweg
 Ronsdorfer Straße
-Ronsdorfer Straße 2 Garten
+Ronsdorfer Straße Garten
 Röntgenplatz
 Röntgenstraße
 Röntgenweg
@@ -73411,7 +72751,6 @@ Roschützer Straße
 Röschweg
 Rosdorf
 Rosdorfer Weg
-Rose
 Rose-Ausländer-Straße
 Roseggerstraße
 Roseggerweg
@@ -73774,7 +73113,6 @@ Rotewegsbreite
 Rotfederweg
 Rotfuchsstraße
 Rotgerweg
-Roth
 Rothaarweg
 Rothäckerweg
 Röthaer Straße
@@ -73913,7 +73251,6 @@ Rotscherlinde
 Rotspitzweg
 Rötsteige
 Rotswiesenweg
-Rott
 Rottachbergstraße
 Rottachbergweg
 Rottacher Straße
@@ -74004,7 +73341,6 @@ Rotwandweg
 Rotweg
 Rotweinstraße
 Rotwildstraße
-Rötz
 Rötzberg
 Rotzingen
 Rotzler Straße
@@ -74021,7 +73357,6 @@ Röwenkamp
 Rowentastraße
 Roxeler Straße
 Röxer Straße
-Roy
 Royland
 Rua Hiroshima
 Ruar Ört
@@ -74144,7 +73479,6 @@ Rudolf-Breitscheid
 Rudolf-Breitscheid-Allee
 Rudolf-Breitscheid-Hof
 Rudolf-Breitscheid-Steg
-Rudolf-Breitscheid-str.9
 Rudolf-Breitscheid Straße
 Rudolf-Breitscheid-Straße
 Rudolf-Breitscheidt-Straße
@@ -74355,7 +73689,6 @@ Ruhlsdorfer Straße / Asternstraße
 Ruhlsdorfer Weg
 Ruhlstraße
 Rühlstraße
-Ruhm
 Rühmer Weg
 Rühmkorffstraße
 Rühner Landweg
@@ -74393,7 +73726,6 @@ Ruinenbergstraße
 Ruinenstraße
 Ruiter Straße
 Ruitzhof
-Rük
 Rukulenstraße
 Ruländerallee
 Ruländerstraße
@@ -74407,7 +73739,6 @@ Rulestraße
 Rulfingerstraße
 Rulfinger Straße
 Rülingstraße
-Rull
 Rülzheimer Straße
 Rumannstraße
 Rümannstraße
@@ -74644,12 +73975,6 @@ Rybnikstraße
 Rykestraße
 Rylevej
 Rymelsberg
-RZ Sieg: Verwaltungsgebäude; Friedrichstraße
-S2
-S3
-S4
-S6
-Saal
 Saalachstraße
 Saalackerstraße
 Saalbachstraße
@@ -74770,7 +74095,6 @@ Sächsische Straße
 Sachsstraße
 Sachtestieg
 Sachtlebenstraße
-Sack
 Sackenbacher Straße
 Sackestraße
 Sackgasse
@@ -74801,7 +74125,6 @@ Saganstraße
 Sagarder Weg
 Sagaystraße
 Sagberg
-Säge
 Sägebockweg
 Sage-Bräu-Straße
 Sägegasse
@@ -75048,7 +74371,6 @@ Sanatoriumsplatz
 Sanatoriumstraße
 San-Biaggio-Platani-Platz
 San Carlos Straße
-Sand
 Sandacker
 Sandäcker
 Sandäckerstraße
@@ -75197,7 +74519,6 @@ Sandträgerweg
 Sandtrift
 Sandwall
 Sandwäsche
-sandweg
 Sandweg
 Sandweierer Straße
 Sandwiese
@@ -75910,7 +75231,6 @@ Schauinsland
 Schauinslandstraße
 Schauinslandweg
 Schaulbarg
-schaumbergstraße
 Schaumbergstraße
 Schaumburger Landstraße
 Schaumburgerstraße
@@ -76481,7 +75801,6 @@ Schkölener Weg
 Schkönaer Straße
 Schkopauerstraße
 Schkopauer Weg
-Schl
 Schlaa
 Schlaatzstraße
 Schlaatzweg
@@ -76670,7 +75989,6 @@ Schlesischer Platz
 Schlesischer Ring
 Schlesischestraße
 Schlesische Straße
-Schleswag-HeinGas-Platz
 Schleswiger Chaussee
 Schleswiger Straße
 Schleswiger Ufer
@@ -76783,7 +76101,7 @@ Schlossallee
 Schloßallee
 Schloßanger
 Schloßauer Straße
-Schloßaufgang 1
+Schloßaufgang
 Schloßaufgang IV
 Schlossaufgang VI
 Schloßaufgang VI
@@ -76898,7 +76216,6 @@ Schloß-Urach-Straße
 Schloßwaldstraße
 Schloßwaldweg
 Schloßwall
-Schlosswall 24 (Ecke Rehmstrasse)
 Schlossweg
 Schloßweg
 Schloßweide
@@ -77476,7 +76793,6 @@ Schöndorfer Hauptstraße
 Schondorfer Straße
 Schöndorffstraße
 Schöne Allee
-SchöneAussicht
 Schöne Aussicht
 Schönebacher Straße
 Schonebeck
@@ -77857,7 +77173,6 @@ Schuckertplatz
 Schuckertstraße
 Schückingstraße
 Schückstraße
-SchuetZenstraße
 Schüffnerstraße
 Schuhagen
 Schuhgasse
@@ -77939,11 +77254,8 @@ Schulsiedlung
 Schulsteig
 Schulstr.
 Schulstra0e
-Schulstraß2
 Schulstrasse
-Schulstraße.
 Schulstraße
-SchulStraße
 Schulte-Bernd-Straße
 Schulte-Heuthaus-Straße
 Schulte-Hinsel-Straße
@@ -78161,7 +77473,7 @@ Schützenwiese
 Schützinger Weg
 Schützkamp
 Schützstraße
-Schützstraße 1
+Schützstraße
 Schützweg
 Schwaamer Straße
 Schwaaner Chaussee
@@ -78394,7 +77706,7 @@ Schwarzer Weg
 Schwarze Straße
 Schwarzeweg
 Schwarzhamm
-Schwarzhauptstraße 10,
+Schwarzhauptstraße0
 Schwarzheider Straße
 Schwarzhölzlstraße
 Schwarzholzstraße
@@ -78730,7 +78042,6 @@ Sedentaler Straße
 Sederanger
 Sedlbrunn
 Sedlweg
-See
 Seeäcker
 Seeäckerstraße
 Seeadlerweg
@@ -79092,7 +78403,6 @@ Sellscheid
 Sellscheidt
 Sellstedter Straße
 Sellstedter Weg
-Selm
 Selma-Lagerlöf-Straße
 Selma-Lagerlöf-Weg
 Selmastraße
@@ -79189,8 +78499,6 @@ Senior-Blumenberg-Gang
 Seniorenweg
 Seniorenzentrum
 Seniorenzentrum Am Stockberg
-SeniVita
-SeniVita Berufsschule
 Senke
 Senkelbachstraße
 Senkelbachweg
@@ -79603,7 +78911,6 @@ Siemens-Martin-Straße
 Siemensring
 Siemensstr.
 Siemensstraße
-Siemensstraße / Bundesknappschaft
 Siemenstraße
 Siemensweg
 Siemenswerderweg
@@ -79726,7 +79033,6 @@ Sildemower Weg
 Silder Moor
 Silesiusstraße
 Silingenweg
-Silk
 Sillemstraße
 Sillenbucher Straße
 Sillensteder Straße
@@ -79963,14 +79269,12 @@ Sodtkestraße
 Sodweg
 Soenneckenstraße
 Soerser Weg
-Soestenstraße (Cityring)
 Soesterstraße
 Soester Straße
 Soester Weg
 Soestestraße
 Sofiedalvej
 Sofienstraße
-Sofienstraße (Galeria Kaufhof)
 Sofioter Straße
 Söflinger Straße
 Softwarecenter
@@ -80025,7 +79329,6 @@ Soldnerstraße
 Soldnerweg
 Soldpuhlweg
 Solferinostraße
-Solg
 Solgasse
 Solinger Straße
 Solinggut
@@ -80034,7 +79337,6 @@ Solitude
 Solitüde
 Solitudeallee
 Solitudestraße
-s.Oliver-Straße
 Solkowskyweg
 Solla
 Sollach
@@ -80255,7 +79557,6 @@ Sonnenstraße
 Sonnentaustraße
 Sonnentauweg
 Sonnentor
-sonnenweg
 Sonnenweg
 Sonnenwendstraße
 Sonnenwiechser Straße
@@ -80323,7 +79624,6 @@ Sophie-Scholl-Weg
 Sophie-Schütte-Straße
 Sophie-Thiemann-Straße
 Sophie-von-Boetticher-Straße
-Sophie-von-LaRoche-Straße
 Sophie-von-La-Roche-Weg
 Soproner Straße
 Sopronstraße
@@ -80542,7 +79842,6 @@ Spethstraße
 Spettinger Straße
 Spetzweg
 Spexarder Straße
-SpeyererStraße
 Speyerer Straße
 Speyerer STraße
 Speyerstraße
@@ -80859,7 +80158,7 @@ Springloh
 Springmannskamp
 Springmannstraße
 Springmorgen
-Springorumallee 20
+Springorumallee0
 Springorumstraße
 Springstraße
 Springteichallee
@@ -80892,7 +80191,6 @@ Spyckscher Baum
 Spykweg
 Sredzkistraße
 Sresemannstraße
-ßßß
 Staadäckerweg
 Staader Straße
 Staader Thalweg
@@ -80916,7 +80214,6 @@ Stachelbeerweg
 Stachöder Weg
 Stackenbergstraße
 Stackendorf
-Stad
 Stadel
 Stadeläcker
 Stadelbergerstraße
@@ -81210,7 +80507,6 @@ Starkertshofener Straße
 Stärkestraße
 Starkfeld
 Starkheim
-starklef
 Starklef
 Starkstraße
 Starnberger Feldweg
@@ -81240,7 +80536,6 @@ Stattmanns Kamp
 Stattropstraße
 Stattskamp
 Stätzlinger Straße
-Stau
 Staubenthaler Höhe
 Staubörnchenstraße
 Stauchartinger Weg
@@ -81405,7 +80700,6 @@ Steffenstraße
 Steffensweg
 Steffi-Graf-Straße
 Ste. Foy Straße
-Steg
 Stegauracher Straße
 Stegekampring
 Stegel
@@ -81443,7 +80737,7 @@ Stegwiese
 Stegwiesen
 Stegwiesenstraße
 Stehfenstraße
-Stehfenstraße 2a
+Stehfenstraßea
 Stehlings
 Stehmannstraße
 Stehnckenshoff
@@ -81659,7 +80953,6 @@ Steinflurweg
 Steinfrankenreuth
 Steinfulgen
 Steinfurt
-SteinfurterStraße
 Steinfurter Straße
 Steinfurther Straße
 Steinfurther Weg
@@ -81846,7 +81139,6 @@ Steinslieth
 Steinspoint
 Steinsstraße
 Steinstoß
-steinstraße
 Steinstrasse
 Steinstraße
 Steinstraßer Allee
@@ -82005,8 +81297,6 @@ Steprathstraße
 St. Erentrudis-Straße
 Stergweg
 Sterholzer Straße
-Sterie
-Sterkrader Str.75
 Sterkrader Straße
 Sterlepperstraße
 Sterlingsweg
@@ -82029,7 +81319,7 @@ Sternenstraße
 Sternentor
 Sternenweg
 Sternfelder Straße
-Sternfelder Straße 1
+Sternfelder Straße
 Sternfeldstraße
 Sterngasse
 Sternkamp
@@ -82657,19 +81947,6 @@ Straßburger Weg
 Straßburgpassage
 Sträßchensweg
 Straßdorfer Straße
-Straße 103
-Straße 133
-Straße 134
-Straße 142
-Straße 155
-Straße 156
-Straße 158
-Straße 207
-Straße 210
-Straße 245
-Straße 33
-Straße 482
-Straße 70
 Straße am Flugplatz
 Straße am Forum
 Straße am Heizhaus
@@ -82680,8 +81957,6 @@ Straße am Wasserturm
 Straße am Zeltplatz
 Straße an der Rodelbahn
 Straßeckhauser Straße
-Straße D
-Straße de Aufbau
 Straße der Aktivisten
 Straße der AWG
 Straße der Bauarbeiter
@@ -82710,10 +81985,6 @@ Straße der Solidarität
 Straße der Völkerfreundschaft
 Straße der Waggonbauer
 Straße der Zukunft
-Straße des 13. Januar
-Straße des 17. Juni
-Straße des 18. März
-Straße des 18. Oktober
 Straße des 8. Mai
 Straße des Aufbaues
 Straße des Aufbaus
@@ -82774,7 +82045,6 @@ Straubelstraße
 Straubenbergstraße
 Straubenhardter Straße
 Straubingerer Straße
-Straubinger Str.15
 Straubinger Straße
 Sträublingshof
 Strauchbergweg
@@ -82847,7 +82117,7 @@ Stresemannplatz
 Stresemannring
 Stresemannstraße
 Stresemann Straße
-Stresemannstraße 2 am Marienplatz 41236 Mönchengladbach
+Stresemannstraße am Marienplatz 41236 Mönchengladbach
 Stresemannweg
 Stresowplatz
 Stresowstraße
@@ -83268,7 +82538,7 @@ Sudetenlandweg
 Sudetenplatz
 Sudetenring
 Sudetenstraße
-Sudetenstraße 22 Garten
+Sudetenstraße2 Garten
 Sudetenweg
 Südeweg
 Südfeld
@@ -83299,7 +82569,6 @@ Südliche Hauptstraße
 Südliche Ingolstädter Straße
 Südliche Münchener Straße
 Südliche Münchner Straße
-südliche Ringstraße
 Südliche Ringstraße
 Südlicher Knick
 Südlicher Küstenkanal
@@ -83320,7 +82589,6 @@ Südspitze
 Südstadtring
 Südstern
 Südstrand
-südstraße
 Südstraße
 Süd-Straße
 Südstraße I
@@ -83350,7 +82618,6 @@ Sugambrerweg
 Süggelberg
 Süggelrandweg
 Süggelweg
-suherdorf 4
 Suhler Straße
 Suhler Weg
 Suhlgarten
@@ -83581,11 +82848,6 @@ Syuggewarder Weg
 Szamotuly-Straße
 Szczeciner Straße
 Székesfehérvárer Straße
-T1
-T2
-T3
-T6
-Taarepswoi
 Taarer Straße
 Tabakblütenweg
 Tabakried
@@ -83619,7 +82881,6 @@ Tafelstraße
 Täfertinger Straße
 Täfertinger Weg
 Tafingerstraße
-Taft
 Tägermoosstraße
 Tagetesstraße
 Tagetesweg
@@ -83638,7 +82899,6 @@ Taklerring
 Taku-Fort-Straße
 Takuplatz
 Takustraße
-Tal
 Taläcker
 Talackerstraße
 Talackerweg
@@ -83945,8 +83205,6 @@ Taxisweg
 Taxusstraße
 Taxusweg
 Taylorstraße
-tbd
-team Allee
 Techentiner Straße
 Technikumplatz
 Technikumstraße
@@ -83958,7 +83216,6 @@ Tecklenburger
 Tecklenburgerstraße
 Tecklenburger Straße
 Tecklenburger Weg
-teckstraße
 Teckstraße
 Teekoppel
 Teerhof
@@ -84219,7 +83476,6 @@ Thaddenstraße
 Thadenstraße
 Thaerplatz
 Thaerstraße
-Thal
 Thalacker
 Thalackerstraße
 Thalenweg
@@ -84278,7 +83534,6 @@ Thedastraße
 Thedestraße
 Thedinghausenstraße
 Thedinghauserstraße
-Thedor-Heus,/Am Bieberbach
 Theeberg
 Theekamp
 Theener Oststreek
@@ -84353,7 +83608,6 @@ Theodor-Hellmich-Straße
 Theodor-Heuss-Allee
 Theodor-Heuss-Anlage
 Theodor-Heuss-Platz
-Theodor-Heuss-Platz/Theater Platz
 Theodor-Heuss-Ring
 Theodor-Heuss-Ring/Ostring
 Theodor-Heuss-Str.
@@ -84456,7 +83710,6 @@ Theutbirgstraße
 Thewissenweg
 Thiatildisstraße
 Thibautstraße
-Thie
 Thiebauthstraße
 Thieboldsgasse
 Thiedebacher Weg
@@ -84664,7 +83917,7 @@ Thymianweg
 Thyrastraße
 Thyratal
 Thyrusstraße
-ThyssenKrupp Allee
+Thyssen-Krupp Allee
 Thywissenstraße
 Tiarksstraße
 Tiarks Straße
@@ -84765,7 +84018,6 @@ Tigerstraße
 Tigges Wiese
 Tilbeck
 Tilbecker Straße
-Tilbecker Straße 34
 Tile-Hagemann-Straße
 Tile-Wardenberg-Straße
 Tilgenkampstraße
@@ -84895,7 +84147,6 @@ Todtnauer Hüttenweg
 Todtshorner Weg
 Toepfferspark
 Toeplerstraße
-Toft
 Töggernweg
 Töginger Straße
 Togostraße
@@ -84913,12 +84164,10 @@ Tollerstraße
 Tollkirschenweg
 Töllnerstraße
 Tolstoistraße
-TölzerStraße
 Tölzer Straße
 Tomasistraße
 Tomberger Straße
 Tombergstraße
-tom-Brok-Straße
 Tom-Brook-Straße
 Tomburgstraße
 Tomerdinger Straße
@@ -85013,7 +84262,6 @@ Toppheideweg
 Toppstraße
 Topsstraße
 Topsweg
-Tor
 Toräcker
 Torbogen
 Torckweg
@@ -85043,7 +84291,6 @@ Torhausweg
 Torkelbergstraße
 Törlenweg
 Törlesäckerstraße
-Törn
 Tornaer Straße
 Tornauer Straße
 Tornauer Weg
@@ -85090,7 +84337,6 @@ Tovární
 Towerstraße
 Traarer Rathausmarkt
 Traarer Straße
-Trab
 Trabelsdorfer Weg
 Traberallee
 Trabers
@@ -85688,27 +84934,11 @@ Twixlumer Reihe
 Twüschenweg
 Tybbinkstraße
 Tychsenstraße
-Tye
 Tylova
 Tymannstraße
 Tyršova
 Tzschimmerstraße
 Tzschirnerplatz
-U1
-U2
-U3
-U4
-U5
-U6
-Ualaanj
-Ualjaat
-Ual Saarepswai
-Uasteraanj
-Uasteranjstich
-Uasterhörn
-Uasterjen
-Uasterstigh
-U Bažin
 Ubbelohdestraße
 Ubbo-Emmius-Straße
 Übelein
@@ -85789,7 +85019,6 @@ Udenhäuser Straße
 Üdersdorferstraße
 Üdersee Süd
 Udetstraße
-Udetstraße 3
 Udo-Fischer-Straße
 Udo-Lindenberg-Platz
 Udo-Scholz-Weg
@@ -85803,7 +85032,6 @@ Ueckerstraße
 Ueddinger Straße
 Uedemer Straße
 Uedesheimer Straße
-Uedesheimerstraße;Müggenburgstraße
 Uedingsweg
 Uelenbenderweg
 Uelitzer Straße
@@ -85826,7 +85054,6 @@ Uetzer Dorfstraße
 Uetzer Straße
 Uetzinger Straße
 Ufaer Straße
-Ufer
 Uferallee
 Ufergarten
 Uferpromenade
@@ -85871,7 +85098,6 @@ Uhlenhorstweg
 Uhlenkamp
 Uhlenkrog
 Uhlenmeyerstraße
-uhlenstraße
 Uhlenstraße
 Uhlenweg
 Uhlerborner Weg
@@ -85886,7 +85112,6 @@ Uhlmann-Bixterheide-Weg
 Uhlrather Blick
 Uhlrather Straße
 Uhlstraße
-Uhlstraße / An der alten Brauerei (Gieslergalarie)
 Uhrendorf
 Uhrendorfer Deich
 Uhrmachergasse
@@ -85975,7 +85200,6 @@ Ulrich-Stechele-Straße
 Ulrichsteiner Straße
 Ulrich-Steinhauer-Straße
 Ulrichstraße
-Ulrichstraße 8
 Ulrichswall
 Ulrich-Thater-Straße
 Ulrich-Trinkler-Straße
@@ -86026,10 +85250,8 @@ Umspannwerkstraße
 Umstraße
 Umweg
 U Nádraží
-unbekannt
 Unckelstraße
-undefined
-underbergstraße
+Underbergstraße
 Undernhorstweg
 Undinenweg
 Undinestraße
@@ -86058,7 +85280,6 @@ Universitätspark
 Universitätsplatz
 Universitätsring
 Universitätsstraße
-Universitätsstraße 9
 Universitätstraße
 Universtiätsstraße
 Unkel-Andrees-Weg
@@ -86067,7 +85288,6 @@ Unkeler Straße
 Unkeler Weg
 Unkenweg
 Unkersdorfer Straße
-unknown
 Unlander Straße
 Unlandstraße
 Unlandweg
@@ -86347,7 +85567,6 @@ Untere Mühlstraße
 Unterend
 Unterende
 Untere Neckarstraße
-Untere Neckarstraße (Montepellierplatz)
 Untere Neue Straße
 Untere Neustadt
 Unterengengasse
@@ -86583,7 +85802,6 @@ Unterhangstraße
 Unterharnsbach
 Unterhauner Straße
 Unterhaunstädter Weg
-unter hauptstraße
 Unterhausbach
 Unterhausen
 Unterhausener Straße
@@ -86660,7 +85878,6 @@ Unterm Hagen
 Unterm Hahnen
 Unterm Hampelberg
 Untermhäuser Straße
-unterm Heilig Kreuz
 Unterm Heilig Kreuz
 Unterm Hübbeln
 Unterm Hünenstein
@@ -86719,7 +85936,6 @@ Untersbergstraße
 Unterschalkenbach
 Unterscheiben
 Unterscheidentaler Straße
-<unterschiedlich>
 Unterschlauersbacher Hauptstraße
 Unterschmieden
 Unterschmitte
@@ -86972,7 +86188,6 @@ Vaihinger Landstraße
 Vaihinger Markt
 Vaihinger Straße
 Valberter Straße
-<val='Bertolt-Brecht-Straße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valckenburgufer
 Valdagno-Platz
 Valdemarsgade
@@ -87002,16 +86217,13 @@ Valentinweg
 Valepperstraße
 Valepper Straße
 Valeppstraße
-<val='Erfurter Straße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valeria-Kratina-Weg
 Valerieweg
 Valersgarten
 Valerystraße
 Valesistraße
-<val='Friedrich-List-Straße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valkenburger Straße
 Valkenierstraße
-<val='Kurt-Tucholsky-Straße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Vallendarer Straße
 Valleyer Straße
 Valleyer Weg
@@ -87020,15 +86232,12 @@ Vallstedter Weg
 Valmestraße
 Valmeweg
 Valparaisostraße
-<val='Parkstraße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valpichlerstraße
-<val='Röpziger Straße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valterweg
-<val='Upsalastraße',<Priority; inDataSet: false, inStandard: false, selected: false>>
 Valve
 Valznerweiherstraße
 Van-Beethoven-Straße
-van-Brackel-Straße
+Van-Brackel-Straße
 Vandalenstraße
 Van-Delden-Straße
 Van-der-Beek Straße
@@ -87043,12 +86252,12 @@ Van-Gils-Straße
 Van-Gogh-Platz
 Van-Gogh-Straße
 Van Melle Straße
-van-Randenborgh-Weg
-van-Roden-Straße
+Van-Randenborgh-Weg
+Van-Roden-Straße
 Van-Ronzelen-Straße
 Van-Wiggen-Platz
 Van-Wingene-Straße
-van-Wouwer-Straße
+Van-Wouwer-Straße
 Vareler Straße
 Vareler Weg
 Varenholzstraße
@@ -87179,7 +86388,6 @@ Venise-Gosnat-Straße
 Venissieuxer Straße
 Venloerstraße
 Venloer Straße
-Venn
 Vennbachweg
 Vennbahnstraße
 Venne
@@ -87698,7 +86906,6 @@ Vohwinkeler Straße
 Voigdehäger Weg
 Voigendorf
 Voigstorfer Weg
-voigtei
 Voigtei
 Voigtländerstraße
 Voigtsdahlumer Straße
@@ -87841,19 +87048,19 @@ Volzstraße
 Vom-Berge-Weg
 Vomperberg
 Vom-Stein-Platz
-vom-Stein-Straße
+Vom-Stein-Straße
 Vom-Stein-Straße
 Von-Aare-Straße
 Von-Agris-Straße
 Von-Ahlefeldt-Stieg
 Von-Alten-Allee
 Von-Alten-Straße
-von-Andechs-Weg
+Von-Andechs-Weg
 Von-Andreae-Straße
 Von-Arenberg-Straße
 Von-Are-Straße
 Von-Aretin-Straße
-von Armin Straße
+Von Armin Straße
 Von-Arx-Straße
 Von-Aue-Straße
 Von-Aufseß-Straße
@@ -87865,27 +87072,27 @@ Von-Bargen-Straße
 Von-Bar-Straße
 Von-Beck-Straße
 Von-Beecke-Straße
-von-Behring-Straße
+Von-Behring-Straße
 Von-Behring-Straße
 Von-Bergmann-Straße
-von-Bibra-Straße
-von-Blumencron-Ring
+Von-Bibra-Straße
+Von-Blumencron-Ring
 Von-Boch-Liebig-Straße
 Von-Bocholtz-Straße
 Von-Boch-Straße
 Von-Bock-Straße
-von-Bodelschwingh-Straße
+Von-Bodelschwingh-Straße
 Von-Bodelschwingh-Straße
 Von-Bodenhausen-Weg
 Von-Boltenstern-Platz
 Von-Bönninghausen-Straße
 Von-Borries-Straße
-von-Bose-Straße
+Von-Bose-Straße
 Von Braun Straße
 Von-Braun-Straße
 Von-Brempt-Straße
 Von-Brentano-Straße
-von-Bretano-Straße
+Von-Bretano-Straße
 Von-Brug-Straße
 Von Brunn Straße
 Von-Brun-Straße
@@ -87893,12 +87100,12 @@ Von-Bülow-Straße
 Von-Burgdorf-Straße
 Von-Busseck-Straße
 Von-Bußeck-Straße
-von-Büssing-Straße
+Von-Büssing-Straße
 Von-Buttel-Straße
 Von-Carlowitz-Straße
 Von-Cobres-Straße
 Von-Coels-Straße
-von-Colln-Straße
+Von-Colln-Straße
 Von-Cramm-Straße
 Von-Dalberg-Straße
 Von-Danckelmann-Platz
@@ -87940,7 +87147,7 @@ Von-Dript-Weg
 Von Droste-Hülshoffstraße
 Von-Droste-Hülshoff-Straße
 Von Droste Straße
-von-Eichendorff-Straße
+Von-Eichendorff-Straße
 Von-Eichendorff-Straße
 Von-Eichendorff-Weg
 Von-Eicken-Straße
@@ -87952,24 +87159,24 @@ Von-Erckert-Straße
 Von-Erthal-Straße
 Von-Esmarch-Straße
 Von-Essen-Straße
-von-Eucken-Weg
+Von-Eucken-Weg
 Von-Eyb-Straße
-von-Fechenbach-Straße
+Von-Fechenbach-Straße
 Von-Feury-Straße
 Von-Flotow-Straße
 Von-Franckenstein-Straße
 Von-Frays-Straße
 Von-Frentz-Straße
-von-Frese-Straße
+Von-Frese-Straße
 Von-Freyberg-Straße
 Von-Fürer-Straße
 Von-Gablenz-Straße
 Von-Gahlen-Straße
 Von-Gaisberg-Straße
 Von-Galen-Platz
-von-Galen-Straße
 Von-Galen-Straße
-von-Garßen-Straße
+Von-Galen-Straße
+Von-Garßen-Straße
 Von-Garßen-Straße
 Von-Gayling-Straße
 Von-Gluck-Straße
@@ -87979,12 +87186,12 @@ Von-Görschen-Straße
 Von-Graba-Straße
 Von-Graefe-Straße
 Von-Graffen-Straße
-von-Gravenreuth-Straße
+Von-Gravenreuth-Straße
 Von-Groote-Platz
 Von-Groote-Ring
 Von-Groote-Straße
 Von-Guericke-Allee
-von-Gumppenberg-Straße
+Von-Gumppenberg-Straße
 Von Gumppenbergstraße
 Von-Gumppenberg-Straße
 Von-Guttenberg-Straße
@@ -87996,8 +87203,8 @@ Von-Hartrad-Straße
 Von-Hasencamp-Straße
 Von-Hase-Weg
 Von-Haslang-Straße
-von-Hassell-Straße
-von-Hatzfeld-Straße
+Von-Hassell-Straße
+Von-Hatzfeld-Straße
 Von-Haxthausen-Weg
 Von Hazzi
 Von-Hees-Straße
@@ -88005,23 +87212,23 @@ Von-Heinsberg-Straße
 Von-Helmholtz-Straße
 Von-Henneberg-Straße
 Von-Hersel-Straße
-von Hessen-Straße
+Von Hessen-Straße
 Von-Heß-Weg
 Von-Hevesy-Straße
 Von-Heydebreck-Straße
 Von-Heydeck-Straße
 Von-Heyden-Straße
 Von-Heyl-Straße
-von Hindenburg Allee
+Von Hindenburg Allee
 Von Hindenburgallee
-von-Hindenburg-Straße
+Von-Hindenburg-Straße
 Von-Hindenburg-Straße
 Von-Hirschberg-Straße
-von Holthusen Straße
+Von Holthusen Straße
 Von-Hompesch-Straße
-von-Hörmann-Straße
+Von-Hörmann-Straße
 Von-Humboldt-Platz
-von-Humboldt-Straße
+Von-Humboldt-Straße
 Von Humboldt Straße
 Von-Humboldt-Straße
 Von-Hünefeld-Straße
@@ -88031,7 +87238,7 @@ Von Ingelheim Straße
 Von-Itter-Platz
 Von-Kahr-Straße
 Von-Kempis-Straße
-von-Ketteler-Straße
+Von-Ketteler-Straße
 Von-Kettelerstraße
 Von-Ketteler-Straße
 Von-Ketteler-Weg
@@ -88043,10 +87250,10 @@ Von-Klug-Straße
 Von-Knebel-Straße
 Von-Koch-Straße
 Von-Koenig-Straße
-von-Korff-Straße
+Von-Korff-Straße
 Von-Kronberg-Straße
 Von-Krüger-Straße
-von-Kühlmann-Straße
+Von-Kühlmann-Straße
 Von-Kühlmann-Straße
 Von-Kuhl-Straße
 Von-Langenmantel-Straße
@@ -88055,14 +87262,14 @@ Von-Lapp-Straße
 Von-Lassaulx-Straße
 Von-Laßberg-Straße
 Von-Leoprechting-Straße
-von-Lerchenfeld-Straße
+Von-Lerchenfeld-Straße
 Von-Lerchenfeld-Straße
 Von-Liebig-Straße
 Von-Lindequist-Weg
 Von-Lingg-Straße
-von-Lippe-Straße
-von-Lochner-Straße
-von-Loe-Straße
+Von-Lippe-Straße
+Von-Lochner-Straße
+Von-Loe-Straße
 Von-Loe-Straße
 Von-Lohe-Straße
 Von-Luxburg-Straße
@@ -88109,9 +87316,9 @@ Von-Reuter-Straße
 Von-Richthofen-Straße
 Von-Rieneckstraße
 Von-Rolf-Straße
-von-Roll-Straße
 Von-Roll-Straße
-von-Römer-Straße
+Von-Roll-Straße
+Von-Römer-Straße
 Von-Rom-Straße
 Von-Röntgen-Straße
 Von Rosenstraße
@@ -88125,13 +87332,13 @@ Von-Sauer-Straße
 Von-Scala-Straße
 Von-Scanzoni-Straße
 Von-Schad-Straße
-von-Schaetzler-Straße
+Von-Schaetzler-Straße
 Vonscheidts Hof
 Von-Schenk-Straße
 Von-Schilcher-Straße
 Von Schildeck Straße
 Von-Schlüsselfelder-Straße
-von-Schmidt-Straße
+Von-Schmidt-Straße
 Von-Schöfer-Ring
 Von-Schönborn-Weg
 Von-Schön-Straße
@@ -88146,22 +87353,22 @@ Von-Sparr-Straße
 Von-Sprewitz-Straße
 Von-Stain-Straße
 Von-Stauffenberg-Allee
-von-Stauffenberg-Straße
+Von-Stauffenberg-Straße
 Von-Stauffenberg-Straße
 Von-Stauffenberg-Weg
 Von-Stechow-Straße
 Von-Stein-Weg
-von-Stephan-Straße
+Von-Stephan-Straße
 Von-Stephan-Straße
 Von-Steuben-Straße
 Von-Stoltzenberg-Straße
 Von-Streithorst-Straße
 Von-Suttner-Straße
 Von-Taube-Weg
-von-Tettau-Straße
+Von-Tettau-Straße
 Von-Thünen-Straße
 Von Varendorff Straße
-von-Vincke-Straße
+Von-Vincke-Straße
 Von-Vincke-Straße
 Von-Vincke-Weg
 Von-Volckamer-Straße
@@ -88173,22 +87380,22 @@ Von-Weichs-Straße
 Von-Welden-Straße
 Von-Wendt-Weg
 Von-Werthern-Straße
-von-Werth-Straße
 Von-Werth-Straße
-von-Westerburg-Straße
+Von-Werth-Straße
 Von-Westerburg-Straße
-von-Westernhagen-Platz
-von Westfalenstraße
+Von-Westerburg-Straße
+Von-Westernhagen-Platz
+Von Westfalenstraße
 Von-Weyda-Straße
 Von-Wieck-Straße
-von-Wied-Straße
+Von-Wied-Straße
 Von-Wied-Straße
 Von-Witzleben-Allee
 Von-Witzleben-Straße
 Von-Wolkenstein-Straße
 Von-Wrangell-Straße
 Von-Ysenburg-Straße
-von-Zeppelin-Straße
+Von-Zeppelin-Straße
 Voosen
 Vopeliuspfad
 Vopeliusstraße
@@ -88221,7 +87428,6 @@ Vor dem Deichtor
 Vor dem Delftor
 Vor dem Delltor
 Vor dem Dorfe
-Vor Dem Dorfe N/A
 Vor dem Dreeser Tor
 Vor dem Drostentor
 Vor dem Fang
@@ -88256,7 +87462,7 @@ Vor dem Oberntore
 Vor dem Obertor
 Vor dem Ort
 Vor dem Petersotor
-vor dem Peterstor
+Vor dem Peterstor
 Vor dem Peterstor
 Vor dem Polstück
 Vor dem Queenbruch
@@ -88460,7 +87666,7 @@ Vorm Bütersten Door
 Vorm Grenzgraben
 Vorm Holz
 Vormholzer Ring
-vormholzer Straße
+Vormholzer Straße
 Vormholzer Straße
 Vormholzstraße
 Vorm Kamp
@@ -88567,11 +87773,10 @@ Vosswinkel
 Voswinckelstraße
 Vöttinger Straße
 Voxstraße
-v. Pentz Allee
-Vrchlického
+V. Pentz Allee
 Vredener Dyk
 Vrydagweg
-v. Thünen Straße
+Von Thünen Straße
 Vulkanhof
 Vulkanhöhe I
 Vulkanring
@@ -88579,13 +87784,12 @@ Vulkanstraße
 Vulkanweg
 Vulpiusstraße
 Vuvenstraße
-V. Vereinsstraße
+Vereinsstraße
 Východní
 Vyhlídková
 Vynener Straße
 Výpadová
 Vysokomýtská
-W
 Wäädemaask
 Waagegasse
 Waageplatz
@@ -88737,7 +87941,7 @@ Wägnerstraße
 Wagnerweg
 Wagnerwirtsgasse
 Wagrainstraße
-Wagrienring 38
+Wagrienring
 Wagrierweg
 Wagstadter Straße
 Wagstädter Weg
@@ -88837,7 +88041,6 @@ Walcherath
 Walchshofener Straße
 Walchstadter Weg
 Walchstraße
-Wald
 Waldäcker
 Waldäckerweg
 Wald-Amorbacher Straße
@@ -89087,7 +88290,6 @@ Walkürenring
 Walkürenstraße
 Walkürenweg
 Walkweg
-Wall
 Wallachstraße
 Wall am Kiez
 Wallau
@@ -89108,7 +88310,6 @@ Wallburgstraße
 Walldorfer Straße
 Walldürner Straße
 Walle
-Wall / Eggerstedtstraße
 Walleitnerweg
 Wallenbergstraße
 Wallenburg
@@ -89388,7 +88589,6 @@ Wandweg
 Wanebachstraße
 Waneckerweg
 Wanfrieder Landstraße
-wangen
 Wangener Marktplatz
 Wangener Straße
 Wangengraben
@@ -89406,7 +88606,6 @@ Wanger Weg
 Wanghausen
 Wanheimer Straße
 Wanheimer STraße
-Wank
 Wankbahnstraße
 Wankelstraße
 Wänken
@@ -89512,7 +88711,6 @@ Warschauer Straße
 Warsteiner Straße
 Warstraße
 Warszawska
-Wart
 Wartbachstraße
 Wartberg
 Wartbergallee
@@ -89615,7 +88813,6 @@ Wasserhausstraße
 Wasserhorst
 Wasserhorster Straße
 Wasserknoden
-Wasserknoden/Kolbenhof
 Wasserkunst
 Wasserkunststraße
 Wasserkuppe
@@ -89652,7 +88849,7 @@ Wasserturm
 Wasserturmstraße
 Wassertwete
 Wasserweg
-Wasserweg 240a
+Wasserweg40a
 Wasserwerk
 Wasserwerkstraße
 Wasserwerksweg
@@ -89794,12 +88991,11 @@ Wefelsestraße
 Wefelshof
 Weferlinger Straße
 Wefersweg
-Weg
 Wegäcker
 Wegackerstraße
 Wegaer Straße
 Weg am Berge
-Weg  am Eckenkamp
+Weg am Eckenkamp
 Weg am Wasser
 Weg am Zenssee
 Weg an den Bachwiesen
@@ -89854,7 +89050,6 @@ Weg zum Rotenbächle
 Weg zum Roten See
 Weg zum Schlößchen
 Weg zum Sportplatz
-Weg zur B104
 Weg zur Badeanstalt
 Weg zur Eichleite
 Weg zur Platte
@@ -89897,7 +89092,6 @@ Wehnerstraße
 Wehnsen
 Wehnser Weg
 Wehofer Straße
-Wehr
 Wehrastraße
 Wehratalstraße
 Wehraweg
@@ -90138,7 +89332,6 @@ Weikersmühle
 Weikertsblochstraße
 Weikertsham
 Weiklesstraße
-Weil
 Weilberg
 Weilbergstraße
 Weilbrunnstraße
@@ -90189,7 +89382,6 @@ Weinberge
 Weinbergerstraße
 Weinberger Straße
 Weinberggasse
-weinberghof
 Weinberghof
 Weinberghöhe
 Weinbergsiedlung
@@ -90250,7 +89442,6 @@ Weinsfeld L
 Weinsteig
 Weinsteige
 Weinstraße
-Weinstraße / Gesundheitsamt
 Weinstraße Nord
 Weinstraße Süd
 Weintingergasse
@@ -90384,7 +89575,6 @@ Weißgerbergasse
 Weißgerbergraben
 Weißgerberstraße
 Weisshaus
-weißhausstraße
 Weißhausstraße
 Weißhofer Straße
 Weißholzstraße
@@ -90471,7 +89661,6 @@ Welfenplatz
 Welfenstraße
 Welfenweg
 Welheimer Weg
-Welk
 Welkenerstraße
 Welkenrather Straße
 Welkergasse
@@ -90638,7 +89827,6 @@ Wendlandzeile
 Wendl-Dietrich-Straße
 Wendlerstr.
 Wendlerstraße
-wendling
 Wendling
 Wendlingweg
 Wendloher Weg
@@ -90771,7 +89959,6 @@ Werftweg
 Werimboldstraße
 Weringhauser Straße
 Werinherstraße
-Werk
 Werkbrücke
 Werkeler Straße
 Werkhausgasse
@@ -90839,7 +90026,6 @@ Werner-Rummelt-Straße
 Werner-Schöne-Straße
 Werner-Schrader-Straße
 Werner-Schumacher-Straße
-Werner_Seelenbinder-Ring
 Werner-Seelenbinder-Ring
 Werner Seelenbinder Straße
 Werner-Seelenbinder-Straße
@@ -91003,7 +90189,6 @@ Wesslingskamp
 Wessobrunner Straße
 Wessobrunner Weg
 Wessumer Straße
-West
 Westach
 Westallee
 Westanlage
@@ -91159,7 +90344,6 @@ Westheide
 Westheimer Straße
 Westhellweg
 Westhofener Straße
-westhofenstraße
 Westhofenstraße
 Westhoffstraße
 Westholz
@@ -91289,7 +90473,6 @@ Wewersche Straße
 Wewerstraße
 Wewordenstraße
 Wexstraße
-Wey
 Weyarner Straße
 Weydemeyerstraße
 Weydingerstraße
@@ -91433,7 +90616,6 @@ Wieckenhof
 Wiecker Straße
 Wieckesweg
 Wieckstraße
-Wied
 Wiedau
 Wiedauer Weg
 Wiedbachstraße
@@ -91479,7 +90661,6 @@ Wiedigshof
 Wiedigshofer Straße
 Wiedmühle
 Wiednitzer Straße
-wiedstraße
 Wiedstraße
 Wiedtalstraße
 Wiedtkenweg
@@ -91566,7 +90747,6 @@ Wierlingsweg
 Wiernsheimer Straße
 Wiersbergstraße
 Wierth
-Wies
 Wiesäcker
 Wiesauer Straße
 Wiesbachhornstraße
@@ -91619,7 +90799,6 @@ Wiesenflecklein
 Wiesengarten
 Wiesengasse
 Wiesengraben
-Wiesengraben 39
 Wiesengrund
 Wiesenhang
 Wiesenheegstraße
@@ -91783,7 +90962,6 @@ Wilder Weg
 Wildeshausener Straße
 Wildeshauser Straße
 Wilde Straße
-wildewiese
 Wildgansstraße
 Wildgarten
 Wildgrub
@@ -91812,7 +90990,6 @@ Wildschwanbrook
 Wildseeweg
 Wildsteinstraße
 Wildstraße
-wildtalstraße
 Wildtalstraße
 Wildtaubenweg
 Wildunger Straße
@@ -92414,7 +91591,6 @@ Winchesterstraße
 Winchester Straße
 Winckelmannstraße
 Wincklerstraße
-Wind
 Windallee
 Windausstraße
 Windausweg
@@ -92523,7 +91699,6 @@ Winkelberg
 Winkelberger Höhe
 Winkeler Straße
 Winkelesch
-Winkelfeldstr.12
 Winkelfeldstraße
 Winkelgasse
 Winkelhaid
@@ -92611,7 +91786,6 @@ Winterfeldallee
 Winterfeldstraße
 Winterfeldtstraße
 Wintergartenstraße
-wintergasse
 Wintergasse
 Wintergerststraße
 Wintergraben
@@ -93265,7 +92439,6 @@ Wondahl
 Wonnhaldestraße
 Wönnichstraße
 Woodsiepenweg
-Woof
 Woogseestraße
 Woogsstraße
 Woogstraße
@@ -93328,7 +92501,6 @@ Worringerweg
 Worringer Weg
 Worringstraße
 Wörsdorfer Straße
-Wört
 Wörtelweg
 Wörter Straße
 Wörther-See-Straße
@@ -93534,9 +92706,7 @@ Wurzacher Weg
 Wurzbacher Straße
 Würzbühl
 Würzburger Landstraße
-Würzburger Ring 33
 Würzburger Straße
-Würzburger STrsße
 Wurzelbacher Weg
 Wurzelbauerstraße
 Wurzelbruch
@@ -93594,7 +92764,6 @@ Wynham-Nord
 Wyspiańskiego
 Wyspianskiego Stanisława
 Wyspiańskiego Stanisława
-x
 Xantener Straße
 Xaver-Bader-Straße
 Xaver-Fendt-Straße
@@ -93605,13 +92774,10 @@ Xaver-Lochbrunner-Straße
 Xaver-Milz-Weg
 Xaver-Terofal-Platz
 Xaver-Weismor-Straße
-Xweg
-XXXstraße
 Xylanderstraße
 Yburgstraße
 Yburgweg
 Yeoviler Straße
-yes
 Yitzhak-Rabin-Straße
 Yorckstraße
 York-Ring
@@ -93657,7 +92823,6 @@ Zähringer Platz
 Zähringerstraße
 Zähringer Straße
 Zähringerweg
-Zain
 Zainerweg
 Zainweg
 Zaisentalstraße
@@ -93802,7 +92967,6 @@ Zeidelweide
 Zeidlerstraße
 Zeigerheim
 Zeigerheimer Weg
-Zeil
 Zeiläckerweg
 Zeilbäumerstraße
 Zeilbäumerweg
@@ -93850,7 +93014,6 @@ Zelckstraße
 Železná
 Zelgmadenstraße
 Zelkesgasse
-Zell
 Zellaer Straße
 Zellbach
 Zellberg
@@ -94205,7 +93368,6 @@ Zipfelweg
 Zipfweg
 Zipkeleben
 Zippelhaus
-Zips
 Zipser Mühle
 Zipser Straße
 Zipsstraße
@@ -94224,7 +93386,6 @@ Zirndorfer Weg
 Zirnweg
 Zirpenweg
 Zissendorfer Weg
-Zist
 Zitadelle
 Zitadellenweg
 Žitavská
@@ -94263,7 +93424,6 @@ Zolderstraße
 Zölestinstraße
 Zollamtsbogen
 Zollamtstraße
-Zollamtstraße;Bremerstraße
 Zollbrücke
 Zollenreuter Straße
 Zollenspieker Hauptdeich
@@ -94426,7 +93586,6 @@ Zu den Specken
 Zu den Stauwiesen
 Zu den Sundern
 Zu den Tannen
-zu den Teichen
 Zu den Teichen
 Zu den Visselwiesen
 Zu den Wiesen
@@ -94576,7 +93735,6 @@ Zum Dachsenberg
 Zum Dänenfließ
 Zum Degenhardt
 Zum Deich
-zum Denkmal
 Zum Denkmal
 Zum Dianafelsen
 Zum Dicken Busch
@@ -94956,7 +94114,6 @@ Zum Küstersumpf
 Zum Laakkanal
 Zum Lachenwäldle
 Zum Laibachtal
-Zum Landgraben / ku grobli
 Zum Lang
 Zum Langeloh
 Zum Langenberg
@@ -95505,7 +94662,6 @@ Zur Denkstätte
 Zur Disselbrede
 Zur Diwelie
 Zur Dorfwies
-zur Dornheck
 Zur Dornhiege
 Zur Drehscheibe
 Zur Dreispitz
@@ -96019,7 +95175,6 @@ Zwintschönaer Landstraße
 Zwintschönaer Straße
 Zwirnereistraße
 Zwirnerstraße
-zwischeh Leopold- und Friedrichstraße
 Zwischenäckerle
 Zwischenahner Damm
 Zwischenahner Straße

@@ -1,8 +1,6 @@
 package com.giraone.testdata;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import com.giraone.testdata.generator.EnumField;
 import com.giraone.testdata.generator.EnumGender;
 
 import java.util.HashMap;
@@ -15,7 +13,7 @@ public class Person {
     EnumGender gender;
     Long index;
     String id;
-    Map<EnumField,String> additionalFields;
+    Map<String, String> additionalFields;
 
     public Person(long index, String givenName, String surname, EnumGender gender) {
         this.index = index;
@@ -71,18 +69,18 @@ public class Person {
     }
 
     @JsonAnyGetter
-    public Map<EnumField, String> getAdditionalFields() {
+    public Map<String, String> getAdditionalFields() {
         return additionalFields;
     }
 
-    public void setAdditionalField(EnumField field, String value) {
+    public void setAdditionalField(String field, String value) {
         if (this.additionalFields == null) {
             this.additionalFields = new HashMap<>();
         }
         this.additionalFields.put(field, value);
     }
 
-    public String getAdditionalField(EnumField field) {
+    public String getAdditionalField(String field) {
         return this.additionalFields != null ? this.additionalFields.get(field) : null;
     }
 

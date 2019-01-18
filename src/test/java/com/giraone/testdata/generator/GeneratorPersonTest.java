@@ -1,6 +1,8 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
+import com.giraone.testdata.fields.FieldEnhancerDateOfBirth;
+import com.giraone.testdata.fields.FieldEnhancerPostalAddress;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,11 +11,19 @@ import java.util.List;
 
 public class GeneratorPersonTest {
 
-    private static Generator generator_de = new Generator(EnumLanguage.de);
-    private static Generator generator_en = new Generator(EnumLanguage.en);
+    private static Generator generator_de;
+    private static Generator generator_en;
 
     @BeforeClass
-    public static void init() {
+    public static void init()
+    {
+        GeneratorConfiguration de = new GeneratorConfiguration();
+        de.language = EnumLanguage.de;
+        generator_de = new Generator(de);
+
+        GeneratorConfiguration en = new GeneratorConfiguration();
+        en.language = EnumLanguage.en;
+        generator_en = new Generator(en);
     }
 
     //- person generation ----------------------------------------------------------------------------------------------
@@ -54,40 +64,50 @@ public class GeneratorPersonTest {
 
     @Test
     public void testThatUuidIsGenerated() {
-        generator_en.setIdType(EnumIdType.uuid);
+        generator_en.getConfiguration().idType = EnumIdType.uuid;
         Person person = generator_en.randomPerson();
         Assert.assertNotNull(person);
         Assert.assertNotNull(person.getId());
         // Sth. like 26297343-cc92-4363-ad45-ee52d091c286
-        Assert.assertTrue("Not a UUID string",
+        Assert.assertTrue("\"" + person.getId() + "\" is not a UUID string",
                 person.getId().matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"));
     }
 
     @Test
     public void testThatSequenceIdIsGenerated() {
-        generator_en.setIdType(EnumIdType.sequence);
-        generator_en.setWithIndex(true);
+        generator_en.getConfiguration().idType = EnumIdType.sequence;
+        generator_en.getConfiguration().withIndex = true;
         Person person = generator_en.randomPerson();
         Assert.assertNotNull(person);
         Assert.assertNotNull(person.getId());
         // Sth. like 1547665828000
-        Assert.assertTrue("Not a long decimal number string", person.getId().matches("[0-9]{1,20}"));
+        Assert.assertTrue("\"" + person.getId() + "\" is not a long decimal number string",
+                person.getId().matches("[0-9]{1,20}"));
         Assert.assertEquals(person.getId(), Long.toUnsignedString(Long.parseLong(person.getId())));
     }
 
     //- field generation -----------------------------------------------------------------------------------------------
 
     @Test
-    public void testThatDateOfBirthGenerated() {
-        generator_en.addAdditionalField(EnumField.dateOfBirth);
+    public void testThatDateOfBirthIsGenerated() {
+        generator_en.getConfiguration().additionalFields.put("dateOfBirth", new FieldEnhancerDateOfBirth());
         Person person = generator_en.randomPerson();
         Assert.assertNotNull(person);
         Assert.assertNotNull(person.getAdditionalFields());
-        System.err.println(person.getAdditionalField(EnumField.dateOfBirth));
-        Assert.assertNotNull(person.getAdditionalField(EnumField.dateOfBirth));
+        Assert.assertNotNull(person.getAdditionalField("dateOfBirth"));
         // Sth. like 19410809
         Assert.assertTrue("Not a ISO date string",
-                person.getAdditionalField(EnumField.dateOfBirth).matches("[0-9]{8}"));
+                person.getAdditionalField("dateOfBirth").matches("[0-9]{8}"));
 
+    }
+
+    @Test
+    public void testThatGermanPostalAddressIsGenerated() {
+        generator_de.getConfiguration().additionalFields.put("postalAddress", new FieldEnhancerPostalAddress());
+        Person person = generator_de.randomPerson();
+        Assert.assertNotNull(person);
+        Assert.assertNotNull(person.getAdditionalFields());
+        System.err.println(person.getAdditionalFields());
+        Assert.assertNotNull(person.getAdditionalField("city"));
     }
 }
