@@ -1,5 +1,7 @@
 package com.giraone.testdata.generator;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +34,7 @@ public enum EnumGender
         return ret == null ? EnumGender.unknown : ret;
     }
 
+    @JsonValue
     @Override
     public String toString()
     {

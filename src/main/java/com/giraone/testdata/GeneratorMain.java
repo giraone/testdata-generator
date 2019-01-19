@@ -86,7 +86,7 @@ public class GeneratorMain {
 
     private void runBlockwise(Generator generator) throws Exception {
 
-        final String extension = configuration.listWriter instanceof PersonListWriterCsv ? ".csv" : ".json";
+        final String extension = configuration.listWriter instanceof PersonListWriterCsv ? "csv" : "json";
         for (int directoryIndex = 0; directoryIndex < configuration.numberOfDirectories; directoryIndex++) {
             final String directoryName = String.format("d-%08d", directoryIndex);
             final File directory = new File(configuration.rootDirectory, directoryName);

@@ -18,7 +18,7 @@ public class GeneratorConfiguration {
     /** create also a sequence number (index) for each created item */
     public boolean withIndex = false;
     /** if withIndex is used, this is the start index */
-    public int startIndex = 1;
+    public int startIndex = 0;
 
     /** type of additional person id: none, uuid, sequence */
     public EnumIdType idType = EnumIdType.none;

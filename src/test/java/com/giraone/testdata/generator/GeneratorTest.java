@@ -137,7 +137,6 @@ public class GeneratorTest {
                 count++;
             }
         }
-        System.out.println("count=" + count);
         Assert.assertTrue("count not greater than 5", count > 5);
     }
 }

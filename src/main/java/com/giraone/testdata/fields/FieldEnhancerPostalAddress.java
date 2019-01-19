@@ -21,7 +21,7 @@ public class FieldEnhancerPostalAddress implements FieldEnhancer {
         person.setAdditionalField("city", city);
         final String street = randomStreet(configuration);
         final String houseNumber = randomHouseNumber(configuration);
-        person.setAdditionalField("street", street + " " + houseNumber);
+        person.setAdditionalField("streetAddress", street + " " + houseNumber);
     }
 
     protected String randomPostalCode(GeneratorConfiguration configuration) {

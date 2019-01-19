@@ -26,6 +26,11 @@ public class PersonListWriterCsv implements PersonListWriter {
                 .addColumn("givenName")
                 .addColumn("gender", CsvSchema.ColumnType.NUMBER)
                 .addColumn("dateOfBirth")
+                .addColumn("postalCode")
+                .addColumn("city")
+                .addColumn("streetAddress")
+                .addColumn("companyId")
+                .addColumn("companyId")
                 .build();
         mapper.writerFor(typeRef)
                 .with(schema)

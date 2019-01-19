@@ -95,8 +95,34 @@ $ java -jar target/testdata-generator-1.0.jar --withIndex --additionalField date
 [{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"dateOfBirth":"19610722"}]
 
 $ java -jar target/testdata-generator-1.0.jar --withIndex --additionalField dateOfBirth,postalAddress
-[{"givenName":"Corinna","surname":"Sauer","gender":"f","index":1,"postalCode":"91052", city":"Erlangen","street":"Am Weg 6b","dateOfBirth":"19670517"}]
+[{"givenName":"Corinna","surname":"Sauer","gender":"f","index":1,"postalCode":"91052", city":"Erlangen","streetAddress":"Am Weg 6b","dateOfBirth":"19670517"}]
 ```
+
+### Assigned companies
+
+For building multi-tenancy scenarios, there is the *additionField* `companyId`.
+This adds a "companyId" string value to the person.
+The companies are of three types:
+* `small`: this groups builds 90% of the companies with employee numbers from 2 to 20
+* `medium`: this groups builds 9% of the companies with employee numbers from 20 to 500
+* `large`: this groups builds 1% of the companies with employee numbers from 50 to 10000
+
+```
+$ java -jar target/testdata-generator-1.0.jar --withIndex --numberOfItems 10 --additionalField companyId --serialize CSV
+0,,Ziegler,Erna,f,,,,,,s-00003146-00000022
+1,,Fischer,Jutta,f,,,,,,l-00000018-00001493
+2,,Brandl,Erna,f,,,,,,m-00000498-00000042
+3,,Erhardt,Christiane,f,,,,,,s-00003198-00000019
+4,,Kienle,Mike,m,,,,,,s-00008822-00000006
+5,,Fischer,Necati,m,,,,,,s-00006678-00000023
+6,,Reinhard,Susanne,f,,,,,,s-00004189-00000008
+7,,Hofmann,Sonja,f,,,,,,s-00008132-00000003
+8,,Schmitz,Karl-Heinz,m,,,,,,s-00004198-00000021
+9,,Gerber,Andrea,f,,,,,,s-00000726-00000022
+```
+
+The *companyId* reflects the size (l,m,s) and the number of employees (<size>-<random-id>-<numberOfEmployees>).
+The above *companyId* is a "large" onw with 1068 employees.
 
 ### Blockwise mode
 
@@ -109,13 +135,24 @@ java -jar target/testdata-generator-1.0.jar --rootDirectory data-5K \
  
 => Will generate 100 items per file, 10 files items per directory and 5 directories - in total 5000 persons 
 
-java -jar target/testdata-generator-1.0.jar --rootDirectory data-5M \
+> time java -jar target/testdata-generator-1.0.jar --rootDirectory data-5M \
  --numberOfItems 1000 --filesPerDirectory 1000 --numberOfDirectories 10 \
- --withIndex --additionalField dateOfBirth,postalAddress
+ --withIndex --additionalField dateOfBirth,postalAddress,companyId
+real	1m47.839s
+user	1m49.925s
+sys	0m3.475s
  
-=> Will generate 1000 items per file, 1000 files items per directory and 10 directories - in total 10 million persons
-=> The approx. prcoessing time is about 100 seconds on a "standard" PC (i7, SSD) 
-=> If you tar this output, this will be approx. 1.6 GByte uncompressed and 370 MByte compressed.
+=> Will generate 1000 items per file, 1000 files items per directory and 10 directories - in total 10 million persons.
+=> The JSON files are approx. 200KByte each.
+=> The approx. prcoessing time is about 110 seconds on a "standard" PC (i7, SSD) - see time value above.
+=> If you tar this output, this will be approx. 2 GByte uncompressed and 430 MByte compressed.
+
+> tar cf data-5M.tar data-5M
+> tar czf data-5M.tar data-5M
+> du -s data-5M*
+2000656	data-5M
+2002244	data-5M.tar
+429216	data-5M.tgz
 ```
 ### Open Issues
 
