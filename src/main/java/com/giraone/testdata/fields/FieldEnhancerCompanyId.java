@@ -12,9 +12,9 @@ import java.util.Random;
  * This class adds a "companyId" string value to the person.
  * The companies are of three types
  * <ul>
- *     <li>small:  90% with employee numbers from 2 to 20/li>
- *     <li>medium:  9% with employee numbers from 20 to 500/li>
- *     <li>large:   1% with employee numbers from 500 to 10000/li>
+ * <li>small:  90% with employee numbers from 2 to 20/li>
+ * <li>medium:  9% with employee numbers from 20 to 500/li>
+ * <li>large:   1% with employee numbers from 500 to 10000/li>
  * </ul>
  */
 public class FieldEnhancerCompanyId implements FieldEnhancer {
@@ -34,6 +34,9 @@ public class FieldEnhancerCompanyId implements FieldEnhancer {
             final Company company = generateCompany();
             COMPANY_CACHE.get(company.getCompanySizeType()).add(company);
         }
+        System.out.println("Companies with size s:" + COMPANY_CACHE.get(CompanyType.CompanySizeType.small).size());
+        System.out.println("Companies with size m:" + COMPANY_CACHE.get(CompanyType.CompanySizeType.medium).size());
+        System.out.println("Companies with size l:" + COMPANY_CACHE.get(CompanyType.CompanySizeType.large).size());
     }
 
     public void addFields(GeneratorConfiguration configuration, String field, Person person) {
@@ -44,17 +47,16 @@ public class FieldEnhancerCompanyId implements FieldEnhancer {
 
     private Company randomCompany() {
 
-        final int percent = RANDOM.nextInt(100);
-
         final CompanyType.CompanySizeType companySizeType;
-        if (percent > 9) {
+        final int i = RANDOM.nextInt(3);
+        if (i == 0) {
             companySizeType = CompanyType.CompanySizeType.small;
-        } else if (percent > 0) {
+        } else if (i == 1) {
             companySizeType = CompanyType.CompanySizeType.medium;
         } else {
             companySizeType = CompanyType.CompanySizeType.large;
         }
-        List<Company> companies = COMPANY_CACHE.get(companySizeType);
+        final List<Company> companies = COMPANY_CACHE.get(companySizeType);
         return companies.get(RANDOM.nextInt(companies.size()));
     }
 
@@ -78,11 +80,13 @@ public class FieldEnhancerCompanyId implements FieldEnhancer {
         }
 
         CompanyType companyType = CompanyType.getByType(companySizeType);
+        /*
         final int numberOfEmployees = companyType.getMinimalNumberOfEmployees() + RANDOM.nextInt(
                 companyType.getMinimalNumberOfEmployees() + companyType.getMaximalNumberOfEmployees());
+        */
         final int companyIndex = COMPANY_CACHE.get(companySizeType).size();
-        String companyId = String.format("%s-%08d-%08d",
-                companySizeType.name().substring(0, 1), companyIndex, numberOfEmployees);
-        return new Company(companyId, numberOfEmployees, companySizeType);
+        final String companyId = String.format("%s-%08d",
+                companySizeType.name().substring(0, 1), companyIndex);
+        return new Company(companyId, companySizeType);
     }
 }
