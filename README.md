@@ -27,14 +27,18 @@ than the name *Lamine*.
 
 ## Included data files
 
+See [src/main/resources/data](src/main/resources/data) folder.
+
 The library contains data files for english and german names.
 
-Sources:
-- English surnames: https://names.mongabay.com/most_common_surnames.htm
-- English given names: https://www.ssa.gov/OACT/babynames/names.zip
-- German surnames: Austria
-- German given names: ?
+### Sources:
 
+- English surnames (12.000) - collected from https://names.mongabay.com/most_common_surnames.htm with adapted Irish and Scottish prefixes Mc* and O'* (Last collection: January 2019)
+- English given names (10.000 female, 6.900 male) - collected from https://www.ssa.gov/OACT/babynames/names.zip (Last collection: January 2019) 
+- German surnames (10.000) - collected from http://www.namenforschung.net/dfd (Last collection: January 2019)
+- German given names (1.000 female, 1.000 male) - source and time of collection unknown
+- German postal codes and corrsponding cities (4.500) - collected from http://api.zippopotam.us (Last collection: January 2019)
+  For the license, see [Open database License](https://opendatacommons.org/licenses/odbl/1.0/).
 ### Build
 
 ```

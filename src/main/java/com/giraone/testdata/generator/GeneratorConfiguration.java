@@ -12,8 +12,8 @@ public class GeneratorConfiguration {
     /** the language for which the test data is generated (either "en" or "de") */
     public EnumLanguage language = EnumLanguage.de;
 
-    /** the country for which the test data is generated - DE only */
-    public String country = "DE";
+    /** the country for which the test data is generated - a ISO 3166-Alpha-3 code - currently only DEU is supported */
+    public String country = "DEU";
 
     /** create also a sequence number (index) for each created item */
     public boolean withIndex = false;
