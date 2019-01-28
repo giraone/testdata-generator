@@ -57,14 +57,13 @@ usage: java -jar testdata-generator-1.0.jar
  -b,--startIndex                  if withIndex is used, this is the start index
  -d,--numberOfDirectories <arg>   the number of directories for splitting the output
  -f,--filesPerDirectory <arg>     the number of files per directory
- -l,--language <arg>              the language for which the test data is
-                                  generated (either "en" or "de")
+ -l,--language <arg>              the language for which the test data is generated (either "en" or "de")
+ -c,--country <arg>               the country for which the test data (postal addresses) is generated (currently only "DEU")
  -n,--numberOfItems <arg>         the number of items, that should be produced in total or in a file
  -p,--personId <arg>              type of additional person id: none, uuid, sequence
  -r,--rootDirectory               the root directory, where the output is written (default = .)
  -s,--serialize <arg>             the serialization mode: either json or csv
  -w,--withIndex                   create also a sequence number (index) for each created item
-
 
 
 $ java -jar target/testdata-generator-1.0.jar
@@ -125,8 +124,7 @@ $ java -jar target/testdata-generator-1.0.jar --withIndex --numberOfItems 10 --a
 9,,Gerber,Andrea,f,,,,,,s-00000726
 ```
 
-The *companyId* reflects the size (l,m,s) and the number of employees (<size>-<random-id>-<numberOfEmployees>).
-The above *companyId* is a "large" onw with 1068 employees.
+The *companyId* is currently prefix with the size category (l,m,s). E.g. *l-00000018* is a "large" company.
 
 ### Blockwise mode
 
@@ -160,5 +158,5 @@ sys	0m3.475s
 ```
 ### Open Issues
 
-- English surnames (currently only top 1000)
+- English/USA city and postal codes are still missing
 
