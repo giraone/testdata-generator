@@ -135,7 +135,7 @@ java -jar target/testdata-generator-1.0.jar --rootDirectory ../data-5K \
  
 => Will generate 100 items per file, 10 files items per directory and 5 directories - in total 5000 persons 
 
-time java -jar target/testdata-generator-1.0.jar --rootDirectory ../data-5M \
+time java -jar target/testdata-generator-1.0.jar --rootDirectory ../data-10M \
  --numberOfItems 1000 --filesPerDirectory 1000 --numberOfDirectories 10 \
  --withIndex --additionalField dateOfBirth,postalAddress,companyId
 real	1m47.839s
