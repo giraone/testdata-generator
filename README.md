@@ -27,14 +27,18 @@ than the name *Lamine*.
 
 ## Included data files
 
+See [src/main/resources/data](src/main/resources/data) folder.
+
 The library contains data files for english and german names.
 
-Sources:
-- English surnames: https://names.mongabay.com/most_common_surnames.htm
-- English given names: https://www.ssa.gov/OACT/babynames/names.zip
-- German surnames: Austria
-- German given names: ?
+### Sources:
 
+- English surnames (12.000) - collected from https://names.mongabay.com/most_common_surnames.htm with adapted Irish and Scottish prefixes Mc* and O'* (Last collection: January 2019)
+- English given names (10.000 female, 6.900 male) - collected from https://www.ssa.gov/OACT/babynames/names.zip (Last collection: January 2019) 
+- German surnames (10.000) - collected from http://www.namenforschung.net/dfd (Last collection: January 2019)
+- German given names (1.000 female, 1.000 male) - source and time of collection unknown
+- German postal codes and corrsponding cities (4.500) - collected from http://api.zippopotam.us (Last collection: January 2019)
+  For the license, see [Open database License](https://opendatacommons.org/licenses/odbl/1.0/).
 ### Build
 
 ```
@@ -53,14 +57,13 @@ usage: java -jar testdata-generator-1.0.jar
  -b,--startIndex                  if withIndex is used, this is the start index
  -d,--numberOfDirectories <arg>   the number of directories for splitting the output
  -f,--filesPerDirectory <arg>     the number of files per directory
- -l,--language <arg>              the language for which the test data is
-                                  generated (either "en" or "de")
+ -l,--language <arg>              the language for which the test data is generated (either "en" or "de")
+ -c,--country <arg>               the country for which the test data (postal addresses) is generated (currently only "DEU")
  -n,--numberOfItems <arg>         the number of items, that should be produced in total or in a file
  -p,--personId <arg>              type of additional person id: none, uuid, sequence
  -r,--rootDirectory               the root directory, where the output is written (default = .)
  -s,--serialize <arg>             the serialization mode: either json or csv
  -w,--withIndex                   create also a sequence number (index) for each created item
-
 
 
 $ java -jar target/testdata-generator-1.0.jar
@@ -121,8 +124,7 @@ $ java -jar target/testdata-generator-1.0.jar --withIndex --numberOfItems 10 --a
 9,,Gerber,Andrea,f,,,,,,s-00000726
 ```
 
-The *companyId* reflects the size (l,m,s) and the number of employees (<size>-<random-id>-<numberOfEmployees>).
-The above *companyId* is a "large" onw with 1068 employees.
+The *companyId* is currently prefix with the size category (l,m,s). E.g. *l-00000018* is a "large" company.
 
 ### Blockwise mode
 
@@ -156,5 +158,5 @@ sys	0m3.475s
 ```
 ### Open Issues
 
-- English surnames (currently only top 1000)
+- English/USA city and postal codes are still missing
 

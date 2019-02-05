@@ -30,6 +30,7 @@ public class GeneratorMain {
         options.addOption("w", "withIndex", false, "create also a sequence number (index) for each created item");
         options.addOption("b", "startIndex", false, "if withIndex is used, this is the start index");
         options.addOption("l", "language", true, "the language for which the test data is generated (either \"en\" or \"de\")");
+        options.addOption("c", "country", true, "the country for which the test data (postal addresses) is generated (currently only \"DEU\")");
         options.addOption("s", "serialize", true, "the serialization mode: either json or csv");
         options.addOption("p", "personId", true, "type of additional person id: none, uuid, sequence");
         options.addOption("a", "additionalFields", true, "comma separated list of additional fields");
@@ -47,6 +48,7 @@ public class GeneratorMain {
                 System.exit(1);
             }
             configuration.language = EnumLanguage.valueOf(cmd.getOptionValue("language", configuration.language.toString()));
+            configuration.country = cmd.getOptionValue("country", configuration.country.toString());
             configuration.withIndex = cmd.hasOption("withIndex");
             configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
             if ("csv".equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {

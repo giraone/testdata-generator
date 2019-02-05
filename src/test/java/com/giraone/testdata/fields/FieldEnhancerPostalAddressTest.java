@@ -22,8 +22,10 @@ public class FieldEnhancerPostalAddressTest {
     public void testThatGermanPostalAddressCityIsGenerated() {
 
         FieldEnhancerPostalAddress f = new FieldEnhancerPostalAddress();
-        String value = f.randomCity(de);
+        String[] value = f.randomCityAndPostCode(de);
         Assert.assertNotNull(value);
+        Assert.assertNotNull(value[0]);
+        Assert.assertNotNull(value[1]);
     }
 
     @Test
