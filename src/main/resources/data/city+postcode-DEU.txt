@@ -10648,7 +10648,6 @@ Nienburg (Weser),31582
 Nienburg (Weser) Erichshagen,31582
 Nienburg (Weser) Holtorf,31582
 Nienburg (Weser) Langendamm,31582
-Nienburg (Weser) Nienburg (Weser),31582
 Nienbüttel,25596
 Niendorf,23919
 Niendorf,23923
@@ -10660,7 +10659,7 @@ Nienhagen,39397
 Nienstedt,06542
 Nienstädt,31688
 Nienstädt Liekwegen,31688
-Nienstädt Nienstädt,31688
+Nienstädt,31688
 Nienwohld,23863
 Niepars,18442
 Niersbach,54518
@@ -10848,10 +10847,6 @@ Oberbachheim,56355
 Oberbarnim,15345
 Oberbarnim,15377
 Oberbarnim Bollersdorf,15377
-Oberbarnim Bollersdorf,15377
-Oberbarnim Bollersdorf,15377
-Oberbarnim Grunow,15377
-Oberbarnim Grunow,15377
 Oberbarnim Grunow,15377
 Oberbarnim Klosterdorf,15345
 Oberbergkirchen,84564
@@ -11064,13 +11059,9 @@ Odenthal,51519
 Oderaue,16259
 Oderaue Altreetz,16259
 Oderaue Mädewitz,16259
-Oderaue Mädewitz,16259
-Oderaue Mädewitz,16259
 Oderaue Neuküstrinchen,16259
 Oderaue Neureetz,16259
 Oderaue Neurüdnitz,16259
-Oderaue Wustrow,16259
-Oderaue Wustrow,16259
 Oderaue Wustrow,16259
 Oderaue Zäckericker Loose,16259
 Oderberg,16248
