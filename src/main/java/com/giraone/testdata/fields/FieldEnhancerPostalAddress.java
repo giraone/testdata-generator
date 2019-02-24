@@ -22,7 +22,7 @@ public class FieldEnhancerPostalAddress implements FieldEnhancer {
     /**
      * Return a string array, where the 1st element is the city, the second is a matching postal code for the city
      * @param configuration the country configuration
-     * @return 2-dimensional atring array
+     * @return 2-dimensional string array
      */
     protected String[] randomCityAndPostCode(GeneratorConfiguration configuration) {
 
