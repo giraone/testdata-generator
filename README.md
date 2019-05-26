@@ -160,3 +160,7 @@ sys	0m3.475s
 
 - English/USA city and postal codes are still missing
 
+### Change Log
+
+- Version 1.1 (27.05.2019)
+  - Updated versions of Jackson and log4j-api to latest versions without security vulnerabilities
