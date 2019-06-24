@@ -2,6 +2,8 @@ package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
 import com.giraone.testdata.fields.FieldEnhancerDateOfBirth;
+import com.giraone.testdata.fields.FieldEnhancerEmail;
+import com.giraone.testdata.fields.FieldEnhancerIban;
 import com.giraone.testdata.fields.FieldEnhancerPostalAddress;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -70,7 +72,7 @@ public class GeneratorPersonTest {
         Assert.assertNotNull(person.getId());
         // Sth. like 26297343-cc92-4363-ad45-ee52d091c286
         Assert.assertTrue("\"" + person.getId() + "\" is not a UUID string",
-                person.getId().matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"));
+                person.getId().matches("^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"));
     }
 
     @Test
@@ -82,7 +84,7 @@ public class GeneratorPersonTest {
         Assert.assertNotNull(person.getId());
         // Sth. like 1547665828000
         Assert.assertTrue("\"" + person.getId() + "\" is not a long decimal number string",
-                person.getId().matches("[0-9]{1,20}"));
+                person.getId().matches("^[0-9]{1,20}$"));
         Assert.assertEquals(person.getId(), Long.toUnsignedString(Long.parseLong(person.getId())));
     }
 
@@ -97,7 +99,7 @@ public class GeneratorPersonTest {
         Assert.assertNotNull(person.getAdditionalField("dateOfBirth"));
         // Sth. like 19410809
         Assert.assertTrue("Not a ISO date string",
-                person.getAdditionalField("dateOfBirth").matches("[0-9]{8}"));
+                person.getAdditionalField("dateOfBirth").matches("^[0-9]{8}$"));
 
     }
 
@@ -107,7 +109,39 @@ public class GeneratorPersonTest {
         Person person = generator_de.randomPerson();
         Assert.assertNotNull(person);
         Assert.assertNotNull(person.getAdditionalFields());
-        System.err.println(person.getAdditionalFields());
         Assert.assertNotNull(person.getAdditionalField("city"));
+    }
+
+    @Test
+    public void testThatEmailIsGenerated() {
+        generator_de.getConfiguration().additionalFields.put("email", new FieldEnhancerEmail());
+        Person person = generator_de.randomPerson();
+        Assert.assertNotNull(person);
+        Assert.assertNotNull(person.getAdditionalFields());
+        Assert.assertNotNull(person.getAdditionalField("email"));
+        Assert.assertTrue("Not an email string",
+                person.getAdditionalField("email").matches("^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$"));
+    }
+
+    @Test
+    public void testThatGermanIbanIsGenerated() {
+        generator_de.getConfiguration().additionalFields.put("iban", new FieldEnhancerIban());
+        Person person = generator_de.randomPerson();
+        Assert.assertNotNull(person);
+        Assert.assertNotNull(person.getAdditionalFields());
+        Assert.assertNotNull(person.getAdditionalField("iban"));
+        Assert.assertTrue("Not a german IBAN string",
+                person.getAdditionalField("iban").matches("^DE[0-9]{20}$"));
+    }
+
+    @Test
+    public void testThatBritishIbanIsGenerated() {
+        generator_en.getConfiguration().additionalFields.put("iban", new FieldEnhancerIban());
+        Person person = generator_en.randomPerson();
+        Assert.assertNotNull(person);
+        Assert.assertNotNull(person.getAdditionalFields());
+        Assert.assertNotNull(person.getAdditionalField("iban"));
+        Assert.assertTrue("Not a british IBAN string",
+                person.getAdditionalField("iban").matches("^GB[0-9]{2}[A-Z]{4}[0-9]{14}$"));
     }
 }

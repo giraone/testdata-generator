@@ -39,6 +39,8 @@ The library contains data files for english and german names.
 - German given names (1.000 female, 1.000 male) - source and time of collection unknown
 - German postal codes and corrsponding cities (4.500) - collected from http://api.zippopotam.us (Last collection: January 2019)
   For the license, see [Open database License](https://opendatacommons.org/licenses/odbl/1.0/).
+- German and british IBANs - collected from https://www.mobilefish.com/services/random_iban_generator/random_iban_generator.php (Last collection: June 2019)
+ 
 ### Build
 
 ```
@@ -50,8 +52,8 @@ mvn package
 ### Simple usages of the command line
 
 ```
-$ java -jar target/testdata-generator-1.0.jar
-usage: java -jar testdata-generator-1.0.jar
+$ java -jar target/testdata-generator.jar
+usage: java -jar testdata-generator.jar
  -h,--help                        print usage help
  -a,--additionalFields <arg>      comma separated list of additional fields
  -b,--startIndex                  if withIndex is used, this is the start index
@@ -62,48 +64,62 @@ usage: java -jar testdata-generator-1.0.jar
  -n,--numberOfItems <arg>         the number of items, that should be produced in total or in a file
  -p,--personId <arg>              type of additional person id: none, uuid, sequence
  -r,--rootDirectory               the root directory, where the output is written (default = .)
- -s,--serialize <arg>             the serialization mode: either json or csv
+ -s,--serialize <arg>             the serialization mode: either json (default) or csv
  -w,--withIndex                   create also a sequence number (index) for each created item
 
 
-$ java -jar target/testdata-generator-1.0.jar
+$ java -jar target/testdata-generator.jar
 [{"givenName":"Klaus-Dieter","surname":"Schmidt","gender":"m"}]
 
-$ java -jar target/testdata-generator-1.0.jar -l en
+$ java -jar target/testdata-generator.jar -l en
 [{"givenName":"John","surname":"Smith","gender":"m"}]
 
-$ java -jar target/testdata-generator-1.0.jar --language en --numberOfItems 3
+$ java -jar target/testdata-generator.jar --language en --numberOfItems 3
 [
  {"givenName":"Michael","surname":"Miller","gender":"m"},
  {"givenName":"John","surname":"Watson","gender":"m"},
  {"givenName":"Patricia","surname":"Smith","gender":"f"}
 ]
 
-$ java -jar target/testdata-generator-1.0.jar --language en --numberOfItems 4 --serialize CSV
+$ java -jar target/testdata-generator.jar --language en --numberOfItems 4 --serialize CSV
 index,id,surname,givenName,gender,
 ,,Miller,Michael,male,
 ,,Watson,John,male,
 ,,Smith,Patricia,male,
 
-$ java -jar target/testdata-generator-1.0.jar --language en --numberOfItems 4 --withIndex --personId uuid --serialize CSV
+$ java -jar target/testdata-generator.jar --language en --numberOfItems 4 --withIndex --personId uuid --serialize CSV
 0,"fbab5e53-aa9a-43e6-a76d-b70b24087460",Richardson,Allison,female,19550919
 1,"6c7a824c-291b-4e50-8660-9d2e880098e8",Mitchell,Tamar,female,19301220
 2,"a604083d-e472-44ab-8a8d-e985e5ed9880",Taylor,Martha,female,19751030
 3,"5a69a0cb-6890-428d-bd57-9c701b84b9ef",Hall,Michael,male,19420103
 
-$ java -jar target/testdata-generator-1.0.jar --withIndex --personId uuid
+$ java -jar target/testdata-generator.jar --withIndex --personId uuid
 [{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"id":"26fb0ec5-7bef-4275-9f0a-d5fdcda9c349"}]
 
-$ java -jar target/testdata-generator-1.0.jar --withIndex --additionalField dateOfBirth
+$ java -jar target/testdata-generator.jar --withIndex --additionalField dateOfBirth
 [{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"dateOfBirth":"19610722"}]
 
-$ java -jar target/testdata-generator-1.0.jar --withIndex --additionalField dateOfBirth,postalAddress
+$ java -jar target/testdata-generator.jar --withIndex --additionalField dateOfBirth,postalAddress
 [{"givenName":"Corinna","surname":"Sauer","gender":"f","index":1,"postalCode":"91052", city":"Erlangen","streetAddress":"Am Weg 6b","dateOfBirth":"19670517"}]
+
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --personId uuid --additionalField iban,email --serialize csv
+index,id,surname,givenName,gender,dateOfBirth,postalCode,city,streetAddress,companyId,email,iban
+0,"a49cdedb-4d05-4c04-a647-4b09beb9df1e",Barth,Helene,f,,,,,,helene.0@barth.com,DE41257504926580317872
+1,"d8fb04d2-b626-4f2b-a841-78388303cafa",Beier,Monika,f,,,,,,monika.beier.1@gmail.com,DE58612015305624307555
+2,"d82e3596-266d-4910-8554-51f7e8aa39d7",Vogler,Klaus,m,,,,,,klaus.vogler.2@web.de,DE54300273809472349764
+3,"fead0acd-8aef-472b-9219-ea6bd146da11",Binder,Anton,m,,,,,,anton.binder.3@gmx.de,DE39496711390956779690
+4,"d93344e2-84c1-4f8c-aa0c-8c37c0e19f9c",Fiedler,Christa,f,,,,,,christa.fiedler.4@icloud.com,DE83146291913232022014
+5,"30b6c5d5-6f75-4720-a0ee-fcf8fbbed1ed",Wächter,Carola,f,,,,,,carola.5@waechter.com,DE03826081195980036282
+6,"0cafcd77-da87-40f2-ae3a-b7f9e0d66f8a",Jahns,Josef,m,,,,,,josef.jahns.6@gmx.de,DE93927265084807187860
+7,"8ef8bfda-683a-4482-aaeb-d8827c5b2b7f",Sonntag,Antje,f,,,,,,antje.sonntag.7@aol.com,DE05333336144687922894
+8,"4dee6a3d-b335-45fc-b0bb-bad5f990b516",Müller,Jens,m,,,,,,jens.mueller.8@gmx.de,DE86378874441491799823
+9,"9ecf1dcf-b984-4cc1-9ffc-f77981ac3997",Schwarz,Stefan,m,,,,,,stefan.9@schwarz.com,DE32785807553633330048
+
 ```
 
 ### Assigned companies
 
-For building multi-tenancy scenarios, there is the *additionField* `companyId`.
+For building multi-tenancy scenarios, there is the *additionalField* `companyId`.
 This adds a "companyId" string value to the person.
 The companies are of three types:
 * `small`: this groups builds 90% of the companies with employee numbers from 2 to 20
@@ -111,7 +127,7 @@ The companies are of three types:
 * `large`: this groups builds 1% of the companies with employee numbers from 50 to 10000
 
 ```
-$ java -jar target/testdata-generator-1.0.jar --withIndex --numberOfItems 10 --additionalField companyId --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalField companyId --serialize CSV
 0,,Ziegler,Erna,f,,,,,,s-00003146
 1,,Fischer,Jutta,f,,,,,,l-00000018
 2,,Brandl,Erna,f,,,,,,m-00000498
@@ -126,18 +142,28 @@ $ java -jar target/testdata-generator-1.0.jar --withIndex --numberOfItems 10 --a
 
 The *companyId* is currently prefix with the size category (l,m,s). E.g. *l-00000018* is a "large" company.
 
-### Blockwise mode
+### Other additional fields
+
+The following additional fields are available:
+
+- `dateOfBirth`: adds a date between 01.01.1930 and the actual date minus 16 years
+- `postalAddress`: adds postalCode, city and streetAddress (depending on the language) as additional fields
+- `iban`: adds an IBAN (International Bank Account Number) as an additional field; the generated IBANs are random, but valid
+- `email`: adds an email address that is build from given name and surname as as an additional field; if the `--withindex` option is used, the index is part of the email address to prevent duplicates
+- `personnelNumber`
+
+### Block wise mode
 
 For generating large amounts of data, the generated data is organized in directories and files.
 
 ```
-java -jar target/testdata-generator-1.0.jar --rootDirectory ../data-5K \
+java -jar target/testdata-generator.jar --rootDirectory ../data-5K \
  --numberOfItems 100 --filesPerDirectory 10 --numberOfDirectories 5 \
  --withIndex --additionalField dateOfBirth,postalAddress,companyId
  
 => Will generate 100 items per file, 10 files items per directory and 5 directories - in total 5000 persons 
 
-time java -jar target/testdata-generator-1.0.jar --rootDirectory ../data-10M \
+time java -jar target/testdata-generator.jar --rootDirectory ../data-10M \
  --numberOfItems 1000 --filesPerDirectory 1000 --numberOfDirectories 10 \
  --withIndex --additionalField dateOfBirth,postalAddress,companyId
 real	1m47.839s
@@ -146,7 +172,7 @@ sys	0m3.475s
  
 => Will generate 1000 items per file, 1000 files items per directory and 10 directories - in total 10 million persons.
 => The JSON files are approx. 200KByte each.
-=> The approx. prcoessing time is about 110 seconds on a "standard" PC (i7, SSD) - see time value above.
+=> The approx. processing time is about 110 seconds on a "standard" PC (i7, SSD) - see time value above.
 => If you tar this output, this will be approx. 2 GByte uncompressed and 430 MByte compressed.
 
 > tar cf data-10M.tar data-10M
@@ -162,5 +188,8 @@ sys	0m3.475s
 
 ### Change Log
 
+- Version 1.2.0 (24.06.2019)
+  - More additional fields added: iban, email
+  - POM changed for stable JAR file
 - Version 1.1.0 (27.05.2019)
   - Updated versions of Jackson and log4j-api to latest versions without security vulnerabilities

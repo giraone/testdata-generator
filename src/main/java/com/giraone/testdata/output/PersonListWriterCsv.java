@@ -30,7 +30,8 @@ public class PersonListWriterCsv implements PersonListWriter {
                 .addColumn("city")
                 .addColumn("streetAddress")
                 .addColumn("companyId")
-                .addColumn("companyId")
+                .addColumn("email")
+                .addColumn("iban")
                 .build();
         mapper.writerFor(typeRef)
                 .with(schema)

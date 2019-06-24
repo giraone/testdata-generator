@@ -31,7 +31,7 @@ public class GeneratorMain {
         options.addOption("b", "startIndex", false, "if withIndex is used, this is the start index");
         options.addOption("l", "language", true, "the language for which the test data is generated (either \"en\" or \"de\")");
         options.addOption("c", "country", true, "the country for which the test data (postal addresses) is generated (currently only \"DEU\")");
-        options.addOption("s", "serialize", true, "the serialization mode: either json or csv");
+        options.addOption("s", "serialize", true, "the serialization mode: either json (default) or csv");
         options.addOption("p", "personId", true, "type of additional person id: none, uuid, sequence");
         options.addOption("a", "additionalFields", true, "comma separated list of additional fields");
         options.addOption("n", "numberOfItems", true, "the number of items, that should be produced in total or in a file");
@@ -111,6 +111,7 @@ public class GeneratorMain {
     private void parseFields(String fieldCommaList, Map<String, FieldEnhancer> result) {
 
         for (String fieldName : fieldCommaList.trim().split(",")) {
+            if (fieldName.length() < 2) continue;
             String className = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
             FieldEnhancer fieldEnhancer;
             try {

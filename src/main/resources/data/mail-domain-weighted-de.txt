@@ -1,0 +1,10 @@
+gmx.de,5
+web.de,4
+t-online.de,2
+gmail.com,2
+yahoo.com,1
+hotmail,1
+aol.com,1
+msn.com,1
+outlook.com,1
+icloud.com,1
