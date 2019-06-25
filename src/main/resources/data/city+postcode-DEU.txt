@@ -11955,10 +11955,8 @@ Rehau,95111
 Rehbach,55566
 Rehborn,55592
 Rehburg-Loccum,31547
-Rehburg-Loccum Bad Rehburg,31547
 Rehburg-Loccum Loccum,31547
 Rehburg-Loccum Münchehagen,31547
-Rehburg-Loccum Rehburg,31547
 Rehburg-Loccum Winzlar,31547
 Rehden,49453
 Rehe,56479
