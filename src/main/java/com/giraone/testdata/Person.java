@@ -1,20 +1,22 @@
 package com.giraone.testdata;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.giraone.testdata.fields.FieldConstants;
 import com.giraone.testdata.generator.EnumGender;
+import com.giraone.testdata.generator.GeneratorConfiguration;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Person {
 
+    Long index;
+    String id;
     String givenName;
     String surname;
     EnumGender gender;
-    Long index;
-    String id;
-    Map<String, String> additionalFields;
+    Map<String, Object> additionalFields;
 
     public Person(long index, String givenName, String surname, EnumGender gender) {
         this.index = index;
@@ -29,30 +31,7 @@ public class Person {
         this.gender = gender;
     }
 
-    public String getGivenName() {
-        return givenName;
-    }
-
-    public void setGivenName(String givenName) {
-        this.givenName = givenName;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public EnumGender getGender() {
-        return gender;
-    }
-
-    public void setGender(EnumGender gender) {
-        this.gender = gender;
-    }
-
+    @JsonIgnore
     public Long getIndex() {
         return index;
     }
@@ -61,6 +40,7 @@ public class Person {
         this.index = index;
     }
 
+    @JsonIgnore
     public String getId() {
         return id;
     }
@@ -69,20 +49,52 @@ public class Person {
         this.id = id;
     }
 
+    @JsonIgnore
+    public String getGivenName() {
+        return givenName;
+    }
+
+    @JsonIgnore
+    public String getSurname() {
+        return surname;
+    }
+
+    @JsonIgnore
+    public EnumGender getGender() {
+        return gender;
+    }
+
     @JsonAnyGetter
-    public Map<String, String> getAdditionalFields() {
+    public Map<String, Object> getAdditionalFields() {
         return additionalFields;
     }
 
-    public void setAdditionalField(String field, String value) {
+    public void setAdditionalField(String field, Object value) {
         if (this.additionalFields == null) {
             this.additionalFields = new HashMap<>();
         }
         this.additionalFields.put(field, value);
     }
 
-    public String getAdditionalField(String field) {
+    public Object getAdditionalField(String field) {
         return this.additionalFields != null ? this.additionalFields.get(field) : null;
+    }
+
+    public void putBasicFields(GeneratorConfiguration configuration) {
+        this.setField(configuration, FieldConstants.surname, surname);
+        this.setField(configuration, FieldConstants.givenName, givenName);
+        this.setField(configuration, FieldConstants.gender, gender);
+        this.setField(configuration, FieldConstants.id, id);
+        this.setField(configuration, FieldConstants.index, index);
+    }
+
+    private void setField(GeneratorConfiguration configuration, String field, Object value) {
+
+        if (configuration.getAliasReader() != null) {
+            this.setAdditionalField(configuration.getAliasReader().getFieldName(field), value);
+        } else {
+            this.setAdditionalField(field, value);
+        }
     }
 
     @Override

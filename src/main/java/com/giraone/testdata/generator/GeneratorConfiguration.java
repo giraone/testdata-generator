@@ -3,8 +3,10 @@ package com.giraone.testdata.generator;
 import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.output.PersonListWriter;
 import com.giraone.testdata.output.PersonListWriterJson;
+import com.giraone.testdata.util.AliasReader;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class GeneratorConfiguration {
@@ -36,6 +38,28 @@ public class GeneratorConfiguration {
     /** the root directory into which the data is generated */
     public File rootDirectory = new File(".");
 
+    /** an optional JSON alias file to map attribute names */
+    public File aliasJsonFile = null;
+
     /** the writer class responsible for the output serialization: typically either json or csv */
     public PersonListWriter listWriter = new PersonListWriterJson();
+
+    private AliasReader aliasReader;
+
+    public AliasReader getAliasReader() {
+
+        if (aliasJsonFile == null) {
+            return null;
+        }
+        if (aliasReader == null) {
+            aliasReader = new AliasReader();
+            try {
+                aliasReader.convertToJsonMap(aliasJsonFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return aliasReader;
+    }
 }

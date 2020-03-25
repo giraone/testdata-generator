@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.giraone.testdata.Person;
+import com.giraone.testdata.fields.FieldConstants;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -20,18 +21,21 @@ public class PersonListWriterCsv implements PersonListWriter {
         ObjectMapper mapper = new CsvMapper();
         CsvSchema schema = CsvSchema.builder()
                 .setUseHeader(true)
-                .addColumn("index", CsvSchema.ColumnType.NUMBER)
-                .addColumn("id")
-                .addColumn("surname")
-                .addColumn("givenName")
-                .addColumn("gender", CsvSchema.ColumnType.NUMBER)
-                .addColumn("dateOfBirth")
-                .addColumn("postalCode")
-                .addColumn("city")
-                .addColumn("streetAddress")
-                .addColumn("companyId")
-                .addColumn("email")
-                .addColumn("iban")
+                .addColumn(FieldConstants.index, CsvSchema.ColumnType.NUMBER)
+                .addColumn(FieldConstants.id)
+                .addColumn(FieldConstants.surname)
+                .addColumn(FieldConstants.givenName)
+                .addColumn(FieldConstants.gender, CsvSchema.ColumnType.NUMBER)
+                .addColumn(FieldConstants.dateOfBirth)
+                .addColumn(FieldConstants.postalCode)
+                .addColumn(FieldConstants.city)
+                .addColumn(FieldConstants.streetAddress)
+                .addColumn(FieldConstants.street)
+                .addColumn(FieldConstants.houseNumber)
+                .addColumn(FieldConstants.companyId)
+                .addColumn(FieldConstants.personnelNumber)
+                .addColumn(FieldConstants.email)
+                .addColumn(FieldConstants.iban)
                 .build();
         mapper.writerFor(typeRef)
                 .with(schema)

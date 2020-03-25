@@ -1,0 +1,12 @@
+{
+  "givenName": "vorname",
+  "surname": "nachname",
+  "gender": "geschlecht",
+  "companyId": "hierarchieSchluessel",
+  "street": "strasse",
+  "houseNumber": "hausnummer",
+  "postalCode": "plz",
+  "city": "wohnort",
+  "dateOfBirth": "geburtsdatum",
+  "personnelNumber": "mitarbeiterNummer"
+}

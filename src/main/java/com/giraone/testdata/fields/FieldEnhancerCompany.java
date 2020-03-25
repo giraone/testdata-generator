@@ -3,10 +3,7 @@ package com.giraone.testdata.fields;
 import com.giraone.testdata.Person;
 import com.giraone.testdata.generator.GeneratorConfiguration;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * This class adds a "companyId" string value to the person.
@@ -17,11 +14,12 @@ import java.util.Random;
  * <li>large:   1% with employee numbers from 500 to 10000/li>
  * </ul>
  */
-public class FieldEnhancerCompanyId implements FieldEnhancer {
+@SuppressWarnings("unused")
+public class FieldEnhancerCompany implements FieldEnhancer {
 
     private static final Random RANDOM = new Random();
 
-    private static final HashMap<CompanyType.CompanySizeType, List<Company>> COMPANY_CACHE = new HashMap<>();
+    private static final Map<CompanyType.CompanySizeType, List<Company>> COMPANY_CACHE = new HashMap<>();
 
     private static final int totalNumberOfCompanies = 10000;
 
@@ -39,10 +37,16 @@ public class FieldEnhancerCompanyId implements FieldEnhancer {
         System.out.println("Companies with size l:" + COMPANY_CACHE.get(CompanyType.CompanySizeType.large).size());
     }
 
-    public void addFields(GeneratorConfiguration configuration, String field, Person person) {
+    public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
-        final String value = randomCompanyId();
-        person.setAdditionalField("companyId", value);
+        final Company company = randomCompany();
+        final String companyId = company.getId();
+        setAdditionalField(configuration, person, FieldConstants.companyId, companyId);
+
+        if (configuration.additionalFields.containsKey(FieldConstants.personnelNumber)) {
+            final String personnelNumber = company.getNextPersonnelNumber();
+            setAdditionalField(configuration, person, FieldConstants.personnelNumber, personnelNumber);
+        }
     }
 
     private Company randomCompany() {
@@ -79,8 +83,8 @@ public class FieldEnhancerCompanyId implements FieldEnhancer {
             companySizeType = CompanyType.CompanySizeType.large;
         }
 
-        CompanyType companyType = CompanyType.getByType(companySizeType);
         /*
+        CompanyType companyType = CompanyType.getByType(companySizeType);
         final int numberOfEmployees = companyType.getMinimalNumberOfEmployees() + RANDOM.nextInt(
                 companyType.getMinimalNumberOfEmployees() + companyType.getMaximalNumberOfEmployees());
         */

@@ -4,21 +4,16 @@ import com.giraone.testdata.Person;
 import com.giraone.testdata.generator.Generator;
 import com.giraone.testdata.generator.GeneratorConfiguration;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Random;
-
-import static java.time.temporal.ChronoUnit.DAYS;
-
 /**
  * This class adds a "iban" (International Bank Account Number) string value to the person.
  */
+@SuppressWarnings("unused")
 public class FieldEnhancerIban implements FieldEnhancer {
 
-    public void addFields(GeneratorConfiguration configuration, String field, Person person) {
+    public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
         final String iban = randomIban(configuration);
-        person.setAdditionalField("iban", iban);
+        setAdditionalField(configuration, person, FieldConstants.iban, iban);
     }
 
     protected String randomIban(GeneratorConfiguration configuration) {

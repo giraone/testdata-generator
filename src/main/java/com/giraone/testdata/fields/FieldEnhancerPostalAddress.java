@@ -7,16 +7,26 @@ import com.giraone.testdata.generator.GeneratorConfiguration;
 /**
  * This class adds a "postal address" (street, postalCode, city) to the person.
  */
+@SuppressWarnings("unused")
 public class FieldEnhancerPostalAddress implements FieldEnhancer {
 
-    public void addFields(GeneratorConfiguration configuration, String field, Person person) {
+    public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
         final String[] randomCityAndPostCode= randomCityAndPostCode(configuration);
-        person.setAdditionalField("city", randomCityAndPostCode[0]);
-        person.setAdditionalField("postalCode", randomCityAndPostCode[1]);
+        setAdditionalField(configuration, person, FieldConstants.city, randomCityAndPostCode[0]);
+        setAdditionalField(configuration, person, FieldConstants.postalCode, randomCityAndPostCode[1]);
         final String street = randomStreet(configuration);
         final String houseNumber = randomHouseNumber(configuration);
-        person.setAdditionalField("streetAddress", street + " " + houseNumber);
+
+
+        if (configuration.additionalFields.containsKey(FieldConstants.street)) {
+            setAdditionalField(configuration, person, FieldConstants.street, street);
+        } else {
+            setAdditionalField(configuration, person, FieldConstants.streetAddress, street + " " + houseNumber);
+        }
+        if (configuration.additionalFields.containsKey(FieldConstants.street)) {
+            setAdditionalField(configuration, person, FieldConstants.houseNumber, houseNumber);
+        }
     }
 
     /**

@@ -38,6 +38,7 @@ public class GeneratorMain {
         options.addOption("f", "filesPerDirectory", true, "the number of files per directory");
         options.addOption("d", "numberOfDirectories", true, "the number of directories for splitting the output");
         options.addOption("r", "rootDirectory", true, "the root directory, where the output is written (default = .)");
+        options.addOption("a", "aliasJsonFile", true, "define an alias file (JSON array with name/alias) to map attribute names");
 
 
         CommandLineParser parser = new DefaultParser();
@@ -51,7 +52,7 @@ public class GeneratorMain {
             configuration.country = cmd.getOptionValue("country", configuration.country.toString());
             configuration.withIndex = cmd.hasOption("withIndex");
             configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
-            if ("csv".equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {
+            if ("csv" .equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {
                 configuration.listWriter = new PersonListWriterCsv();
             }
             configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
@@ -60,6 +61,7 @@ public class GeneratorMain {
             configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
             configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
             configuration.rootDirectory = new File(cmd.getOptionValue("rootDirectory", "."));
+            configuration.aliasJsonFile = cmd.getOptionValue("aliasJsonFile") != null ? new File(cmd.getOptionValue("aliasJsonFile")) : null;
             run();
 
         } catch (ParseException e) {
@@ -82,7 +84,7 @@ public class GeneratorMain {
     private void runOneList(Generator generator, PrintStream out) throws Exception {
 
         List<Person> personList = generator.randomPersons(
-                configuration.startIndex, configuration.numberOfItems - configuration.startIndex);
+            configuration.startIndex, configuration.numberOfItems - configuration.startIndex);
         configuration.listWriter.write(personList, out);
     }
 
@@ -113,14 +115,22 @@ public class GeneratorMain {
         for (String fieldName : fieldCommaList.trim().split(",")) {
             if (fieldName.length() < 2) continue;
             String className = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
-            FieldEnhancer fieldEnhancer;
-            try {
-                fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className).newInstance();
-            } catch (Exception e) {
-                e.printStackTrace();
-                return;
+            int i;
+            if ((i = className.indexOf('.')) > 0) {
+                className = className.substring(0, i);
+                fieldName = fieldName.substring(i + 1);
             }
-            result.put(fieldName, fieldEnhancer);
+            FieldEnhancer fieldEnhancer = result.get(fieldName);
+            if (fieldEnhancer == null) {
+                try {
+                    fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className)
+                        .getDeclaredConstructor().newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return;
+                }
+                result.put(fieldName, fieldEnhancer);
+            }
         }
     }
 

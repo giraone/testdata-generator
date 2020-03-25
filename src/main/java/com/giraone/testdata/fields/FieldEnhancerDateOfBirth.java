@@ -12,6 +12,7 @@ import static java.time.temporal.ChronoUnit.DAYS;
 /**
  * This class adds a "dateOfBirth" string value (ISO date "yyyymmdd") to the person.
  */
+@SuppressWarnings("unused")
 public class FieldEnhancerDateOfBirth implements FieldEnhancer {
 
     private static final Random RANDOM = new Random();
@@ -20,10 +21,10 @@ public class FieldEnhancerDateOfBirth implements FieldEnhancer {
     private static LocalDate toLocalDate = LocalDate.now().minusYears(16);
     private static int dayLimit = (int) DAYS.between(fromLocalDate, toLocalDate);
 
-    public void addFields(GeneratorConfiguration configuration, String field, Person person) {
+    public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
         final String value = randomDateOfBirthAsIsoString();
-        person.setAdditionalField(field, value);
+        setAdditionalField(configuration, person, field, value);
     }
 
     private String randomDateOfBirthAsIsoString() {

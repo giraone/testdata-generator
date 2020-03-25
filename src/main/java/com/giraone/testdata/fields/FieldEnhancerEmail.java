@@ -10,13 +10,14 @@ import java.util.Random;
 /**
  * This class adds an "email" string value to the person, which ist derived from given name and surname.
  */
+@SuppressWarnings("unused")
 public class FieldEnhancerEmail implements FieldEnhancer {
 
     private static final Random RANDOM = new Random();
 
     NameNormalizeService nameNormalizeService = new NameNormalizeService();
 
-    public void addFields(GeneratorConfiguration configuration, String field, Person person) {
+    public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
 
         final String givenName = nameNormalizeService.normalize(person.getGivenName());
@@ -24,10 +25,10 @@ public class FieldEnhancerEmail implements FieldEnhancer {
         final String index = person.getIndex() != null ? ("." + person.getIndex()) : "";
 
         if (RANDOM.nextInt(5) == 0) {
-            person.setAdditionalField("email", givenName + index + "@" + surname + ".com");
+            setAdditionalField(configuration, person, FieldConstants.email, givenName + index + "@" + surname + ".com");
         } else {
             final String domain = randomMailDomain(configuration);
-            person.setAdditionalField("email", givenName + "." + surname + index + "@" + domain);
+            setAdditionalField(configuration, person, FieldConstants.email, givenName + "." + surname + index + "@" + domain);
         }
     }
 

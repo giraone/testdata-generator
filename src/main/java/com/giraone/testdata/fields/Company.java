@@ -4,6 +4,7 @@ class Company {
 
     private String id;
     private CompanyType.CompanySizeType companySizeType;
+    private int largestPersonnelNumber = 10000000;
 
     public Company(String id, CompanyType.CompanySizeType companySizeType) {
         this.id = id;
@@ -16,5 +17,9 @@ class Company {
 
     public CompanyType.CompanySizeType getCompanySizeType() {
         return companySizeType;
+    }
+
+    public String getNextPersonnelNumber() {
+        return String.format("%08d", largestPersonnelNumber++);
     }
 }
