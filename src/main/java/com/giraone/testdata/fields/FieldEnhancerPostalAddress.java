@@ -34,7 +34,7 @@ public class FieldEnhancerPostalAddress implements FieldEnhancer {
      * @param configuration the country configuration
      * @return 2-dimensional string array
      */
-    protected String[] randomCityAndPostCode(GeneratorConfiguration configuration) {
+    protected static String[] randomCityAndPostCode(GeneratorConfiguration configuration) {
 
         return Generator.randomFromFile("city+postcode-" + configuration.country + ".txt").split(",");
     }

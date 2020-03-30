@@ -7,7 +7,10 @@ import com.giraone.testdata.util.AliasReader;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class GeneratorConfiguration {
 
@@ -26,7 +29,10 @@ public class GeneratorConfiguration {
     public EnumIdType idType = EnumIdType.none;
 
     /** set of additional fields - {@see FieldEnhancer} */
-    public HashMap<String, FieldEnhancer> additionalFields = new HashMap<>();
+    public Map<String, FieldEnhancer> additionalFields = new HashMap<>();
+
+    /**constant fields, that are added randomly */
+    public List<FieldSpec> constantFields = new ArrayList<>();
 
     /** the number of items, that should be produced in total or in a file */
     public int numberOfItems = 1;

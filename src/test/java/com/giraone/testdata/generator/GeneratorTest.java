@@ -1,8 +1,12 @@
 package com.giraone.testdata.generator;
 
+import com.giraone.testdata.Person;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class GeneratorTest {
 
@@ -63,7 +67,7 @@ public class GeneratorTest {
 
     @Test
     public void createOneEnglishMaleGivenName() {
-        String name = generatorDE.randomGivenName(EnumGender.male);
+        String name = generatorEN.randomGivenName(EnumGender.male);
         Assert.assertNotNull(name);
         Assert.assertTrue("Name is empty or only one character", name.length() > 1);
     }
@@ -138,5 +142,51 @@ public class GeneratorTest {
             }
         }
         Assert.assertTrue("count not greater than 5", count > 5);
+    }
+
+    //- Check random constant -------------------------------------------------------------------------------------------
+
+    @Test
+    public void checkRandomConstantValue() {
+
+        try {
+            String[] values = new String[] { "one", "two" };
+            List<String> valueList = Arrays.asList(values);
+            FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.stringType);
+            generatorEN.getConfiguration().constantFields.add(fieldSpec);
+            Person person = generatorEN.randomPerson(0);
+            Object value = person.getAdditionalField("field");
+            Assert.assertNotNull(value);
+            Assert.assertEquals(String.class, value.getClass());
+            Assert.assertTrue(valueList.contains(value));
+        } finally {
+            generatorEN.getConfiguration().constantFields.clear();
+        }
+
+        try {
+            String[] values = new String[] { "1", "2" };
+            FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.integerType);
+            generatorEN.getConfiguration().constantFields.add(fieldSpec);
+            Person person = generatorEN.randomPerson(0);
+            Object value = person.getAdditionalField("field");
+            Assert.assertNotNull(value);
+            Assert.assertEquals(Integer.class, value.getClass());
+            int intValue = (int) value;
+            Assert.assertTrue(intValue == 1 || intValue == 2);
+        } finally {
+            generatorEN.getConfiguration().constantFields.clear();
+        }
+
+        try {
+            String[] values = new String[] { "false", "true" };
+            FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.booleanType);
+            generatorEN.getConfiguration().constantFields.add(fieldSpec);
+            Person person = generatorEN.randomPerson(0);
+            Object value = person.getAdditionalField("field");
+            Assert.assertNotNull(value);
+            Assert.assertEquals(Boolean.class, value.getClass());
+        } finally {
+            generatorEN.getConfiguration().constantFields.clear();
+        }
     }
 }

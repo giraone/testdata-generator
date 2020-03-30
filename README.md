@@ -96,13 +96,13 @@ $ java -jar target/testdata-generator.jar --language en --numberOfItems 4 --with
 $ java -jar target/testdata-generator.jar --withIndex --personId uuid
 [{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"id":"26fb0ec5-7bef-4275-9f0a-d5fdcda9c349"}]
 
-$ java -jar target/testdata-generator.jar --withIndex --additionalField dateOfBirth
+$ java -jar target/testdata-generator.jar --withIndex --additionalFields dateOfBirth
 [{"givenName":"Heidemarie","surname":"Schmidt","gender":"f","index":1,"dateOfBirth":"19610722"}]
 
-$ java -jar target/testdata-generator.jar --withIndex --additionalField dateOfBirth,postalAddress
+$ java -jar target/testdata-generator.jar --withIndex --additionalFields dateOfBirth,postalAddress
 [{"givenName":"Corinna","surname":"Sauer","gender":"f","index":1,"postalCode":"91052", city":"Erlangen","streetAddress":"Am Weg 6b","dateOfBirth":"19670517"}]
 
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --personId uuid --additionalField iban,email --serialize csv
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --personId uuid --additionalFields iban,email --serialize csv
 index,id,surname,givenName,gender,dateOfBirth,postalCode,city,streetAddress,companyId,email,iban
 0,"a49cdedb-4d05-4c04-a647-4b09beb9df1e",Barth,Helene,f,,,,,,helene.0@barth.com,DE41257504926580317872
 1,"d8fb04d2-b626-4f2b-a841-78388303cafa",Beier,Monika,f,,,,,,monika.beier.1@gmail.com,DE58612015305624307555
@@ -127,7 +127,7 @@ The companies are of three types:
 * `large`:  this groups builds 1% of the companies with employee numbers from 50 to 10000
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalField companyId --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalFields companyId --serialize CSV
 0,,Ziegler,Erna,f,,,,,,s-00003146
 1,,Fischer,Jutta,f,,,,,,l-00000018
 2,,Brandl,Erna,f,,,,,,m-00000498
@@ -145,48 +145,86 @@ The *companyId* is currently prefix with the size category (l,m,s). E.g. *l-0000
 If one one to create a `personnelNumber`, that is unique within a company, the following statement can be used
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalField company.companyId,company.personnelNumber --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalFields company.companyId,company.personnelNumber --serialize CSV
 ```
-### Other additional fields
+
+### More predefined additional fields
 
 The following additional fields are available:
 
 - `dateOfBirth`: adds a date between 01.01.1930 and the actual date minus 16 years
+- `placeOfBirth`: adds an additional city as place of birth in 50% of all cases
 - `postalAddress`: adds postalCode, city and streetAddress (depending on the language) as additional fields
 - `iban`: adds an IBAN (International Bank Account Number) as an additional field; the generated IBANs are random, but valid
 - `email`: adds an email address that is build from given name and surname as as an additional field; if the `--withindex` option is used, the index is part of the email address to prevent duplicates
 - `personnelNumber`: adds a personnel number of the form `[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]`, that ist unique with a company.
 
+### Other random constant fields
+
+Using `--constantFields` one can add additional fields, that are randomly chosen:
+
+```shell script
+java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --constantFields "eyeColor=red|blue,size=175|180|185,isAdmin=false|true,car=null|Audi|VW"
+```
+
+will output
+
+```json
+[{"gender":"m","eyeColor":"red","size":180,"surname":"Rauch","givenName":"Armin","index":0,"isAdmin":false},
+{"gender":"f","eyeColor":"red","size":185,"car":"Audi","surname":"Straub","givenName":"Ingrid","index":1,"isAdmin":false},
+{"gender":"m","eyeColor":"blue","size":175,"car":"VW","surname":"Meier","givenName":"Walter","index":2,"isAdmin":true}]
+```
+
+```shell script
+java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --constantFields "academicTitle=null(75)|Dr.|Prof. Dr."
+```
+
+will add one the the possibilities only in 25% of the output.
+
+The syntax should be clear. Field specifications are separated by comma, values are separated by `|`.
+The first value defines the data type. If the first value is `null`, 50% of the value are not set.
+If the first value is null(i), i percent of the values are not set.
+
+### Other random constant fields
+
+Using `--constantFields` one can add additional fields, that are randomly chosen:
+
 ### Block wise mode
 
 For generating large amounts of data, the generated data is organized in directories and files.
 
-```
+```shell script
 java -jar target/testdata-generator.jar --rootDirectory ../data-5K \
  --numberOfItems 100 --filesPerDirectory 10 --numberOfDirectories 5 \
- --withIndex --additionalField dateOfBirth,postalAddress.postalCode,postalAddress.city,postalAddress.street,postalAddress.houseNumber,company.companyId,company.personnelNumber \
+ --withIndex --additionalFields dateOfBirth,postalAddress.postalCode,postalAddress.city,postalAddress.street,postalAddress.houseNumber,company.companyId,company.personnelNumber \
  --aliasJsonFile "alias-german.json"
  
 => Will generate 100 items per file, 10 files items per directory and 5 directories - in total 5000 persons 
 
 time java -jar target/testdata-generator.jar --rootDirectory ../data-10M \
  --numberOfItems 1000 --filesPerDirectory 1000 --numberOfDirectories 10 \
- --withIndex --additionalField dateOfBirth,postalAddress,companyId
-real	1m47.839s
-user	1m49.925s
-sys	0m3.475s
+ --withIndex --additionalFields dateOfBirth,postalAddress.postalCode,postalAddress.city,postalAddress.street,postalAddress.houseNumber,company.companyId,company.personnelNumber \
+ --aliasJsonFile "alias-german.json"
+
+Companies with size s:9016
+Companies with size m:876
+Companies with size l:108
+
+real	1m40.090s
+user	1m48.503s
+sys	0m3.159s
  
 => Will generate 1000 items per file, 1000 files items per directory and 10 directories - in total 10 million persons.
 => The JSON files are approx. 200KByte each.
 => The approx. processing time is about 110 seconds on a "standard" PC (i7, SSD) - see time value above.
-=> If you tar this output, this will be approx. 2 GByte uncompressed and 430 MByte compressed.
+=> If you tar this output, this will be approx. 2.5 GByte uncompressed and 470 MByte compressed.
 
 > tar cf data-10M.tar data-10M
-> tar czf data-10M.tar data-10M
+> tar czf data-10M.tgz data-10M
 > du -s data-10M*
-2000656	data-10M
-2002244	data-10M.tar
-429216	data-10M.tgz
+2520388	data-10M
+2517684	data-10M.tar
+470652	data-10M.tgz
 ```
 
 ### Alias names for fields
@@ -200,6 +238,9 @@ or *dateOfBirth* to other names, e.g. to german names like *nachname* or *geburt
 
 ### Change Log
 
+- Version 1.4.0 (30.03.2020)
+  - Support for random fields
+  - birthName and placeOfBirth added
 - Version 1.3.0 (25.03.2020)
   - Allow definition of alias names for fields
   - Possibility to split *streetAddress* into *street* and *houseNumber* field

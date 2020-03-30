@@ -1,16 +1,14 @@
 package com.giraone.testdata;
 
 import com.giraone.testdata.fields.FieldEnhancer;
-import com.giraone.testdata.generator.EnumIdType;
-import com.giraone.testdata.generator.EnumLanguage;
-import com.giraone.testdata.generator.Generator;
-import com.giraone.testdata.generator.GeneratorConfiguration;
+import com.giraone.testdata.generator.*;
 import com.giraone.testdata.output.PersonListWriterCsv;
 import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +32,7 @@ public class GeneratorMain {
         options.addOption("s", "serialize", true, "the serialization mode: either json (default) or csv");
         options.addOption("p", "personId", true, "type of additional person id: none, uuid, sequence");
         options.addOption("a", "additionalFields", true, "comma separated list of additional fields");
+        options.addOption("x", "constantFields", true, "comma separated list of constant fields, that are added randomly");
         options.addOption("n", "numberOfItems", true, "the number of items, that should be produced in total or in a file");
         options.addOption("f", "filesPerDirectory", true, "the number of files per directory");
         options.addOption("d", "numberOfDirectories", true, "the number of directories for splitting the output");
@@ -56,7 +55,8 @@ public class GeneratorMain {
                 configuration.listWriter = new PersonListWriterCsv();
             }
             configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
-            parseFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
+            parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
+            parseConstantFields(cmd.getOptionValue("constantFields", ""), configuration.constantFields);
             configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
             configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
             configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
@@ -110,7 +110,7 @@ public class GeneratorMain {
         }
     }
 
-    private void parseFields(String fieldCommaList, Map<String, FieldEnhancer> result) {
+    private void parseAdditionalFields(String fieldCommaList, Map<String, FieldEnhancer> result) {
 
         for (String fieldName : fieldCommaList.trim().split(",")) {
             if (fieldName.length() < 2) continue;
@@ -131,6 +131,41 @@ public class GeneratorMain {
                 }
                 result.put(fieldName, fieldEnhancer);
             }
+        }
+    }
+
+    // Parse sth. like red|blue,size=175|180|185,car=null|Audi|VW
+    private void parseConstantFields(String fieldCommaList, List<FieldSpec> result) {
+
+        for (String fieldSpecString : fieldCommaList.trim().split(",")) {
+            if (fieldSpecString.length() < 2) continue;
+            int equalsSign = fieldSpecString.indexOf('=');
+            if (equalsSign <= 0) continue;
+            String fieldName = fieldSpecString.substring(0, equalsSign);
+            String fieldValues = fieldSpecString.substring(equalsSign + 1);
+            String[] valuesList = fieldValues.split("[|]");
+
+            boolean isNull = false;
+            int isNullPercentage = 50;
+            if (valuesList[0].startsWith("null")) {
+                isNull = true;
+                int i = valuesList[0].indexOf("(");
+                int j = valuesList[0].indexOf(")");
+                if (i > 0 && j > 0) {
+                    isNullPercentage = Integer.parseInt(valuesList[0].substring(i+1, j));
+                }
+                valuesList = Arrays.copyOfRange(valuesList, 1, valuesList.length);
+            }
+
+            EnumJsonDataType enumJsonDataType = EnumJsonDataType.stringType;
+            if (valuesList[0].matches("[0-9]+")) {
+                enumJsonDataType = EnumJsonDataType.integerType;
+            } else if (valuesList[0].matches("true|false")) {
+                enumJsonDataType = EnumJsonDataType.booleanType;
+            }
+            FieldSpec fieldSpec = new FieldSpec(fieldName, valuesList, enumJsonDataType, isNull, isNullPercentage);
+            //System.err.println(fieldSpec);
+            result.add(fieldSpec);
         }
     }
 

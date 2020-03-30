@@ -76,6 +76,22 @@ public class Generator {
             field.getValue().addFields(configuration, person, field.getKey());
         }
 
+        for (FieldSpec fieldSpec : configuration.constantFields) {
+
+            String[] fieldValues = fieldSpec.getValues();
+            if (fieldSpec.isWithNullValues() && RANDOM.nextInt(100) < fieldSpec.getWithNullPercentage()) {
+                continue;
+            }
+            Object value = fieldValues[RANDOM.nextInt(fieldValues.length)];
+
+            if (fieldSpec.getJsonDataType() == EnumJsonDataType.integerType) {
+                value = Integer.parseInt((String) value);
+            } else  if (fieldSpec.getJsonDataType() == EnumJsonDataType.booleanType) {
+                value = Boolean.parseBoolean((String) value);
+            }
+            person.setAdditionalField(fieldSpec.getName(), value);
+        }
+
         return person;
     }
 

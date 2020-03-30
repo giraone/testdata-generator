@@ -4,9 +4,13 @@
   "gender": "geschlecht",
   "companyId": "hierarchieSchluessel",
   "street": "strasse",
+  "streetAddress": "strasseUndHausnummer",
   "houseNumber": "hausnummer",
   "postalCode": "plz",
   "city": "wohnort",
   "dateOfBirth": "geburtsdatum",
-  "personnelNumber": "mitarbeiterNummer"
+  "placeOfBirth": "ortDerGeburt",
+  "birthName": "geburtsname",
+  "personnelNumber": "mitarbeiterNummer",
+  "staatsangehoerigkeit": "staatsangehoerigkeit"
 }

@@ -12,8 +12,8 @@ class CompanyType {
 
     static {
         COMPANY_SIZE_TYPE_MAP.put(CompanySizeType.small, new CompanyType(2,20));
-        COMPANY_SIZE_TYPE_MAP.put(CompanySizeType.medium, new CompanyType(20,500));
-        COMPANY_SIZE_TYPE_MAP.put(CompanySizeType.large, new CompanyType(500,10000));
+        COMPANY_SIZE_TYPE_MAP.put(CompanySizeType.medium, new CompanyType(20,100));
+        COMPANY_SIZE_TYPE_MAP.put(CompanySizeType.large, new CompanyType(101,1000));
     }
 
     private int minimalNumberOfEmployees;

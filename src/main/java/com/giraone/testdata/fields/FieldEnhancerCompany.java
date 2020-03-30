@@ -9,9 +9,9 @@ import java.util.*;
  * This class adds a "companyId" string value to the person.
  * The companies are of three types
  * <ul>
- * <li>small:  90% with employee numbers from 2 to 20/li>
- * <li>medium:  9% with employee numbers from 20 to 500/li>
- * <li>large:   1% with employee numbers from 500 to 10000/li>
+ * <li>small:  90% with employee numbers from 2 to 20</li>
+ * <li>medium:  9% with employee numbers from 20 to 100</li>
+ * <li>large:   1% with employee numbers from 101 to 1000</li>
  * </ul>
  */
 @SuppressWarnings("unused")

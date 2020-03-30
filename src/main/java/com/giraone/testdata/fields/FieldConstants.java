@@ -15,6 +15,9 @@ public class FieldConstants {
     public static final String city = "city";
     public static final String dateOfBirth = "dateOfBirth";
 
+    public static final String placeOfBirth = "placeOfBirth";
+    public static final String birthName = "birthName";
+
     public static final String email = "email";
     public static final String iban = "iban";
     public static final String personnelNumber = "personnelNumber";

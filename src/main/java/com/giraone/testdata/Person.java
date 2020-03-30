@@ -88,7 +88,7 @@ public class Person {
         this.setField(configuration, FieldConstants.index, index);
     }
 
-    private void setField(GeneratorConfiguration configuration, String field, Object value) {
+    public void setField(GeneratorConfiguration configuration, String field, Object value) {
 
         if (configuration.getAliasReader() != null) {
             this.setAdditionalField(configuration.getAliasReader().getFieldName(field), value);
