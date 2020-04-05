@@ -119,30 +119,59 @@ index,id,surname,givenName,gender,dateOfBirth,postalCode,city,streetAddress,comp
 
 ### Assigned companies
 
-For building multi-tenancy scenarios, there is the *additionalField* `companyId`.
-This adds a "companyId" string value to the person.
-The companies are of three types:
-* `small`: this groups builds 90% of the companies with employee numbers from 2 to 20
-* `medium`: this groups builds 9% of the companies with employee numbers from 20 to 500
-* `large`:  this groups builds 1% of the companies with employee numbers from 50 to 10000
+
+ * This class adds a "companyId" string value to the person.
+ * 
+ 
+ 
+For building multi-tenancy scenarios, there is the *additionalField* `companyId`, that can be added to persons.
+The companyId is a hierarchical key, e.g. `Alphabet/Google/Sales/US`. In this case it has 4 level:
+- Holding
+- Company
+- Department
+- Sub-Department
+The naming of the key and the distribution of how many persons are assigned to each unit is configurable.
+A simple one level JSON configuration file would be:
+```json
+[
+ {
+  "valuePattern": "%s-%08d",
+  "sizeDistribution":
+  [
+   {
+    "name": "s",
+    "proportion": 0.8,
+    "minimalNumber": 2,
+    "maximalNumber": 9
+   },
+   {
+    "name": "l",
+    "proportion": 0.2,
+    "minimalNumber": 10,
+    "maximalNumber": 100
+   }
+  ]
+ }
+]
+```
+In this case, every person is assigned to a small company (2-9 employees) or a large company (10-100 employees).
+80% of the persons are assigned to a small company and 20% to a large company. The companyId is sth. like
+`s-01234567` or `l-01234568`. The above specification is also the default one.
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalFields companyId --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec CompanyIdSpec.json --additionalFields company.companyId --serialize CSV
 0,,Ziegler,Erna,f,,,,,,s-00003146
 1,,Fischer,Jutta,f,,,,,,l-00000018
-2,,Brandl,Erna,f,,,,,,m-00000498
+2,,Brandl,Erna,f,,,,,,s-00000498
 3,,Erhardt,Christiane,f,,,,,,s-00003198
 4,,Kienle,Mike,m,,,,,,s-00008822
 5,,Fischer,Necati,m,,,,,,s-00006678
-6,,Reinhard,Susanne,f,,,,,,s-00004189
+6,,Reinhard,Susanne,f,,,,,,l-00004189
 7,,Hofmann,Sonja,f,,,,,,s-00008132
 8,,Schmitz,Karl-Heinz,m,,,,,,s-00004198
 9,,Gerber,Andrea,f,,,,,,s-00000726
 ```
-
-The *companyId* is currently prefix with the size category (l,m,s). E.g. *l-00000018* is a "large" company.
-
-If one one to create a `personnelNumber`, that is unique within a company, the following statement can be used
+If one wants to create a `personnelNumber`, that is unique within a company, the following statement can be used
 
 ```shell script
 $ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalFields company.companyId,company.personnelNumber --serialize CSV
@@ -179,9 +208,9 @@ will output
 java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --constantFields "academicTitle=null(75)|Dr.|Prof. Dr."
 ```
 
-will add one the the possibilities only in 25% of the output.
+will add one the possibilities only in 25% of the output.
 
-The syntax should be clear. Field specifications are separated by comma, values are separated by `|`.
+The syntax should be clear. Field specifications are separated by a comma, values are separated by `|`.
 The first value defines the data type. If the first value is `null`, 50% of the value are not set.
 If the first value is null(i), i percent of the values are not set.
 
@@ -238,6 +267,9 @@ or *dateOfBirth* to other names, e.g. to german names like *nachname* or *geburt
 
 ### Change Log
 
+- Version 1.5.0 (05.04.2020)
+  - Tests migration to JUnit 5 and AssertJ 3
+  - Support for hierarchical companyIds, e.g. company, location, department
 - Version 1.4.0 (30.03.2020)
   - Support for random fields
   - birthName and placeOfBirth added
@@ -249,4 +281,4 @@ or *dateOfBirth* to other names, e.g. to german names like *nachname* or *geburt
   - More additional fields added: iban, email
   - POM changed for stable JAR file
 - Version 1.1.0 (27.05.2019)
-  - Updated versions of Jackson and log4j-api to latest versions without security vulnerabilities
+  - Updated versions of Jackson and log4j-api to the latest versions without security vulnerabilities

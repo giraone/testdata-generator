@@ -1,6 +1,7 @@
 package com.giraone.testdata;
 
 import com.giraone.testdata.fields.FieldEnhancer;
+import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.generator.*;
 import com.giraone.testdata.output.PersonListWriterCsv;
 import org.apache.commons.cli.*;
@@ -32,6 +33,7 @@ public class GeneratorMain {
         options.addOption("s", "serialize", true, "the serialization mode: either json (default) or csv");
         options.addOption("p", "personId", true, "type of additional person id: none, uuid, sequence");
         options.addOption("a", "additionalFields", true, "comma separated list of additional fields");
+        options.addOption("y", "companySpec", true, "define a custom company specification");
         options.addOption("x", "constantFields", true, "comma separated list of constant fields, that are added randomly");
         options.addOption("n", "numberOfItems", true, "the number of items, that should be produced in total or in a file");
         options.addOption("f", "filesPerDirectory", true, "the number of files per directory");
@@ -56,6 +58,7 @@ public class GeneratorMain {
             }
             configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
             parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
+            parseCompanySpec(cmd.getOptionValue("companySpec", ""), configuration.companySpec);
             parseConstantFields(cmd.getOptionValue("constantFields", ""), configuration.constantFields);
             configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
             configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
@@ -132,6 +135,10 @@ public class GeneratorMain {
                 result.put(fieldName, fieldEnhancer);
             }
         }
+    }
+
+    private void parseCompanySpec(String filePath, CompanyHierarchySpecification companyHierarchySpecification) {
+
     }
 
     // Parse sth. like red|blue,size=175|180|185,car=null|Audi|VW

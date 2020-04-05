@@ -1,19 +1,20 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class GeneratorTest {
 
     private static Generator generatorDE;
     private static Generator generatorEN;
 
-    @BeforeClass
+    @BeforeAll
     public static void init()
     {
         GeneratorConfiguration de = new GeneratorConfiguration();
@@ -30,37 +31,37 @@ public class GeneratorTest {
     @Test
     public void countEnglishMaleGivenName() {
         int count = generatorEN.getNumberOfEntriesGivenName(EnumGender.male);
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     @Test
     public void countEnglishFemaleGivenName() {
         int count = generatorEN.getNumberOfEntriesGivenName(EnumGender.female);
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     @Test
     public void countGermanMaleGivenName() {
         int count = generatorDE.getNumberOfEntriesGivenName(EnumGender.male);
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     @Test
     public void countGermanFemaleGivenName() {
         int count = generatorDE.getNumberOfEntriesGivenName(EnumGender.female);
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     @Test
     public void countEnglishSurname() {
         int count = generatorEN.getNumberOfEntriesSurname();
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     @Test
     public void countGermanSurname() {
         int count = generatorDE.getNumberOfEntriesSurname();
-        Assert.assertTrue("Count is not greater than 10", count > 10);
+        assertThat(count).isGreaterThan(10);
     }
 
     //- Basic given name tests -----------------------------------------------------------------------------------------
@@ -68,29 +69,29 @@ public class GeneratorTest {
     @Test
     public void createOneEnglishMaleGivenName() {
         String name = generatorEN.randomGivenName(EnumGender.male);
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     @Test
     public void createOneGermanMaleGivenName() {
         String name = generatorDE.randomGivenName(EnumGender.male);
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     @Test
     public void createOneEnglishFemaleGivenName() {
         String name = generatorEN.randomGivenName(EnumGender.female);
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     @Test
     public void createOneGermanFemaleGivenName() {
         String name = generatorDE.randomGivenName(EnumGender.female);
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     //- Basic surname tests --------------------------------------------------------------------------------------------
@@ -98,15 +99,15 @@ public class GeneratorTest {
     @Test
     public void createOneEnglishFemaleSurname() {
         String name = generatorEN.randomSurname();
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     @Test
     public void createOneGermanFemaleSurname() {
         String name = generatorDE.randomSurname();
-        Assert.assertNotNull(name);
-        Assert.assertTrue("Name is empty or only one character", name.length() > 1);
+        assertThat(name).isNotNull();
+        assertThat(name.trim().length()).isGreaterThan(1);
     }
 
     //- Check often used -----------------------------------------------------------------------------------------------
@@ -141,7 +142,7 @@ public class GeneratorTest {
                 count++;
             }
         }
-        Assert.assertTrue("count not greater than 5", count > 5);
+        assertThat(count).isGreaterThan(5);
     }
 
     //- Check random constant -------------------------------------------------------------------------------------------
@@ -156,9 +157,9 @@ public class GeneratorTest {
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
             Object value = person.getAdditionalField("field");
-            Assert.assertNotNull(value);
-            Assert.assertEquals(String.class, value.getClass());
-            Assert.assertTrue(valueList.contains(value));
+            assertThat(value).isNotNull();
+            assertThat(value).isOfAnyClassIn(String.class);
+            assertThat(value).isIn(valueList);
         } finally {
             generatorEN.getConfiguration().constantFields.clear();
         }
@@ -169,10 +170,10 @@ public class GeneratorTest {
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
             Object value = person.getAdditionalField("field");
-            Assert.assertNotNull(value);
-            Assert.assertEquals(Integer.class, value.getClass());
+            assertThat(value).isNotNull();
+            assertThat(value).isOfAnyClassIn(Integer.class);
             int intValue = (int) value;
-            Assert.assertTrue(intValue == 1 || intValue == 2);
+            assertThat(intValue).isBetween(1, 2);
         } finally {
             generatorEN.getConfiguration().constantFields.clear();
         }
@@ -183,8 +184,8 @@ public class GeneratorTest {
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
             Object value = person.getAdditionalField("field");
-            Assert.assertNotNull(value);
-            Assert.assertEquals(Boolean.class, value.getClass());
+            assertThat(value).isNotNull();
+            assertThat(value).isOfAnyClassIn(Boolean.class);
         } finally {
             generatorEN.getConfiguration().constantFields.clear();
         }

@@ -2,16 +2,17 @@ package com.giraone.testdata.fields;
 
 import com.giraone.testdata.generator.EnumLanguage;
 import com.giraone.testdata.generator.GeneratorConfiguration;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FieldEnhancerPostalAddressTest {
 
     private static GeneratorConfiguration de = new GeneratorConfiguration();
     private static GeneratorConfiguration en = new GeneratorConfiguration();
 
-    @BeforeClass
+    @BeforeAll
     public static void init()
     {
         de.language = EnumLanguage.de;
@@ -23,9 +24,9 @@ public class FieldEnhancerPostalAddressTest {
 
 
         String[] value = FieldEnhancerPostalAddress.randomCityAndPostCode(de);
-        Assert.assertNotNull(value);
-        Assert.assertNotNull(value[0]);
-        Assert.assertNotNull(value[1]);
+        assertThat(value).isNotNull();
+        assertThat(value[0]).isNotNull();
+        assertThat(value[1]).isNotNull();
     }
 
     @Test
@@ -33,6 +34,7 @@ public class FieldEnhancerPostalAddressTest {
 
         FieldEnhancerPostalAddress f = new FieldEnhancerPostalAddress();
         String value = f.randomStreet(de);
-        Assert.assertNotNull(value);
+        assertThat(value).isNotNull();
+        assertThat(value).isNotEmpty();
     }
 }

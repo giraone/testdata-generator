@@ -1,6 +1,7 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.fields.FieldEnhancer;
+import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.output.PersonListWriter;
 import com.giraone.testdata.output.PersonListWriterJson;
 import com.giraone.testdata.util.AliasReader;
@@ -33,6 +34,9 @@ public class GeneratorConfiguration {
 
     /**constant fields, that are added randomly */
     public List<FieldSpec> constantFields = new ArrayList<>();
+
+    /** configuration for company IDs - {@see FieldEnhancerCompany} */
+    public CompanyHierarchySpecification companySpec = CompanyHierarchySpecification.DEFAULT;
 
     /** the number of items, that should be produced in total or in a file */
     public int numberOfItems = 1;
