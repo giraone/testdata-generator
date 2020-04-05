@@ -1,0 +1,42 @@
+[
+  {
+    "valuePattern": "%s-%08d",
+    "sizeDistribution":
+    [
+      {
+        "name": "s",
+        "proportion": 0.8,
+        "minimalNumberOfEmployees": 2,
+        "maximalNumberOfEmployees": 9,
+        "minimalNumberOfSubCompanies": 0,
+        "maximalNumberOfSubCompanies": 2
+      },
+      {
+        "name": "l",
+        "proportion": 0.2,
+        "minimalNumberOfEmployees": 10,
+        "maximalNumberOfEmployees": 100,
+        "minimalNumberOfSubCompanies": 0,
+        "maximalNumberOfSubCompanies": 4
+      }
+    ]
+  },
+  {
+    "valuePattern": "%s-%08d",
+    "sizeDistribution":
+    [
+      {
+        "name": "hq",
+        "proportion": 0.6
+      },
+      {
+        "name": "loc1",
+        "proportion": 0.2,
+      },
+      {
+        "name": "loc2",
+        "proportion": 0.2
+      }
+    ]
+  }
+]

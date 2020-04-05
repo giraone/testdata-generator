@@ -14,7 +14,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.UUID;
 
 public class Generator {
 
@@ -101,7 +106,7 @@ public class Generator {
 
     public List<Person> randomPersons(int startIndex, int endIndex) {
 
-        final ArrayList<Person> ret = new ArrayList<>();
+        final List<Person> ret = new ArrayList<>();
         for (int index = startIndex; index < endIndex; index++) {
             final Person person = randomPerson(index);
             ret.add(person);

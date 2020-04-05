@@ -6,7 +6,7 @@
 
     <groupId>com.giraone</groupId>
     <artifactId>testdata-generator</artifactId>
-    <version>1.3.0</version>
+    <version>1.5.0</version>
 
     <name>testdata-generator</name>
     <url>http://github.com/giraone/testdata-generator</url>

@@ -4,17 +4,35 @@ public class CompanySizeDistribution {
 
     private String name;
     private float proportion;
-    private int minimalNumber;
-    private int maximalNumber;
+    private int minimalNumberOfEmployees;
+    private int maximalNumberOfEmployees;
+    private int minimalNumberOfSubCompanies;
+    private int maximalNumberOfSubCompanies;
 
     public CompanySizeDistribution() {
     }
 
-    public CompanySizeDistribution(String name, float proportion, int minimalNumber, int maximalNumber) {
+    public CompanySizeDistribution(String name, float proportion) {
         this.name = name;
         this.proportion = proportion;
-        this.minimalNumber = minimalNumber;
-        this.maximalNumber = maximalNumber;
+        this.minimalNumberOfEmployees = -1;
+        this.maximalNumberOfEmployees = -1;
+    }
+
+    public CompanySizeDistribution(String name, float proportion, int minimalNumberOfEmployees, int maximalNumberOfEmployees) {
+        this.name = name;
+        this.proportion = proportion;
+        this.minimalNumberOfEmployees = minimalNumberOfEmployees;
+        this.maximalNumberOfEmployees = maximalNumberOfEmployees;
+    }
+
+    public CompanySizeDistribution(String name, float proportion, int minimalNumberOfEmployees, int maximalNumberOfEmployees, int minimalNumberOfSubCompanies, int maximalNumberOfSubCompanies) {
+        this.name = name;
+        this.proportion = proportion;
+        this.minimalNumberOfEmployees = minimalNumberOfEmployees;
+        this.maximalNumberOfEmployees = maximalNumberOfEmployees;
+        this.minimalNumberOfSubCompanies = minimalNumberOfSubCompanies;
+        this.maximalNumberOfSubCompanies = maximalNumberOfSubCompanies;
     }
 
     public String getName() {
@@ -33,29 +51,37 @@ public class CompanySizeDistribution {
         this.proportion = proportion;
     }
 
-    public int getMinimalNumber() {
-        return minimalNumber;
+    public int getMinimalNumberOfEmployees() {
+        return minimalNumberOfEmployees;
     }
 
-    public void setMinimalNumber(int minimalNumber) {
-        this.minimalNumber = minimalNumber;
+    public void setMinimalNumberOfEmployees(int minimalNumberOfEmployees) {
+        this.minimalNumberOfEmployees = minimalNumberOfEmployees;
     }
 
-    public int getMaximalNumber() {
-        return maximalNumber;
+    public int getMaximalNumberOfEmployees() {
+        return maximalNumberOfEmployees;
     }
 
-    public void setMaximalNumber(int maximalNumber) {
-        this.maximalNumber = maximalNumber;
+    public void setMaximalNumberOfEmployees(int maximalNumberOfEmployees) {
+        this.maximalNumberOfEmployees = maximalNumberOfEmployees;
     }
 
-    @Override
-    public String toString() {
-        return "CompanySizeDistribution{" +
-            "name='" + name + '\'' +
-            ", proportion=" + proportion +
-            ", minimalNumber=" + minimalNumber +
-            ", maximalNumber=" + maximalNumber +
-            '}';
+    public int getMinimalNumberOfSubCompanies() {
+        return minimalNumberOfSubCompanies;
     }
+
+    public void setMinimalNumberOfSubCompanies(int minimalNumberOfSubCompanies) {
+        this.minimalNumberOfSubCompanies = minimalNumberOfSubCompanies;
+    }
+
+    public int getMaximalNumberOfSubCompanies() {
+        return maximalNumberOfSubCompanies;
+    }
+
+    public void setMaximalNumberOfSubCompanies(int maximalNumberOfSubCompanies) {
+        this.maximalNumberOfSubCompanies = maximalNumberOfSubCompanies;
+    }
+
+
 }

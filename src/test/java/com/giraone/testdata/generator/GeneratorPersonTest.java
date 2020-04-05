@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class GeneratorPersonTest {
+class GeneratorPersonTest {
 
     private static Generator generatorDE;
     private static Generator generatorEN;
@@ -29,7 +29,7 @@ public class GeneratorPersonTest {
     //- person generation ----------------------------------------------------------------------------------------------
 
     @Test
-    public void generatePersonEn() {
+    void generatePersonEn() {
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getGender()).isNotNull();
@@ -38,7 +38,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void generatePersonDe() {
+    void generatePersonDe() {
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getGender()).isNotNull();
@@ -47,7 +47,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void generatePersonsEn() {
+    void generatePersonsEn() {
         List<Person> personList = generatorEN.randomPersons(0, 10);
         assertThat(personList).isNotNull();
         assertThat(personList.size()).isEqualTo(10);
@@ -57,7 +57,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void generatePersonsDe() {
+    void generatePersonsDe() {
         List<Person> personList = generatorDE.randomPersons(0, 10);
         assertThat(personList).isNotNull();
         assertThat(personList.size()).isEqualTo(10);
@@ -69,7 +69,7 @@ public class GeneratorPersonTest {
     //- ID generation --------------------------------------------------------------------------------------------------
 
     @Test
-    public void testThatUuidIsGenerated() {
+    void testThatUuidIsGenerated() {
         generatorEN.getConfiguration().idType = EnumIdType.uuid;
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
@@ -79,7 +79,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void testThatSequenceIdIsGenerated() {
+    void testThatSequenceIdIsGenerated() {
         generatorEN.getConfiguration().idType = EnumIdType.sequence;
         generatorEN.getConfiguration().withIndex = true;
         Person person = generatorEN.randomPerson();
@@ -93,7 +93,7 @@ public class GeneratorPersonTest {
     //- field generation -----------------------------------------------------------------------------------------------
 
     @Test
-    public void testThatDateOfBirthIsGenerated() {
+    void testThatDateOfBirthIsGenerated() {
         generatorEN.getConfiguration().additionalFields.put(FieldConstants.dateOfBirth, new FieldEnhancerDateOfBirth());
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
@@ -104,7 +104,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void testThatGermanPostalAddressIsGenerated() {
+    void testThatGermanPostalAddressIsGenerated() {
         generatorDE.getConfiguration().additionalFields.put("postalAddress", new FieldEnhancerPostalAddress());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
@@ -114,7 +114,8 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void testThatEmailIsGenerated() {
+    void testThatEmailIsGenerated() {
+
         generatorDE.getConfiguration().additionalFields.put(FieldConstants.email, new FieldEnhancerEmail());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
@@ -125,7 +126,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void testThatGermanIbanIsGenerated() {
+    void testThatGermanIbanIsGenerated() {
         generatorDE.getConfiguration().additionalFields.put(FieldConstants.iban, new FieldEnhancerIban());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
@@ -136,7 +137,7 @@ public class GeneratorPersonTest {
     }
 
     @Test
-    public void testThatBritishIbanIsGenerated() {
+    void testThatBritishIbanIsGenerated() {
         generatorEN.getConfiguration().additionalFields.put(FieldConstants.iban, new FieldEnhancerIban());
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();

@@ -1,13 +1,28 @@
 package com.giraone.testdata;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.giraone.testdata.fields.FieldEnhancer;
+import com.giraone.testdata.fields.FieldEnhancerCompany;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
-import com.giraone.testdata.generator.*;
+import com.giraone.testdata.fields.company.CompanyLevelSpecification;
+import com.giraone.testdata.generator.EnumIdType;
+import com.giraone.testdata.generator.EnumJsonDataType;
+import com.giraone.testdata.generator.EnumLanguage;
+import com.giraone.testdata.generator.FieldSpec;
+import com.giraone.testdata.generator.Generator;
+import com.giraone.testdata.generator.GeneratorConfiguration;
 import com.giraone.testdata.output.PersonListWriterCsv;
-import org.apache.commons.cli.*;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
@@ -50,7 +65,7 @@ public class GeneratorMain {
                 System.exit(1);
             }
             configuration.language = EnumLanguage.valueOf(cmd.getOptionValue("language", configuration.language.toString()));
-            configuration.country = cmd.getOptionValue("country", configuration.country.toString());
+            configuration.country = cmd.getOptionValue("country", configuration.country);
             configuration.withIndex = cmd.hasOption("withIndex");
             configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
             if ("csv" .equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {
@@ -80,18 +95,23 @@ public class GeneratorMain {
         if (configuration.filesPerDirectory > 0 || configuration.numberOfDirectories > 0) {
             runBlockwise(generator);
         } else {
-            runOneList(generator, System.out);
+            runOneList(generator, System.out, true);
         }
     }
 
-    private void runOneList(Generator generator, PrintStream out) throws Exception {
+    private void runOneList(Generator generator, PrintStream out, boolean doCalculateTotals) throws Exception {
 
+        if (doCalculateTotals) {
+            calculateTotals();
+        }
         List<Person> personList = generator.randomPersons(
             configuration.startIndex, configuration.numberOfItems - configuration.startIndex);
         configuration.listWriter.write(personList, out);
     }
 
     private void runBlockwise(Generator generator) throws Exception {
+
+        calculateTotals();
 
         final String extension = configuration.listWriter instanceof PersonListWriterCsv ? "csv" : "json";
         for (int directoryIndex = 0; directoryIndex < configuration.numberOfDirectories; directoryIndex++) {
@@ -107,7 +127,7 @@ public class GeneratorMain {
                 final String fileName = String.format("f-%08d.%s", fileIndex, extension);
                 final File file = new File(directory, fileName);
                 try (PrintStream out = new PrintStream(new FileOutputStream(file))) {
-                    runOneList(generator, out);
+                    runOneList(generator, out, false);
                 }
             }
         }
@@ -137,8 +157,11 @@ public class GeneratorMain {
         }
     }
 
-    private void parseCompanySpec(String filePath, CompanyHierarchySpecification companyHierarchySpecification) {
+    private void parseCompanySpec(String filePath, CompanyHierarchySpecification companyHierarchySpecification) throws IOException {
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<CompanyLevelSpecification> levelSpecifications = objectMapper.readValue(new File(filePath), new TypeReference<List<CompanyLevelSpecification>>(){});
+        companyHierarchySpecification.setLevelSpecifications(levelSpecifications);
     }
 
     // Parse sth. like red|blue,size=175|180|185,car=null|Audi|VW
@@ -176,9 +199,19 @@ public class GeneratorMain {
         }
     }
 
+    private void calculateTotals() {
+        int totalNumberOfPersons = configuration.numberOfDirectories * configuration.filesPerDirectory * configuration.numberOfItems;
+        System.err.println("totalNumberOfPersons = " + totalNumberOfPersons);
+        for (FieldEnhancer field : configuration.additionalFields.values()) {
+            if (field instanceof FieldEnhancerCompany) {
+                ((FieldEnhancerCompany) field).init(configuration.companySpec, totalNumberOfPersons);
+            }
+        }
+    }
+
     private void usage(Options options) {
 
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("java -jar testdata-generator-1.0.jar", options);
+        formatter.printHelp("java -jar testdata-generator.jar", options);
     }
 }

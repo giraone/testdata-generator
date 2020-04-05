@@ -141,14 +141,14 @@ A simple one level JSON configuration file would be:
    {
     "name": "s",
     "proportion": 0.8,
-    "minimalNumber": 2,
-    "maximalNumber": 9
+    "minimalNumberOfEmployees": 2,
+    "maximalNumberOfEmployees": 9
    },
    {
     "name": "l",
     "proportion": 0.2,
-    "minimalNumber": 10,
-    "maximalNumber": 100
+    "minimalNumberOfEmployees": 10,
+    "maximalNumberOfEmployees": 100
    }
   ]
  }
@@ -159,7 +159,7 @@ In this case, every person is assigned to a small company (2-9 employees) or a l
 `s-01234567` or `l-01234568`. The above specification is also the default one.
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec CompanyIdSpec.json --additionalFields company.companyId --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec companySpecLevel1.json --additionalFields company.companyId --serialize CSV
 0,,Ziegler,Erna,f,,,,,,s-00003146
 1,,Fischer,Jutta,f,,,,,,l-00000018
 2,,Brandl,Erna,f,,,,,,s-00000498
@@ -171,6 +171,53 @@ $ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --compa
 8,,Schmitz,Karl-Heinz,m,,,,,,s-00004198
 9,,Gerber,Andrea,f,,,,,,s-00000726
 ```
+
+An example for a two level company hierarchy is:
+```json
+[
+ {
+  "valuePattern": "%s-%08d",
+  "sizeDistribution":
+  [
+   {
+    "name": "s",
+    "proportion": 0.8,
+    "minimalNumberOfEmployees": 2,
+    "maximalNumberOfEmployees": 9,
+    "minimalNumberOfSubCompanies": 0,
+    "maximalNumberOfSubCompanies": 2
+   },
+   {
+    "name": "l",
+    "proportion": 0.2,
+    "minimalNumberOfEmployees": 10,
+    "maximalNumberOfEmployees": 100,
+    "minimalNumberOfSubCompanies": 0,
+    "maximalNumberOfSubCompanies": 4
+   }
+  ]
+ },
+ {
+  "valuePattern": "%s-%08d",
+  "sizeDistribution":
+  [
+   {
+    "name": "hq",
+    "proportion": 0.6
+   },
+   {
+    "name": "loc1",
+    "proportion": 0.2,
+   },
+   {
+    "name": "loc2",
+    "proportion": 0.2
+   }
+  ]
+ }
+]
+```
+
 If one wants to create a `personnelNumber`, that is unique within a company, the following statement can be used
 
 ```shell script

@@ -1,5 +1,10 @@
-package com.giraone.testdata.fields.company;
+package com.giraone.testdata.fields;
 
+import com.giraone.testdata.fields.FieldEnhancerCompany;
+import com.giraone.testdata.fields.company.Company;
+import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
+import com.giraone.testdata.fields.company.CompanyLevelSpecification;
+import com.giraone.testdata.fields.company.CompanySizeDistribution;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -40,7 +45,7 @@ public class CompanyHierarchyGenerationTest {
         assertThat(company).isNotNull();
         assertThat(company.getIndex()).isBetween(0, numberOfPersons / 10);
         assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}$");
-        assertThat(company.getSize()).isGreaterThan(0);
+        assertThat(company.getTotalNumberOfEmployees()).isGreaterThan(0);
 
         // act/assert loop
         for (int i = 1; i < numberOfPersons; i++) {
@@ -48,8 +53,7 @@ public class CompanyHierarchyGenerationTest {
             assertThat(company).isNotNull();
             assertThat(company.getIndex()).isBetween(0, numberOfPersons / 10);
             assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}$");
-            assertThat(company.getSize()).isGreaterThan(0);
-            System.err.println(company);
+            assertThat(company.getTotalNumberOfEmployees()).isGreaterThan(0);
         }
     }
 
@@ -68,10 +72,10 @@ public class CompanyHierarchyGenerationTest {
         companyLevelSpecificationList.add(companyLevelSpecification1);
         {
             CompanySizeDistribution companySizeDistributionSmall = new CompanySizeDistribution(
-                "s", 0.8f, 1, 99
+                "s", 0.8f, 1, 99, 0, 2
             );
             CompanySizeDistribution companySizeDistributionLarge = new CompanySizeDistribution(
-                "l", 0.2f, 100, 1000
+                "l", 0.2f, 100, 1000, 2, 6
             );
             List<CompanySizeDistribution> sizeDistributions = new ArrayList<>();
             sizeDistributions.add(companySizeDistributionSmall);
@@ -81,10 +85,10 @@ public class CompanyHierarchyGenerationTest {
         }
         {
             CompanySizeDistribution companySizeDistributionMainDivision = new CompanySizeDistribution(
-                "h", 0.5f, 1, 50
+                "h", 0.5f
             );
             CompanySizeDistribution companySizeDistributionSubDivision = new CompanySizeDistribution(
-                "n", 0.5f, 51, 100
+                "n", 0.5f
             );
             List<CompanySizeDistribution> sizeDistributions = new ArrayList<>();
             sizeDistributions.add(companySizeDistributionMainDivision);
@@ -100,17 +104,16 @@ public class CompanyHierarchyGenerationTest {
         // assert
         assertThat(company).isNotNull();
         assertThat(company.getIndex()).isBetween(0, numberOfPersons / 10);
-        assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}/(h|n)-[0-9]{4}$");
-        assertThat(company.getSize()).isGreaterThan(0);
+        assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}(/(h|n)-[0-9]{4})?$");
+        assertThat(company.getTotalNumberOfEmployees()).isGreaterThan(0);
 
         // act/assert loop
         for (int i = 1; i < numberOfPersons; i++) {
             company = fieldEnhancerCompany.randomCompany();
             assertThat(company).isNotNull();
             assertThat(company.getIndex()).isBetween(0, numberOfPersons / 10);
-            assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}/(h|n)-[0-9]{4}$");
-            assertThat(company.getSize()).isGreaterThan(0);
-            System.err.println(company);
+            assertThat(company.getKey()).matches("^(s|l)-[0-9]{8}(/(h|n)-[0-9]{4})?$");
+            assertThat(company.getTotalNumberOfEmployees()).isGreaterThan(0);
         }
     }
 }
