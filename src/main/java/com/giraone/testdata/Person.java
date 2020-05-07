@@ -69,15 +69,37 @@ public class Person {
         return additionalFields;
     }
 
+    @SuppressWarnings(("unchecked"))
     public void setAdditionalField(String field, Object value) {
         if (this.additionalFields == null) {
             this.additionalFields = new HashMap<>();
         }
-        this.additionalFields.put(field, value);
+        int i;
+        if ((i = field.indexOf('.')) > 0) {
+            String prefix = field.substring(0, i);
+            String suffix = field.substring(i + 1);
+            Map<String, Object> subObject;
+
+            if ((subObject = (Map<String, Object>) this.additionalFields.get(prefix)) == null) {
+                subObject = new HashMap<>();
+            }
+            subObject.put(suffix, value);
+            this.additionalFields.put(prefix, subObject);
+        } else {
+            this.additionalFields.put(field, value);
+        }
     }
 
     public Object getAdditionalField(String field) {
-        return this.additionalFields != null ? this.additionalFields.get(field) : null;
+        int i;
+        if ((i = field.indexOf('.')) > 0) {
+            String prefix = field.substring(0, i);
+            String suffix = field.substring(0, i);
+            Map<String, Object> subObject = (Map<String, Object>) this.additionalFields.get(prefix);
+            return subObject != null ? subObject.get(suffix) : null;
+        } else {
+            return this.additionalFields != null ? this.additionalFields.get(field) : null;
+        }
     }
 
     public void putBasicFields(GeneratorConfiguration configuration) {

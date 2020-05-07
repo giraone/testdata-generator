@@ -30,7 +30,22 @@ import java.util.Map;
 
 public class GeneratorMain {
 
-    private GeneratorConfiguration configuration = new GeneratorConfiguration();
+    private static final String DEFAULT_COMPANY_SPEC = "[\n" +
+        "  {\n" +
+        "    \"valuePattern\": \"%08d\",\n" +
+        "    \"sizeDistribution\":\n" +
+        "    [\n" +
+        "      {\n" +
+        "        \"name\": \"\",\n" +
+        "        \"proportion\": 1.0,\n" +
+        "        \"minimalNumberOfEmployees\": 2,\n" +
+        "        \"maximalNumberOfEmployees\": 9\n" +
+        "      }\n" +
+        "    ]\n" +
+        "  }\n" +
+        "]";
+
+    private final GeneratorConfiguration configuration = new GeneratorConfiguration();
 
     public static void main(String[] args) throws Exception {
 
@@ -73,7 +88,7 @@ public class GeneratorMain {
             }
             configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
             parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
-            parseCompanySpec(cmd.getOptionValue("companySpec", ""), configuration.companySpec);
+            parseCompanySpec(cmd.getOptionValue("companySpec", null), configuration.companySpec);
             parseConstantFields(cmd.getOptionValue("constantFields", ""), configuration.constantFields);
             configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
             configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
@@ -160,7 +175,12 @@ public class GeneratorMain {
     private void parseCompanySpec(String filePath, CompanyHierarchySpecification companyHierarchySpecification) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        List<CompanyLevelSpecification> levelSpecifications = objectMapper.readValue(new File(filePath), new TypeReference<List<CompanyLevelSpecification>>(){});
+        List<CompanyLevelSpecification> levelSpecifications;
+        if (filePath != null) {
+            levelSpecifications = objectMapper.readValue(new File(filePath), new TypeReference<List<CompanyLevelSpecification>>(){});
+        }  else {
+            levelSpecifications = objectMapper.readValue(DEFAULT_COMPANY_SPEC, new TypeReference<List<CompanyLevelSpecification>>(){});
+        }
         companyHierarchySpecification.setLevelSpecifications(levelSpecifications);
     }
 
@@ -194,7 +214,7 @@ public class GeneratorMain {
                 enumJsonDataType = EnumJsonDataType.booleanType;
             }
             FieldSpec fieldSpec = new FieldSpec(fieldName, valuesList, enumJsonDataType, isNull, isNullPercentage);
-            //System.err.println(fieldSpec);
+            System.err.println(fieldSpec);
             result.add(fieldSpec);
         }
     }

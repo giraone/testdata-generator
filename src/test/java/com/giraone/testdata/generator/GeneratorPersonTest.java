@@ -146,4 +146,26 @@ class GeneratorPersonTest {
         assertThat(person.getAdditionalFields().get(FieldConstants.iban).toString())
             .matches("^GB[0-9]{2}[A-Z]{4}[0-9]{14}$");
     }
+
+    @Test
+    void testThatGermanPhoneNumberIsGenerated() {
+        generatorDE.getConfiguration().additionalFields.put(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
+        Person person = generatorDE.randomPerson();
+        assertThat(person).isNotNull();
+        assertThat(person.getAdditionalFields()).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber).toString())
+                .matches("^[+]49[0-9 ]+$");
+    }
+
+    @Test
+    void testThatBritishPhoneNumberIsGenerated() {
+        generatorEN.getConfiguration().additionalFields.put(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
+        Person person = generatorDE.randomPerson();
+        assertThat(person).isNotNull();
+        assertThat(person.getAdditionalFields()).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber).toString())
+                .matches("^[+]44[0-9 ]+$");
+    }
 }

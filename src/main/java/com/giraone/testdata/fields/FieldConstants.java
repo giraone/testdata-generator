@@ -7,7 +7,7 @@ public class FieldConstants {
     public static final String givenName = "givenName";
     public static final String surname = "surname";
     public static final String gender = "gender";
-    public static final String companyId = "companyId";
+    public static final String companyId = "company.id";
     public static final String streetAddress = "streetAddress";
     public static final String street = "street";
     public static final String houseNumber = "houseNumber";
@@ -20,5 +20,6 @@ public class FieldConstants {
 
     public static final String email = "email";
     public static final String iban = "iban";
+    public static final String phoneNumber = "phoneNumber";
     public static final String personnelNumber = "personnelNumber";
 }

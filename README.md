@@ -11,7 +11,7 @@ or "Thomas Müller" than "Eusebius Wichteldorf". This non-uniform distribution o
 performance in database queries. And having realistic names can help also in doing demos.
 
 If your are in this situation, this library can help. It generates names from weighted datafiles.
-Such a file looks like this:
+Such a file, looks like this:
 
 ```
 Mary,25000
@@ -159,7 +159,7 @@ In this case, every person is assigned to a small company (2-9 employees) or a l
 `s-01234567` or `l-01234568`. The above specification is also the default one.
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec companySpecLevel1.json --additionalFields company.companyId --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec companySpecLevel1.json --additionalFields company.id --serialize CSV
 0,,Ziegler,Erna,f,,,,,,s-00003146
 1,,Fischer,Jutta,f,,,,,,l-00000018
 2,,Brandl,Erna,f,,,,,,s-00000498
@@ -221,7 +221,7 @@ An example for a two level company hierarchy is:
 If one wants to create a `personnelNumber`, that is unique within a company, the following statement can be used
 
 ```shell script
-$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --additionalFields company.companyId,company.personnelNumber --serialize CSV
+$ java -jar target/testdata-generator.jar --withIndex --numberOfItems 10 --companySpec companySpecLevel1.json --additionalFields company.id,company.personnelNumber
 ```
 
 ### More predefined additional fields
@@ -314,6 +314,10 @@ or *dateOfBirth* to other names, e.g. to german names like *nachname* or *geburt
 
 ### Change Log
 
+- Version 1.6.0 (07.05.2020)
+  - New field phoneNumber
+  - Company configuration changed to group company fields (company.id, company.personnelNumber)
+  - Upgrade to Jackson 2.11.0
 - Version 1.5.0 (05.04.2020)
   - Tests migration to JUnit 5 and AssertJ 3
   - Support for hierarchical companyIds, e.g. company, location, department

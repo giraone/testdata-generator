@@ -5,7 +5,6 @@ import com.giraone.testdata.generator.GeneratorConfiguration;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Random;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
@@ -14,8 +13,6 @@ import static java.time.temporal.ChronoUnit.DAYS;
  */
 @SuppressWarnings("unused")
 public class FieldEnhancerDateOfBirth implements FieldEnhancer {
-
-    private static final Random RANDOM = new Random();
 
     private static LocalDate fromLocalDate = LocalDate.parse("1930-01-01");
     private static LocalDate toLocalDate = LocalDate.now().minusYears(16);

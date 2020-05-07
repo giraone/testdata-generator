@@ -2,15 +2,14 @@
   "givenName": "vorname",
   "surname": "nachname",
   "gender": "geschlecht",
-  "companyId": "hierarchieSchluessel",
+  "company.id": "betrieb.betriebsnummerSv",
   "street": "strasse",
-  "streetAddress": "strasseUndHausnummer",
   "houseNumber": "hausnummer",
-  "postalCode": "plz",
-  "city": "wohnort",
+  "postalCode": "postleitzahl",
+  "city": "ort",
   "dateOfBirth": "geburtsdatum",
-  "placeOfBirth": "ortDerGeburt",
+  "placeOfBirth": "geburtsort",
   "birthName": "geburtsname",
-  "personnelNumber": "mitarbeiterNummer",
-  "staatsangehoerigkeit": "staatsangehoerigkeit"
+  "personnelNumber": "personalNummer",
+  "phoneNumber": "telefonnummer"
 }

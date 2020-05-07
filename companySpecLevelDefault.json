@@ -1,0 +1,14 @@
+[
+  {
+    "valuePattern": "%08d",
+    "sizeDistribution":
+    [
+      {
+        "name": "",
+        "proportion": 1.0,
+        "minimalNumberOfEmployees": 2,
+        "maximalNumberOfEmployees": 9
+      }
+    ]
+  }
+]

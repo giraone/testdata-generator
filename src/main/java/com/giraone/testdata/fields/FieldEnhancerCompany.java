@@ -8,16 +8,13 @@ import com.giraone.testdata.fields.company.CompanySizeDistribution;
 import com.giraone.testdata.generator.GeneratorConfiguration;
 
 import java.util.List;
-import java.util.Random;
 
 /**
- * This class adds a "companyId" string value to the person.
+ * This class adds a "company.id" string value to the person.
  * The companyId is a hierarchical key, e.g. "Alphabet/Google/Sales/US
  */
 @SuppressWarnings("unused")
 public class FieldEnhancerCompany implements FieldEnhancer {
-
-    private static final Random RANDOM = new Random();
 
     private CompanyHierarchySpecification companyHierarchySpecification;
     private int totalNumberOfCompanies;
@@ -64,7 +61,13 @@ public class FieldEnhancerCompany implements FieldEnhancer {
         final int distributionIndex = getDistribution(levelSpecification0.getSizeDistribution(), r);
         final CompanySizeDistribution distribution = levelSpecification0.getSizeDistribution().get(distributionIndex);
         final int totalNumberOfEmployees = distribution.getMinimalNumberOfEmployees() + RANDOM.nextInt(distribution.getMaximalNumberOfEmployees() - distribution.getMinimalNumberOfEmployees());
-        final String companyKey = String.format(levelSpecification0.getValuePattern(), distribution.getName(), companyIndex);
+        String format = levelSpecification0.getValuePattern();
+        final String companyKey;
+        if (format.contains("%s")) {
+            companyKey = String.format(format, distribution.getName(), companyIndex);
+        } else {
+            companyKey = String.format(format, companyIndex);
+        }
         final int totalNumberOfSubCompanies = calculateTotalNumberOfSubCompanies(totalNumberOfEmployees, levelSpecification0);
         company = new Company(levelIndex, companyIndex, companyKey, totalNumberOfEmployees, totalNumberOfSubCompanies);
         // System.err.println(company);
@@ -110,13 +113,15 @@ public class FieldEnhancerCompany implements FieldEnhancer {
 
     private int calculateTotalNumberOfCompanies(int totalNumberOfPersons, CompanyLevelSpecification levelSpecification0) {
 
-        float ret = 0.0f;
+        float averageCompanySize = 0.0f;
         for (int distributionIndex = 0; distributionIndex < levelSpecification0.getSizeDistribution().size(); distributionIndex++) {
             CompanySizeDistribution distribution = levelSpecification0.getSizeDistribution().get(distributionIndex);
-            int average = distribution.getMinimalNumberOfEmployees() + 2 * (distribution.getMaximalNumberOfEmployees() - distribution.getMinimalNumberOfEmployees());
-            ret += average * distribution.getProportion();
+            int average = distribution.getMinimalNumberOfEmployees() + (distribution.getMaximalNumberOfEmployees() - distribution.getMinimalNumberOfEmployees()) / 2;
+            averageCompanySize += average * distribution.getProportion();
+            //System.err.println(average + " " + distribution.getProportion() + " " + averageCompanySize);
         }
-        return Math.round(ret - 0.5f);
+        System.err.println("Average company size = " + averageCompanySize);
+        return Math.max(1, Math.round(totalNumberOfPersons / averageCompanySize - 0.5f));
     }
 
     private int calculateTotalNumberOfSubCompanies(int totalNumberOfPersons, CompanyLevelSpecification levelSpecification) {

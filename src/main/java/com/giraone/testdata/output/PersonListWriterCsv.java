@@ -36,6 +36,7 @@ public class PersonListWriterCsv implements PersonListWriter {
                 .addColumn(FieldConstants.personnelNumber)
                 .addColumn(FieldConstants.email)
                 .addColumn(FieldConstants.iban)
+                .addColumn(FieldConstants.phoneNumber)
                 .build();
         mapper.writerFor(typeRef)
                 .with(schema)

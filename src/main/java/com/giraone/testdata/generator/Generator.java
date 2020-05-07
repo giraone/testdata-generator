@@ -69,13 +69,13 @@ public class Generator {
             person.setIndex(index);
         }
 
-        person.putBasicFields(configuration);
-
         if (configuration.idType == EnumIdType.sequence) {
             person.setId(Long.toUnsignedString(index));
         } else if (configuration.idType == EnumIdType.uuid) {
             person.setId(UUID.randomUUID().toString());
         }
+
+        person.putBasicFields(configuration);
 
         for (Map.Entry<String, FieldEnhancer> field : configuration.additionalFields.entrySet()) {
             field.getValue().addFields(configuration, person, field.getKey());
