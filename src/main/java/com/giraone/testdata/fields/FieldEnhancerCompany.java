@@ -57,7 +57,7 @@ public class FieldEnhancerCompany implements FieldEnhancer {
 
         int levelIndex = 0;
         CompanyLevelSpecification levelSpecification0 = companyHierarchySpecification.getLevelSpecifications().get(levelIndex);
-        final float r = RANDOM.nextInt(10000) / 100f;
+        final float r = RANDOM.nextInt(10000) / 10000f;
         final int distributionIndex = getDistribution(levelSpecification0.getSizeDistribution(), r);
         final CompanySizeDistribution distribution = levelSpecification0.getSizeDistribution().get(distributionIndex);
         final int totalNumberOfEmployees = distribution.getMinimalNumberOfEmployees() + RANDOM.nextInt(distribution.getMaximalNumberOfEmployees() - distribution.getMinimalNumberOfEmployees());
@@ -98,8 +98,7 @@ public class FieldEnhancerCompany implements FieldEnhancer {
         if (subCompany != null) {
             return subCompany;
         }
-        final float r = RANDOM.nextInt(10000) / 100f;
-        final int distributionIndex = getDistribution(levelSpecification.getSizeDistribution(), r);
+        final int distributionIndex = getDistribution(levelSpecification.getSizeDistribution(), RANDOM.nextFloat());
         final CompanySizeDistribution distribution = levelSpecification.getSizeDistribution().get(distributionIndex);
         int max = 1 + (int) Math.round(((parentCompany.getTotalNumberOfEmployees() - 1) * distribution.getProportion()) - 0.5);
         int min = 1;
@@ -121,6 +120,9 @@ public class FieldEnhancerCompany implements FieldEnhancer {
             //System.err.println(average + " " + distribution.getProportion() + " " + averageCompanySize);
         }
         System.err.println("Average company size = " + averageCompanySize);
+        if (averageCompanySize <= 0.5f) {
+            throw new IllegalArgumentException("CompanyLevelSpecification is incorrect and lead to companies with 0 employees!");
+        }
         return Math.max(1, Math.round(totalNumberOfPersons / averageCompanySize - 0.5f));
     }
 
@@ -140,7 +142,7 @@ public class FieldEnhancerCompany implements FieldEnhancer {
         for (int index = 0; index < distributions.size(); index++) {
             CompanySizeDistribution distribution = distributions.get(index);
             sum += distribution.getProportion();
-            if (sum < randomMax) {
+            if (sum > randomMax) {
                 return index;
             }
         }
