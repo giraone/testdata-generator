@@ -136,7 +136,7 @@ public class GeneratorMain {
                 if (fileIndex == 0) {
                     boolean done = directory.mkdirs();
                     if (!done) {
-                        throw new IllegalStateException("Directory " + directory + " cannot be created!");
+                        throw new IllegalStateException("Directory " + directory + " cannot be created! Either there are no access rights, or it already exists.");
                     }
                 }
                 final String fileName = String.format("f-%08d.%s", fileIndex, extension);
