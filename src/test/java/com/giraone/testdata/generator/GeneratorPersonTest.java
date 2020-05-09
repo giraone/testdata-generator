@@ -2,7 +2,7 @@ package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
 import com.giraone.testdata.fields.*;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,11 +11,11 @@ import static org.assertj.core.api.Assertions.*;
 
 class GeneratorPersonTest {
 
-    private static Generator generatorDE;
-    private static Generator generatorEN;
+    private Generator generatorDE;
+    private Generator generatorEN;
 
-    @BeforeAll
-    static void init()
+    @BeforeEach
+    void init()
     {
         GeneratorConfiguration de = new GeneratorConfiguration();
         de.language = EnumLanguage.de;
@@ -74,7 +74,7 @@ class GeneratorPersonTest {
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getId()).isNotNull();
-        // Sth. like 26297343-cc92-4363-ad45-ee52d091c286
+        // Sth. like c4a5024a-1ae3-4735-b0dd-d3d49b4e36ad
         assertThat(person.getId()).matches("^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$");
     }
 
@@ -91,6 +91,17 @@ class GeneratorPersonTest {
     }
 
     //- field generation -----------------------------------------------------------------------------------------------
+
+    @Test
+    void testThatIdAsUuidGenerated() {
+        generatorEN.getConfiguration().idType = EnumIdType.uuid;
+        Person person = generatorEN.randomPerson();
+        assertThat(person).isNotNull();
+        assertThat(person.getAdditionalFields()).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.dateOfBirth)).isNotNull();
+        // Sth. like 19410809
+        assertThat(person.getAdditionalFields().get(FieldConstants.dateOfBirth).toString()).matches("^[0-9]{8}$");
+    }
 
     @Test
     void testThatDateOfBirthIsGenerated() {
