@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.giraone.testdata.fields.FieldConstants;
 import com.giraone.testdata.generator.EnumGender;
 import com.giraone.testdata.generator.GeneratorConfiguration;
+import com.google.common.base.CaseFormat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -69,8 +70,10 @@ public class Person {
         return additionalFields;
     }
 
-    @SuppressWarnings(("unchecked"))
-    public void setAdditionalField(String field, Object value) {
+    @SuppressWarnings("unchecked")
+    public void setAdditionalField(GeneratorConfiguration configuration, String field, Object value) {
+
+        // System.err.println(" -> " + field + " = " + value);
         if (this.additionalFields == null) {
             this.additionalFields = new HashMap<>();
         }
@@ -79,26 +82,31 @@ public class Person {
             String prefix = field.substring(0, i);
             String suffix = field.substring(i + 1);
             Map<String, Object> subObject;
-
             if ((subObject = (Map<String, Object>) this.additionalFields.get(prefix)) == null) {
                 subObject = new HashMap<>();
             }
-            subObject.put(suffix, value);
-            this.additionalFields.put(prefix, subObject);
+            subObject.put(mapFieldName(configuration, prefix, suffix), mapValue(configuration, field, value));
+            this.additionalFields.put(mapFieldName(configuration, prefix), subObject);
         } else {
-            this.additionalFields.put(field, value);
+            this.additionalFields.put(mapFieldName(configuration, field), mapValue(configuration, field, value));
         }
     }
 
-    public Object getAdditionalField(String field) {
+    @SuppressWarnings("unchecked")
+    public Object getAdditionalField(GeneratorConfiguration configuration, String fieldName) {
+
+        if (configuration.getAliasReader() != null) {
+            fieldName = configuration.getAliasReader().getValue(fieldName, fieldName);
+        }
+
         int i;
-        if ((i = field.indexOf('.')) > 0) {
-            String prefix = field.substring(0, i);
-            String suffix = field.substring(0, i);
+        if ((i = fieldName.indexOf('.')) > 0) {
+            String prefix = fieldName.substring(0, i);
+            String suffix = fieldName.substring(0, i);
             Map<String, Object> subObject = (Map<String, Object>) this.additionalFields.get(prefix);
             return subObject != null ? subObject.get(suffix) : null;
         } else {
-            return this.additionalFields != null ? this.additionalFields.get(field) : null;
+            return this.additionalFields != null ? this.additionalFields.get(fieldName) : null;
         }
     }
 
@@ -110,15 +118,6 @@ public class Person {
         this.setField(configuration, FieldConstants.index, index);
     }
 
-    public void setField(GeneratorConfiguration configuration, String field, Object value) {
-
-        if (configuration.getAliasReader() != null) {
-            this.setAdditionalField(configuration.getAliasReader().getFieldName(field), value);
-        } else {
-            this.setAdditionalField(field, value);
-        }
-    }
-
     @Override
     public String toString() {
         return "Person{" +
@@ -128,5 +127,56 @@ public class Person {
                 ", index=" + index +
                 ", id='" + id + '\'' +
                 '}';
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    private void setField(GeneratorConfiguration configuration, String field, Object value) {
+
+        this.setAdditionalField(configuration, mapFieldName(configuration, field),
+            mapValue(configuration, field, value));
+    }
+
+    private String mapFieldName(GeneratorConfiguration configuration, String fieldName) {
+
+        if (configuration.getAliasReader() != null) {
+            fieldName = configuration.getAliasReader().getValue(fieldName, fieldName);
+        }
+        if (configuration.snakeCaseOutput) {
+            return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, fieldName);
+        } else {
+            return fieldName;
+        }
+    }
+
+    private String mapFieldName(GeneratorConfiguration configuration, String prefix, String suffix) {
+
+        if (configuration.getAliasReader() != null) {
+            final String fieldName = prefix + '.' + suffix;
+            final String aliasName = configuration.getAliasReader().getValue(fieldName, fieldName);
+            int i;
+            if ((i = aliasName.indexOf('.')) ==  -1) {
+                throw new IllegalArgumentException("Alias " + aliasName + " must contain .");
+            }
+            suffix = aliasName.substring(i + 1);
+        }
+        if (configuration.snakeCaseOutput) {
+            return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, suffix);
+        } else {
+            return suffix;
+        }
+    }
+
+    private Object mapValue(GeneratorConfiguration configuration, String field, Object value) {
+
+        if (configuration.getFormatReader() == null) {
+           return value;
+        }
+        final String format = configuration.getFormatReader().getValue(field);
+
+        if (format == null) {
+            return value;
+        }
+        return String.format(format, Integer.parseInt(value.toString()));
     }
 }

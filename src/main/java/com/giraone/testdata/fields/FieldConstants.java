@@ -21,5 +21,10 @@ public class FieldConstants {
     public static final String email = "email";
     public static final String iban = "iban";
     public static final String phoneNumber = "phoneNumber";
-    public static final String personnelNumber = "personnelNumber";
+    public static final String ssn = "ssn";
+
+    public static final String personnelIndex = "personnelIndex";
+    public static final String companyIndex = "company.index";
+    public static final String companyNumberOfEmployees = "company.numberOfEmployees";
+
 }

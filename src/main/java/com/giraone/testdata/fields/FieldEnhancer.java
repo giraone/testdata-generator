@@ -10,16 +10,12 @@ import java.util.Random;
  */
 public interface FieldEnhancer {
 
-    static final Random RANDOM = new Random();
+    Random RANDOM = new Random();
 
     void addFields(GeneratorConfiguration configuration, Person person, String field);
 
     default void setAdditionalField(GeneratorConfiguration configuration, Person person, String field, String value) {
 
-        if (configuration.getAliasReader() != null) {
-            person.setAdditionalField(configuration.getAliasReader().getFieldName(field), value);
-        } else {
-            person.setAdditionalField(field, value);
-        }
+        person.setAdditionalField(configuration, field, value);
     }
 }

@@ -1,6 +1,5 @@
 package com.giraone.testdata.fields;
 
-import com.giraone.testdata.fields.FieldEnhancerCompany;
 import com.giraone.testdata.fields.company.Company;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.fields.company.CompanyLevelSpecification;

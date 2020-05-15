@@ -2,7 +2,8 @@
   "givenName": "vorname",
   "surname": "nachname",
   "gender": "geschlecht",
-  "company.id": "betrieb.betriebsnummerSv",
+  "company": "betrieb",
+  "company.index": "betrieb.betriebsnummerSv",
   "street": "strasse",
   "houseNumber": "hausnummer",
   "postalCode": "postleitzahl",
@@ -10,6 +11,7 @@
   "dateOfBirth": "geburtsdatum",
   "placeOfBirth": "geburtsort",
   "birthName": "geburtsname",
-  "personnelNumber": "personalNummer",
-  "phoneNumber": "telefonnummer"
+  "personnelIndex": "personalNummer",
+  "phoneNumber": "telefonnummer",
+  "ssn": "svNummer"
 }

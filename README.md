@@ -52,20 +52,25 @@ mvn package
 ### Simple usages of the command line
 
 ```
-$ java -jar target/testdata-generator.jar
-usage: java -jar testdata-generator.jar
- -h,--help                        print usage help
- -a,--additionalFields <arg>      comma separated list of additional fields
+$ java -jar target/testdata-generator.jar --help
+ -a,--aliasJsonFile <arg>         define an alias file (JSON array with name/alias) to map attribute names
  -b,--startIndex                  if withIndex is used, this is the start index
+ -c,--country <arg>               the country for which the test data (postal addresses) is generated
+                                  (currently only "DEU")
  -d,--numberOfDirectories <arg>   the number of directories for splitting the output
  -f,--filesPerDirectory <arg>     the number of files per directory
+ -h,--help                        print usage help
+ -j,--snake_case                  use snake_case JSON output
  -l,--language <arg>              the language for which the test data is generated (either "en" or "de")
- -c,--country <arg>               the country for which the test data (postal addresses) is generated (currently only "DEU")
  -n,--numberOfItems <arg>         the number of items, that should be produced in total or in a file
+ -o,--formatJsonFile <arg>        define format file (JSON array with name/format) values,
+                                  e.g. leading zeros for index
  -p,--personId <arg>              type of additional person id: none, uuid, sequence
- -r,--rootDirectory               the root directory, where the output is written (default = .)
+ -r,--rootDirectory <arg>         the root directory, where the output is written (default = .)
  -s,--serialize <arg>             the serialization mode: either json (default) or csv
  -w,--withIndex                   create also a sequence number (index) for each created item
+ -x,--constantFields <arg>        comma separated list of constant fields, that are added randomly
+ -y,--companySpec <arg>           define a custom company specification
 
 
 $ java -jar target/testdata-generator.jar
@@ -207,7 +212,7 @@ An example for a two level company hierarchy is:
    },
    {
     "name": "loc1",
-    "proportion": 0.2,
+    "proportion": 0.2
    },
    {
     "name": "loc2",
@@ -314,8 +319,15 @@ or *dateOfBirth* to other names, e.g. to german names like *nachname* or *geburt
 
 ### Change Log
 
+- Version 1.7.0 (15.05.2020)
+  - New command lines option --formatJsonFile for formatting number values.
+  - New command lines option --snake_case for JSON snake_case naming.
+  - Support for generating SSNs added
+  - Jacoco added
+- Version 1.6.1 (09.05.2020)
+  - Tests and company generation improved
 - Version 1.6.0 (07.05.2020)
-  - New field phoneNumber
+  - New field phoneNumber added
   - Company configuration changed to group company fields (company.id, company.personnelNumber)
   - Upgrade to Jackson 2.11.0
 - Version 1.5.0 (05.04.2020)

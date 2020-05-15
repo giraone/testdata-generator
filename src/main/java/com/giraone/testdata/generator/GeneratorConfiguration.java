@@ -3,15 +3,14 @@ package com.giraone.testdata.generator;
 import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.output.PersonListWriter;
+import com.giraone.testdata.output.PersonListWriterCsv;
 import com.giraone.testdata.output.PersonListWriterJson;
-import com.giraone.testdata.util.AliasReader;
+import com.giraone.testdata.util.KeyValueReader;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class GeneratorConfiguration {
 
@@ -30,7 +29,7 @@ public class GeneratorConfiguration {
     public EnumIdType idType = EnumIdType.none;
 
     /** set of additional fields - {@see FieldEnhancer} */
-    public Map<String, FieldEnhancer> additionalFields = new HashMap<>();
+    public List<AdditionalField> additionalFields = new ArrayList<>();
 
     /**constant fields, that are added randomly */
     public List<FieldSpec> constantFields = new ArrayList<>();
@@ -51,18 +50,29 @@ public class GeneratorConfiguration {
     /** an optional JSON alias file to map attribute names */
     public File aliasJsonFile = null;
 
+    /** an optional JSON format file to format attribute values */
+    public File formatJsonFile = null;
+
+    /** use snake_case output */
+    public boolean snakeCaseOutput = false;
+
+    /** use CSV output */
+    public boolean csvOutput = false;
+
+
     /** the writer class responsible for the output serialization: typically either json or csv */
-    public PersonListWriter listWriter = new PersonListWriterJson();
+    private PersonListWriter listWriter;
 
-    private AliasReader aliasReader;
+    private KeyValueReader aliasReader;
+    private KeyValueReader formatReader;
 
-    public AliasReader getAliasReader() {
+    public KeyValueReader getAliasReader() {
 
         if (aliasJsonFile == null) {
             return null;
         }
         if (aliasReader == null) {
-            aliasReader = new AliasReader();
+            aliasReader = new KeyValueReader();
             try {
                 aliasReader.convertToJsonMap(aliasJsonFile);
             } catch (IOException e) {
@@ -71,5 +81,50 @@ public class GeneratorConfiguration {
             }
         }
         return aliasReader;
+    }
+
+    public KeyValueReader getFormatReader() {
+
+        if (formatJsonFile == null) {
+            return null;
+        }
+        if (formatReader == null) {
+            formatReader = new KeyValueReader();
+            try {
+                formatReader.convertToJsonMap(formatJsonFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return formatReader;
+    }
+
+    public void addAdditionalField(String name, FieldEnhancer fieldEnhancer) {
+
+       this.additionalFields.add(new AdditionalField(name, fieldEnhancer));
+    }
+
+    public boolean containsAdditionalField(String name) {
+
+        for (AdditionalField field: additionalFields) {
+            if (name.equals(field.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void initializeWriter() {
+
+        if (this.csvOutput) {
+            this.listWriter = new PersonListWriterCsv();
+        } else {
+            this.listWriter = new PersonListWriterJson();
+        }
+    }
+
+    public PersonListWriter getListWriter() {
+        return listWriter;
     }
 }

@@ -5,15 +5,11 @@ import com.giraone.testdata.generator.Generator;
 import com.giraone.testdata.generator.GeneratorConfiguration;
 import com.giraone.testdata.util.NameNormalizeService;
 
-import java.util.Random;
-
 /**
  * This class adds an "email" string value to the person, which ist derived from given name and surname.
  */
 @SuppressWarnings("unused")
 public class FieldEnhancerEmail implements FieldEnhancer {
-
-    private static final Random RANDOM = new Random();
 
     NameNormalizeService nameNormalizeService = new NameNormalizeService();
 

@@ -6,6 +6,7 @@ public class Company {
     private int index;
     private String key;
     private int totalNumberOfEmployees;
+    private int personnelIndex;
     private Company[] subCompanies;
 
     public Company() {
@@ -16,6 +17,7 @@ public class Company {
         this.index = index;
         this.key = key;
         this.totalNumberOfEmployees = totalNumberOfEmployees;
+        this.personnelIndex = 0;
         if (totalNumberOfSubCompanies > 0) {
             subCompanies = new Company[totalNumberOfSubCompanies];
         } else {
@@ -70,6 +72,10 @@ public class Company {
         this.subCompanies = subCompanies;
     }
 
+    public int getNextPersonnelIndex() {
+        return ++this.personnelIndex;
+    }
+
     @Override
     public String toString() {
         return "Company{" +
@@ -80,4 +86,6 @@ public class Company {
             ", #subCompanies=" + subCompanies.length +
             '}';
     }
+
+
 }

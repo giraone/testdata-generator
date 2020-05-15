@@ -33,7 +33,6 @@ public class PersonListWriterCsv implements PersonListWriter {
                 .addColumn(FieldConstants.street)
                 .addColumn(FieldConstants.houseNumber)
                 .addColumn(FieldConstants.companyId)
-                .addColumn(FieldConstants.personnelNumber)
                 .addColumn(FieldConstants.email)
                 .addColumn(FieldConstants.iban)
                 .addColumn(FieldConstants.phoneNumber)

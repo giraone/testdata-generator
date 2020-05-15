@@ -1,13 +1,18 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
-import com.giraone.testdata.fields.*;
+import com.giraone.testdata.fields.FieldConstants;
+import com.giraone.testdata.fields.FieldEnhancerDateOfBirth;
+import com.giraone.testdata.fields.FieldEnhancerEmail;
+import com.giraone.testdata.fields.FieldEnhancerIban;
+import com.giraone.testdata.fields.FieldEnhancerPhoneNumber;
+import com.giraone.testdata.fields.FieldEnhancerPostalAddress;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class GeneratorPersonTest {
 
@@ -94,7 +99,7 @@ class GeneratorPersonTest {
 
     @Test
     void testThatDateOfBirthIsGenerated() {
-        generatorEN.getConfiguration().additionalFields.put(FieldConstants.dateOfBirth, new FieldEnhancerDateOfBirth());
+        generatorEN.getConfiguration().addAdditionalField(FieldConstants.dateOfBirth, new FieldEnhancerDateOfBirth());
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -105,7 +110,7 @@ class GeneratorPersonTest {
 
     @Test
     void testThatGermanPostalAddressIsGenerated() {
-        generatorDE.getConfiguration().additionalFields.put("postalAddress", new FieldEnhancerPostalAddress());
+        generatorDE.getConfiguration().addAdditionalField("postalAddress", new FieldEnhancerPostalAddress());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -116,7 +121,7 @@ class GeneratorPersonTest {
     @Test
     void testThatEmailIsGenerated() {
 
-        generatorDE.getConfiguration().additionalFields.put(FieldConstants.email, new FieldEnhancerEmail());
+        generatorDE.getConfiguration().addAdditionalField(FieldConstants.email, new FieldEnhancerEmail());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -127,7 +132,7 @@ class GeneratorPersonTest {
 
     @Test
     void testThatGermanIbanIsGenerated() {
-        generatorDE.getConfiguration().additionalFields.put(FieldConstants.iban, new FieldEnhancerIban());
+        generatorDE.getConfiguration().addAdditionalField(FieldConstants.iban, new FieldEnhancerIban());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -138,7 +143,7 @@ class GeneratorPersonTest {
 
     @Test
     void testThatBritishIbanIsGenerated() {
-        generatorEN.getConfiguration().additionalFields.put(FieldConstants.iban, new FieldEnhancerIban());
+        generatorEN.getConfiguration().addAdditionalField(FieldConstants.iban, new FieldEnhancerIban());
         Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -149,7 +154,7 @@ class GeneratorPersonTest {
 
     @Test
     void testThatGermanPhoneNumberIsGenerated() {
-        generatorDE.getConfiguration().additionalFields.put(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
+        generatorDE.getConfiguration().addAdditionalField(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
@@ -160,8 +165,8 @@ class GeneratorPersonTest {
 
     @Test
     void testThatBritishPhoneNumberIsGenerated() {
-        generatorEN.getConfiguration().additionalFields.put(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
-        Person person = generatorDE.randomPerson();
+        generatorEN.getConfiguration().addAdditionalField(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
+        Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();

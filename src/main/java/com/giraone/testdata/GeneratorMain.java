@@ -6,6 +6,7 @@ import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.fields.FieldEnhancerCompany;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.fields.company.CompanyLevelSpecification;
+import com.giraone.testdata.generator.AdditionalField;
 import com.giraone.testdata.generator.EnumIdType;
 import com.giraone.testdata.generator.EnumJsonDataType;
 import com.giraone.testdata.generator.EnumLanguage;
@@ -25,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -70,7 +72,8 @@ public class GeneratorMain {
         options.addOption("d", "numberOfDirectories", true, "the number of directories for splitting the output");
         options.addOption("r", "rootDirectory", true, "the root directory, where the output is written (default = .)");
         options.addOption("a", "aliasJsonFile", true, "define an alias file (JSON array with name/alias) to map attribute names");
-
+        options.addOption("o", "formatJsonFile", true, "define format file (JSON array with name/format) values, e.g. leading zeros for index");
+        options.addOption("j", "snake_case", false, "use snake_case JSON output");
 
         CommandLineParser parser = new DefaultParser();
         try {
@@ -83,9 +86,6 @@ public class GeneratorMain {
             configuration.country = cmd.getOptionValue("country", configuration.country);
             configuration.withIndex = cmd.hasOption("withIndex");
             configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
-            if ("csv" .equals(cmd.getOptionValue("serialize", "json").toLowerCase())) {
-                configuration.listWriter = new PersonListWriterCsv();
-            }
             configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
             parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
             parseCompanySpec(cmd.getOptionValue("companySpec", null), configuration.companySpec);
@@ -95,7 +95,14 @@ public class GeneratorMain {
             configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
             configuration.rootDirectory = new File(cmd.getOptionValue("rootDirectory", "."));
             configuration.aliasJsonFile = cmd.getOptionValue("aliasJsonFile") != null ? new File(cmd.getOptionValue("aliasJsonFile")) : null;
+            configuration.formatJsonFile = cmd.getOptionValue("formatJsonFile") != null ? new File(cmd.getOptionValue("formatJsonFile")) : null;
+            configuration.snakeCaseOutput = cmd.hasOption("snake_case");
+            configuration.csvOutput = "csv".equals(cmd.getOptionValue("serialize", "json").toLowerCase());
+
+            configuration.initializeWriter();
+
             run();
+
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -121,14 +128,14 @@ public class GeneratorMain {
         }
         List<Person> personList = generator.randomPersons(
             configuration.startIndex, configuration.numberOfItems - configuration.startIndex);
-        configuration.listWriter.write(personList, out);
+        configuration.getListWriter().write(personList, out);
     }
 
     private void runBlockwise(Generator generator) throws Exception {
 
         calculateTotals();
 
-        final String extension = configuration.listWriter instanceof PersonListWriterCsv ? "csv" : "json";
+        final String extension = configuration.getListWriter() instanceof PersonListWriterCsv ? "csv" : "json";
         for (int directoryIndex = 0; directoryIndex < configuration.numberOfDirectories; directoryIndex++) {
             final String directoryName = String.format("d-%08d", directoryIndex);
             final File directory = new File(configuration.rootDirectory, directoryName);
@@ -136,7 +143,7 @@ public class GeneratorMain {
                 if (fileIndex == 0) {
                     boolean done = directory.mkdirs();
                     if (!done) {
-                        throw new IllegalStateException("Directory " + directory + " cannot be created!");
+                        throw new IllegalStateException("Directory " + directory + " cannot be created! Either there are no access rights, or it already exists.");
                     }
                 }
                 final String fileName = String.format("f-%08d.%s", fileIndex, extension);
@@ -148,27 +155,34 @@ public class GeneratorMain {
         }
     }
 
-    private void parseAdditionalFields(String fieldCommaList, Map<String, FieldEnhancer> result) {
+    private void parseAdditionalFields(String fieldCommaList, List<AdditionalField> result) {
 
+        Map<String, FieldEnhancer> enhancerPerClass = new HashMap<>();
         for (String fieldName : fieldCommaList.trim().split(",")) {
+            System.err.println("- " + fieldName);
             if (fieldName.length() < 2) continue;
             String className = fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
             int i;
             if ((i = className.indexOf('.')) > 0) {
                 className = className.substring(0, i);
-                fieldName = fieldName.substring(i + 1);
+                //fieldName = fieldName.substring(i + 1);
             }
-            FieldEnhancer fieldEnhancer = result.get(fieldName);
+            FieldEnhancer fieldEnhancer = enhancerPerClass.get(className);
             if (fieldEnhancer == null) {
-                try {
-                    fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className)
-                        .getDeclaredConstructor().newInstance();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return;
+                if ("PersonnelIndex".equals(className)) {
+                    fieldEnhancer = new FieldEnhancerCompany();
+                } else {
+                    try {
+                        fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className)
+                                .getDeclaredConstructor().newInstance();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        return;
+                    }
                 }
-                result.put(fieldName, fieldEnhancer);
+                enhancerPerClass.put(className, fieldEnhancer);
             }
+            result.add(new AdditionalField(fieldName, fieldEnhancer));
         }
     }
 
@@ -184,7 +198,8 @@ public class GeneratorMain {
         companyHierarchySpecification.setLevelSpecifications(levelSpecifications);
     }
 
-    // Parse sth. like red|blue,size=175|180|185,car=null|Audi|VW
+    // Parse sth. like color=red|blue,size=175|180|185,car=null|Audi|VW,title=null(80)|Dr.|Prof. Dr.|Prof.
+    // Parse sth. like number=%0-10000|%05d
     private void parseConstantFields(String fieldCommaList, List<FieldSpec> result) {
 
         for (String fieldSpecString : fieldCommaList.trim().split(",")) {
@@ -196,6 +211,10 @@ public class GeneratorMain {
             String[] valuesList = fieldValues.split("[|]");
 
             boolean isNull = false;
+            boolean isRandom = false;
+            String randomFormat = null;
+            int randomMin = 0;
+            int randomMax = 1000;
             int isNullPercentage = 50;
             if (valuesList[0].startsWith("null")) {
                 isNull = true;
@@ -207,14 +226,28 @@ public class GeneratorMain {
                 valuesList = Arrays.copyOfRange(valuesList, 1, valuesList.length);
             }
 
+            // number=%0-10000|%05d
+            if (valuesList[0].startsWith("%")) {
+                randomFormat = valuesList[0] = valuesList[0].substring(1);
+               isRandom = true;
+               int i = valuesList[1].indexOf("-");
+               if (i == -1) {
+                   throw new IllegalArgumentException("constantField \"" + fieldName
+                           + "\" has to from-to info in \"" + valuesList[1] + "\"");
+               }
+               randomMin = Integer.parseInt(valuesList[1].substring(0, i));
+               randomMax = Integer.parseInt(valuesList[1].substring(i+1));
+            }
+
             EnumJsonDataType enumJsonDataType = EnumJsonDataType.stringType;
             if (valuesList[0].matches("[0-9]+")) {
                 enumJsonDataType = EnumJsonDataType.integerType;
             } else if (valuesList[0].matches("true|false")) {
                 enumJsonDataType = EnumJsonDataType.booleanType;
             }
-            FieldSpec fieldSpec = new FieldSpec(fieldName, valuesList, enumJsonDataType, isNull, isNullPercentage);
-            System.err.println(fieldSpec);
+            FieldSpec fieldSpec = new FieldSpec(fieldName, valuesList, enumJsonDataType, isNull, isNullPercentage,
+                    isRandom, randomMin, randomMax, randomFormat);
+            //System.err.println(fieldSpec);
             result.add(fieldSpec);
         }
     }
@@ -222,9 +255,9 @@ public class GeneratorMain {
     private void calculateTotals() {
         int totalNumberOfPersons = configuration.numberOfDirectories * configuration.filesPerDirectory * configuration.numberOfItems;
         System.err.println("totalNumberOfPersons = " + totalNumberOfPersons);
-        for (FieldEnhancer field : configuration.additionalFields.values()) {
-            if (field instanceof FieldEnhancerCompany) {
-                ((FieldEnhancerCompany) field).init(configuration.companySpec, totalNumberOfPersons);
+        for (AdditionalField field : configuration.additionalFields) {
+            if (field.getFieldEnhancer() instanceof FieldEnhancerCompany) {
+                ((FieldEnhancerCompany) field.getFieldEnhancer()).init(configuration.companySpec, totalNumberOfPersons);
             }
         }
     }

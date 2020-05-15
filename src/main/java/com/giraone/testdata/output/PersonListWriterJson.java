@@ -11,6 +11,9 @@ import java.util.List;
 
 public class PersonListWriterJson implements PersonListWriter {
 
+    public PersonListWriterJson() {
+    }
+
     @Override
     public void write(List<Person> personList, PrintStream out) throws IOException {
         ObjectMapper mapper = new ObjectMapper();

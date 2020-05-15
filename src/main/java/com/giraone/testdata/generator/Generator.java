@@ -1,7 +1,6 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
-import com.giraone.testdata.fields.FieldEnhancer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,7 +35,7 @@ public class Generator {
 
     //- members --------------------------------------------------------------------------------------------------------
 
-    private GeneratorConfiguration configuration;
+    private final GeneratorConfiguration configuration;
 
     //- Constructor and getter/setters ---------------------------------------------------------------------------------
 
@@ -77,24 +76,30 @@ public class Generator {
 
         person.putBasicFields(configuration);
 
-        for (Map.Entry<String, FieldEnhancer> field : configuration.additionalFields.entrySet()) {
-            field.getValue().addFields(configuration, person, field.getKey());
+        for (AdditionalField field : configuration.additionalFields) {
+            field.getFieldEnhancer().addFields(configuration, person, field.getName());
         }
 
         for (FieldSpec fieldSpec : configuration.constantFields) {
 
-            String[] fieldValues = fieldSpec.getValues();
             if (fieldSpec.isWithNullValues() && RANDOM.nextInt(100) < fieldSpec.getWithNullPercentage()) {
                 continue;
             }
-            Object value = fieldValues[RANDOM.nextInt(fieldValues.length)];
 
-            if (fieldSpec.getJsonDataType() == EnumJsonDataType.integerType) {
-                value = Integer.parseInt((String) value);
-            } else  if (fieldSpec.getJsonDataType() == EnumJsonDataType.booleanType) {
-                value = Boolean.parseBoolean((String) value);
+            Object value;
+            if (fieldSpec.isRandomNumber()) {
+                int intValue = fieldSpec.getRandomMin() + RANDOM.nextInt(fieldSpec.getRandomMin() + fieldSpec.getRandomMax());
+                value = String.format(fieldSpec.getRandomFormat(), intValue);
+            } else {
+                String[] fieldValues = fieldSpec.getValues();
+                value = fieldValues[RANDOM.nextInt(fieldValues.length)];
+                if (fieldSpec.getJsonDataType() == EnumJsonDataType.integerType) {
+                    value = Integer.parseInt((String) value);
+                } else  if (fieldSpec.getJsonDataType() == EnumJsonDataType.booleanType) {
+                    value = Boolean.parseBoolean((String) value);
+                }
             }
-            person.setAdditionalField(fieldSpec.getName(), value);
+            person.setAdditionalField(configuration, fieldSpec.getName(), value);
         }
 
         return person;

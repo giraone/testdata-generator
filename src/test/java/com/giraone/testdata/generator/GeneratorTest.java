@@ -156,7 +156,7 @@ public class GeneratorTest {
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.stringType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
-            Object value = person.getAdditionalField("field");
+            Object value = person.getAdditionalField(generatorEN.getConfiguration(), "field");
             assertThat(value).isNotNull();
             assertThat(value).isOfAnyClassIn(String.class);
             assertThat(value).isIn(valueList);
@@ -169,7 +169,7 @@ public class GeneratorTest {
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.integerType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
-            Object value = person.getAdditionalField("field");
+            Object value = person.getAdditionalField(generatorEN.getConfiguration(), "field");
             assertThat(value).isNotNull();
             assertThat(value).isOfAnyClassIn(Integer.class);
             int intValue = (int) value;
@@ -183,7 +183,7 @@ public class GeneratorTest {
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.booleanType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
-            Object value = person.getAdditionalField("field");
+            Object value = person.getAdditionalField(generatorEN.getConfiguration(), "field");
             assertThat(value).isNotNull();
             assertThat(value).isOfAnyClassIn(Boolean.class);
         } finally {
