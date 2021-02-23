@@ -13,12 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 public class Generator {
 
@@ -88,7 +83,7 @@ public class Generator {
 
             Object value;
             if (fieldSpec.isRandomNumber()) {
-                int intValue = fieldSpec.getRandomMin() + RANDOM.nextInt(fieldSpec.getRandomMin() + fieldSpec.getRandomMax());
+                int intValue = fieldSpec.getRandomMin() + RANDOM.nextInt(fieldSpec.getRandomMax() - fieldSpec.getRandomMin());
                 value = String.format(fieldSpec.getRandomFormat(), intValue);
             } else {
                 String[] fieldValues = fieldSpec.getValues();

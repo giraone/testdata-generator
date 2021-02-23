@@ -19,7 +19,7 @@ public class FieldEnhancerPhoneNumber implements FieldEnhancer {
     protected String randomPhoneNumber(GeneratorConfiguration configuration) {
 
         if (configuration.language == EnumLanguage.en) {
-            return "+44 " + (1000 + RANDOM.nextInt(9000)) + " " + ((1000 + RANDOM.nextInt(9000)));
+            return "+43 " + (1000 + RANDOM.nextInt(9000)) + " " + ((1000 + RANDOM.nextInt(9000)));
         } else {
             return "+49 " + (1000 + RANDOM.nextInt(9000)) + " " + ((1000 + RANDOM.nextInt(9000)));
         }

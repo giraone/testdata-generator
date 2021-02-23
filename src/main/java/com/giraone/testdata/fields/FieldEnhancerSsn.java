@@ -5,8 +5,6 @@ import com.giraone.testdata.generator.EnumGender;
 import com.giraone.testdata.generator.Generator;
 import com.giraone.testdata.generator.GeneratorConfiguration;
 
-import java.time.format.DateTimeFormatter;
-
 /**
  * This class adds an "ssn" string value to the person, which ist derived from dateOfBirth, gender
  */
@@ -21,12 +19,13 @@ public class FieldEnhancerSsn implements FieldEnhancer {
 
     protected String ssnGermanFromPerson(GeneratorConfiguration configuration, Person person) {
 
-        String birthName = (String) person.getAdditionalField(configuration, FieldConstants.birthName);
-        if (birthName == null) {
-            birthName = person.getSurname();
-        }
+        String initial = person.getSurname().substring(0,1).toUpperCase();
         String isoDateOfBirth = (String) person.getAdditionalField(configuration, FieldConstants.dateOfBirth);
-        return SsnGerman.build(birthName, DateTimeFormatter.ISO_DATE.parse(isoDateOfBirth), EnumGender.male == person.getGender());
+        String dateOfBirthString = isoDateOfBirth.substring(6,8) + isoDateOfBirth.substring(4,6) + isoDateOfBirth.substring(2,4);
+        String genderString = String.format("%02d", EnumGender.male == person.getGender()
+                ? RANDOM.nextInt(50) : 50 + RANDOM.nextInt(50));
+        String checkSum = "1"; // TODO
+        return randomSsnPrefix(configuration) + dateOfBirthString + initial + genderString + checkSum;
     }
 
     protected String randomSsnPrefix(GeneratorConfiguration configuration) {

@@ -1,12 +1,7 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
-import com.giraone.testdata.fields.FieldConstants;
-import com.giraone.testdata.fields.FieldEnhancerDateOfBirth;
-import com.giraone.testdata.fields.FieldEnhancerEmail;
-import com.giraone.testdata.fields.FieldEnhancerIban;
-import com.giraone.testdata.fields.FieldEnhancerPhoneNumber;
-import com.giraone.testdata.fields.FieldEnhancerPostalAddress;
+import com.giraone.testdata.fields.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -166,7 +161,7 @@ class GeneratorPersonTest {
     @Test
     void testThatBritishPhoneNumberIsGenerated() {
         generatorEN.getConfiguration().addAdditionalField(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
-        Person person = generatorEN.randomPerson();
+        Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();

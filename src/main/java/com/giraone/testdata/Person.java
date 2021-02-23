@@ -82,13 +82,21 @@ public class Person {
             String prefix = field.substring(0, i);
             String suffix = field.substring(i + 1);
             Map<String, Object> subObject;
-            if ((subObject = (Map<String, Object>) this.additionalFields.get(prefix)) == null) {
+            String mappedPrefix = mapFieldName(configuration, prefix);
+            if ((subObject = (Map<String, Object>) this.additionalFields.get(mappedPrefix)) == null) {
                 subObject = new HashMap<>();
+                this.additionalFields.put(mappedPrefix, subObject);
             }
-            subObject.put(mapFieldName(configuration, prefix, suffix), mapValue(configuration, field, value));
-            this.additionalFields.put(mapFieldName(configuration, prefix), subObject);
+            String mappedKey = mapFieldName(configuration, prefix, suffix);
+            Object mappedValue = mapValue(configuration, field, value);
+            // System.err.println(" --> " + mappedPrefix + "." + mappedKey + " = " + mappedValue);
+            subObject.put(mappedKey, mappedValue);
+
         } else {
-            this.additionalFields.put(mapFieldName(configuration, field), mapValue(configuration, field, value));
+            String mappedKey = mapFieldName(configuration, field);
+            Object mappedValue = mapValue(configuration, field, value);
+            // System.err.println(" --> " + mappedKey + " = " + mappedValue);
+            this.additionalFields.put(mappedKey, mappedValue);
         }
     }
 
@@ -142,11 +150,7 @@ public class Person {
         if (configuration.getAliasReader() != null) {
             fieldName = configuration.getAliasReader().getValue(fieldName, fieldName);
         }
-        if (configuration.snakeCaseOutput) {
-            return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, fieldName);
-        } else {
-            return fieldName;
-        }
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, fieldName);
     }
 
     private String mapFieldName(GeneratorConfiguration configuration, String prefix, String suffix) {
@@ -160,11 +164,7 @@ public class Person {
             }
             suffix = aliasName.substring(i + 1);
         }
-        if (configuration.snakeCaseOutput) {
-            return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, suffix);
-        } else {
-            return suffix;
-        }
+        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, suffix);
     }
 
     private Object mapValue(GeneratorConfiguration configuration, String field, Object value) {

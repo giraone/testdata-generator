@@ -8,11 +8,11 @@ public class FieldConstants {
     public static final String surname = "surname";
     public static final String gender = "gender";
     public static final String companyId = "company.id";
-    public static final String streetAddress = "streetAddress";
-    public static final String street = "street";
-    public static final String houseNumber = "houseNumber";
-    public static final String postalCode = "postalCode";
-    public static final String city = "city";
+    public static final String streetAddress = "postalAddress.streetAddress";
+    public static final String street = "postalAddress.street";
+    public static final String houseNumber = "postalAddress.houseNumber";
+    public static final String postalCode = "postalAddress.postalCode";
+    public static final String city = "postalAddress.city";
     public static final String dateOfBirth = "dateOfBirth";
 
     public static final String placeOfBirth = "placeOfBirth";

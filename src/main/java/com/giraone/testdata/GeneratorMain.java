@@ -6,20 +6,9 @@ import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.fields.FieldEnhancerCompany;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.fields.company.CompanyLevelSpecification;
-import com.giraone.testdata.generator.AdditionalField;
-import com.giraone.testdata.generator.EnumIdType;
-import com.giraone.testdata.generator.EnumJsonDataType;
-import com.giraone.testdata.generator.EnumLanguage;
-import com.giraone.testdata.generator.FieldSpec;
-import com.giraone.testdata.generator.Generator;
-import com.giraone.testdata.generator.GeneratorConfiguration;
+import com.giraone.testdata.generator.*;
 import com.giraone.testdata.output.PersonListWriterCsv;
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -236,7 +225,7 @@ public class GeneratorMain {
                            + "\" has to from-to info in \"" + valuesList[1] + "\"");
                }
                randomMin = Integer.parseInt(valuesList[1].substring(0, i));
-               randomMax = Integer.parseInt(valuesList[1].substring(i+1));
+               randomMax = Integer.parseInt(valuesList[1].substring(i + 1));
             }
 
             EnumJsonDataType enumJsonDataType = EnumJsonDataType.stringType;

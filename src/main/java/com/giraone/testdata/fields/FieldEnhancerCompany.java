@@ -38,7 +38,9 @@ public class FieldEnhancerCompany implements FieldEnhancer {
     public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
         final Company company = randomCompany();
-        setAdditionalField(configuration, person, FieldConstants.companyId, company.getKey());
+        if (configuration.containsAdditionalField(FieldConstants.companyId)) {
+            setAdditionalField(configuration, person, FieldConstants.companyId, company.getKey());
+        }
         if (configuration.containsAdditionalField(FieldConstants.companyIndex)) {
             setAdditionalField(configuration, person, FieldConstants.companyIndex, Long.toString(company.getIndex()));
         }
@@ -86,6 +88,10 @@ public class FieldEnhancerCompany implements FieldEnhancer {
         }
 
         return company;
+    }
+
+    public String formatPersonnelNumber(long index) {
+        return String.format("%08d", index);
     }
 
     //------------------------------------------------------------------------------------------------------------------

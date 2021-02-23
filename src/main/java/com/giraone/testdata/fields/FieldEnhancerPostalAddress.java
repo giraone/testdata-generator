@@ -18,14 +18,13 @@ public class FieldEnhancerPostalAddress implements FieldEnhancer {
         final String street = randomStreet(configuration);
         final String houseNumber = randomHouseNumber(configuration);
 
-
         if (configuration.containsAdditionalField(FieldConstants.street)) {
             setAdditionalField(configuration, person, FieldConstants.street, street);
+            if (configuration.containsAdditionalField(FieldConstants.houseNumber)) {
+                setAdditionalField(configuration, person, FieldConstants.houseNumber, houseNumber);
+            }
         } else {
             setAdditionalField(configuration, person, FieldConstants.streetAddress, street + " " + houseNumber);
-        }
-        if (configuration.containsAdditionalField(FieldConstants.street)) {
-            setAdditionalField(configuration, person, FieldConstants.houseNumber, houseNumber);
         }
     }
 
