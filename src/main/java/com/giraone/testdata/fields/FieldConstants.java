@@ -13,6 +13,8 @@ public class FieldConstants {
     public static final String houseNumber = "postalAddress.houseNumber";
     public static final String postalCode = "postalAddress.postalCode";
     public static final String city = "postalAddress.city";
+    public static final String state = "postalAddress.state";
+    public static final String stateCode = "postalAddress.stateCode";
     public static final String dateOfBirth = "dateOfBirth";
 
     public static final String placeOfBirth = "placeOfBirth";

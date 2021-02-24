@@ -229,8 +229,9 @@ public class GeneratorMain {
             }
 
             EnumJsonDataType enumJsonDataType = EnumJsonDataType.stringType;
-            if (valuesList[0].matches("[0-9]+")) {
+            if (valuesList[0].matches("[0-9]+I")) {
                 enumJsonDataType = EnumJsonDataType.integerType;
+                valuesList[0] = valuesList[0].substring(0, valuesList[0].length()-1);
             } else if (valuesList[0].matches("true|false")) {
                 enumJsonDataType = EnumJsonDataType.booleanType;
             }

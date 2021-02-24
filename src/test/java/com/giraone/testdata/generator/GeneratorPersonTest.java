@@ -111,6 +111,7 @@ class GeneratorPersonTest {
         assertThat(person.getAdditionalFields()).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.city)).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.streetAddress)).isNotNull();
+        assertThat(person.getAdditionalFields().get(FieldConstants.state)).isNotNull();
     }
 
     @Test

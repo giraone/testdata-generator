@@ -7,44 +7,42 @@ import com.giraone.testdata.generator.GeneratorConfiguration;
 /**
  * This class adds a "postal address" (street, postalCode, city) to the person.
  */
-@SuppressWarnings("unused")
 public class FieldEnhancerPostalAddress implements FieldEnhancer {
 
     public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
         final String[] randomCityAndPostCode= randomCityAndPostCode(configuration);
-        setAdditionalField(configuration, person, FieldConstants.city, randomCityAndPostCode[0]);
-        setAdditionalField(configuration, person, FieldConstants.postalCode, randomCityAndPostCode[1]);
+        person.setAdditionalField(configuration, FieldConstants.city, randomCityAndPostCode[0]);
+        person.setAdditionalField(configuration, FieldConstants.postalCode, randomCityAndPostCode[1]);
+        person.setAdditionalField(configuration, FieldConstants.state, randomCityAndPostCode[2]);
+        person.setAdditionalField(configuration, FieldConstants.stateCode, randomCityAndPostCode[3]);
         final String street = randomStreet(configuration);
         final String houseNumber = randomHouseNumber(configuration);
-
-        if (configuration.containsAdditionalField(FieldConstants.street)) {
-            setAdditionalField(configuration, person, FieldConstants.street, street);
-            if (configuration.containsAdditionalField(FieldConstants.houseNumber)) {
-                setAdditionalField(configuration, person, FieldConstants.houseNumber, houseNumber);
-            }
-        } else {
-            setAdditionalField(configuration, person, FieldConstants.streetAddress, street + " " + houseNumber);
-        }
+        person.setAdditionalField(configuration, FieldConstants.streetAddress, street + " " + houseNumber);
     }
 
     /**
      * Return a string array, where the 1st element is the city, the second is a matching postal code for the city
      * @param configuration the country configuration
-     * @return 2-dimensional string array
+     * @return 4-dimensional string array with city, postalCode, state, stateCode
      */
     protected static String[] randomCityAndPostCode(GeneratorConfiguration configuration) {
 
-        return Generator.randomFromFile("city+postcode-" + configuration.country + ".txt").split(",");
+        return Generator.randomFromFile("city+postcode+state-" + configuration.country + ".txt").split(",");
     }
 
-    protected String randomStreet(GeneratorConfiguration configuration) {
+    protected static String randomStreet(GeneratorConfiguration configuration) {
 
         return Generator.randomFromFile("street-" + configuration.language + ".txt");
     }
 
-    protected String randomHouseNumber(GeneratorConfiguration configuration) {
+    protected static String randomHouseNumber(GeneratorConfiguration configuration) {
 
         return Generator.randomFromWeightedFile("house-number-" + configuration.language + ".txt");
+    }
+
+    protected static String stateCodeByPostCode(String postCode) {
+
+        return postCode.startsWith("9") ? "9" : "5";
     }
 }
