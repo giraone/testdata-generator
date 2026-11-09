@@ -1,6 +1,5 @@
 package com.giraone.testdata.generator;
 
-public enum EnumIdType
-{
-    none, uuid, sequence;
+public enum EnumIdType {
+    none, uuid, sequence
 }

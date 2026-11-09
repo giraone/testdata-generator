@@ -11,7 +11,7 @@ public class SsnUs {
 
     public static String build() {
 
-        return String.format("%03d-%02d-%04d", random(132,921), random(12, 83), random(1423, 9211));
+        return String.format("%03d-%02d-%04d", random(132, 921), random(12, 83), random(1423, 9211));
     }
 
     private static int random(int min, int max) {

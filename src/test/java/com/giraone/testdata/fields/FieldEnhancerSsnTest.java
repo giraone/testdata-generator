@@ -11,14 +11,13 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class FieldEnhancerSsnTest {
 
-    private static GeneratorConfiguration de = new GeneratorConfiguration();
-    private static GeneratorConfiguration en = new GeneratorConfiguration();
+    private static final GeneratorConfiguration de = new GeneratorConfiguration();
+    private static final GeneratorConfiguration en = new GeneratorConfiguration();
 
-    private FieldEnhancerSsn cut = new FieldEnhancerSsn();
+    private final FieldEnhancerSsn cut = new FieldEnhancerSsn();
 
     @BeforeAll
-    public static void init()
-    {
+    public static void init() {
         de.language = EnumLanguage.de;
         en.language = EnumLanguage.en;
     }
@@ -27,7 +26,7 @@ class FieldEnhancerSsnTest {
     public void testThatGermanSsnIsGeneratedCorrectlyForMales() {
 
         Person person = new Person("Erwin", "Doe", EnumGender.male);
-        person.setAdditionalField(de, FieldConstants.dateOfBirth, "2000-12-31");
+        person.setAdditionalField(de, FieldConstants.dateOfBirth, "20001231");
         String ssn = cut.ssnGermanFromPerson(de, person);
         assertThat(ssn).isNotNull();
         assertThat(ssn).matches("[0-9]{2}311200D[0-4][0-9][0-9]");
@@ -37,7 +36,7 @@ class FieldEnhancerSsnTest {
     public void testThatGermanSsnIsGeneratedCorrectlyForFemales() {
 
         Person person = new Person("Erika", "Mustermann", EnumGender.female);
-        person.setAdditionalField(de, FieldConstants.dateOfBirth, "2000-12-31");
+        person.setAdditionalField(de, FieldConstants.dateOfBirth, "20001231");
         String ssn = cut.ssnGermanFromPerson(de, person);
         assertThat(ssn).isNotNull();
         assertThat(ssn).matches("[0-9]{2}311200M[5-9][0-9][0-9]");
@@ -47,7 +46,7 @@ class FieldEnhancerSsnTest {
     public void testThatGermanSsnIsGeneratedCorrectlyWithBirthName() {
 
         Person person = new Person("Erika", "Mustermann", EnumGender.female);
-        person.setAdditionalField(de, FieldConstants.dateOfBirth, "2000-12-31");
+        person.setAdditionalField(de, FieldConstants.dateOfBirth, "20001231");
         person.setAdditionalField(de, FieldConstants.birthName, "Wagner");
         String ssn = cut.ssnGermanFromPerson(de, person);
         assertThat(ssn).isNotNull();

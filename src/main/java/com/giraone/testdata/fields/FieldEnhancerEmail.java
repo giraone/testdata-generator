@@ -11,7 +11,7 @@ import com.giraone.testdata.util.NameNormalizeService;
 @SuppressWarnings("unused")
 public class FieldEnhancerEmail implements FieldEnhancer {
 
-    NameNormalizeService nameNormalizeService = new NameNormalizeService();
+    final NameNormalizeService nameNormalizeService = new NameNormalizeService();
 
     public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 

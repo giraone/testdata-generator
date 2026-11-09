@@ -57,19 +57,19 @@ public class Company {
         this.totalNumberOfEmployees = totalNumberOfEmployees;
     }
 
-    public void addSubCompany(int i, Company company)
-    {
+    public void addSubCompany(int i, Company company) {
         if (subCompanies[i] != null) {
             throw new IllegalStateException("Index " + i + " already set with " + subCompanies[i] + "! cannot add " + company);
         }
-       subCompanies[i] = company;
+        subCompanies[i] = company;
     }
 
     public Company[] getSubCompanies() {
-        return subCompanies;
+        return subCompanies == null ? null : subCompanies.clone();
     }
+
     public void setSubCompanies(Company[] subCompanies) {
-        this.subCompanies = subCompanies;
+        this.subCompanies = subCompanies == null ? null : subCompanies.clone();
     }
 
     public int getNextPersonnelIndex() {

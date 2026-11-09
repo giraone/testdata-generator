@@ -1,11 +1,17 @@
 package com.giraone.testdata.generator;
 
 import com.giraone.testdata.Person;
-import com.giraone.testdata.fields.*;
+import com.giraone.testdata.fields.FieldConstants;
+import com.giraone.testdata.fields.FieldEnhancerDateOfBirth;
+import com.giraone.testdata.fields.FieldEnhancerEmail;
+import com.giraone.testdata.fields.FieldEnhancerIban;
+import com.giraone.testdata.fields.FieldEnhancerPhoneNumber;
+import com.giraone.testdata.fields.FieldEnhancerPostalAddress;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,8 +21,7 @@ class GeneratorPersonTest {
     private static Generator generatorEN;
 
     @BeforeAll
-    static void init()
-    {
+    static void init() {
         GeneratorConfiguration de = new GeneratorConfiguration();
         de.language = EnumLanguage.de;
         generatorDE = new Generator(de);
@@ -109,9 +114,11 @@ class GeneratorPersonTest {
         Person person = generatorDE.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
-        assertThat(person.getAdditionalFields().get(FieldConstants.city)).isNotNull();
-        assertThat(person.getAdditionalFields().get(FieldConstants.streetAddress)).isNotNull();
-        assertThat(person.getAdditionalFields().get(FieldConstants.state)).isNotNull();
+        assertThat(person.getAdditionalFields().get("postalAddress")).isInstanceOf(Map.class);
+        Map<?, ?> address = (Map<?, ?>) person.getAdditionalFields().get("postalAddress");
+        assertThat(address.get("city")).isNotNull();
+        assertThat(address.get("streetAddress")).isNotNull();
+        assertThat(address.get("state")).isNotNull();
     }
 
     @Test
@@ -156,17 +163,17 @@ class GeneratorPersonTest {
         assertThat(person.getAdditionalFields()).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber).toString())
-                .matches("^[+]49[0-9 ]+$");
+            .matches("^[+]49[0-9 ]+$");
     }
 
     @Test
     void testThatBritishPhoneNumberIsGenerated() {
         generatorEN.getConfiguration().addAdditionalField(FieldConstants.phoneNumber, new FieldEnhancerPhoneNumber());
-        Person person = generatorDE.randomPerson();
+        Person person = generatorEN.randomPerson();
         assertThat(person).isNotNull();
         assertThat(person.getAdditionalFields()).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber)).isNotNull();
         assertThat(person.getAdditionalFields().get(FieldConstants.phoneNumber).toString())
-                .matches("^[+]44[0-9 ]+$");
+            .matches("^[+]44[0-9 ]+$");
     }
 }

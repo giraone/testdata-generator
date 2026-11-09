@@ -13,7 +13,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.UUID;
 
 public class Generator {
 
@@ -90,7 +95,7 @@ public class Generator {
                 value = fieldValues[RANDOM.nextInt(fieldValues.length)];
                 if (fieldSpec.getJsonDataType() == EnumJsonDataType.integerType) {
                     value = Integer.parseInt((String) value);
-                } else  if (fieldSpec.getJsonDataType() == EnumJsonDataType.booleanType) {
+                } else if (fieldSpec.getJsonDataType() == EnumJsonDataType.booleanType) {
                     value = Boolean.parseBoolean((String) value);
                 }
             }
@@ -136,7 +141,7 @@ public class Generator {
             try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    if (line.trim().length() == 0 || line.startsWith("#")) continue;
+                    if (line.trim().isEmpty() || line.startsWith("#")) continue;
                     valueList.add(line);
                 }
             } catch (IOException io) {
@@ -164,7 +169,7 @@ public class Generator {
             try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    if (line.trim().length() == 0 || line.startsWith("#")) continue;
+                    if (line.trim().isEmpty() || line.startsWith("#")) continue;
                     String[] pieces = line.split("[,]");
                     if (pieces.length == 2 && isNotNullOrEmpty(pieces[0]) && isNotNullOrEmpty(pieces[1])) {
                         int valuePos = valueList.size();
@@ -203,6 +208,6 @@ public class Generator {
     }
 
     private static boolean isNotNullOrEmpty(String s) {
-        return s != null && s.length() > 0;
+        return s != null && !s.isEmpty();
     }
 }

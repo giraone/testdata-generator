@@ -15,8 +15,7 @@ public class GeneratorTest {
     private static Generator generatorEN;
 
     @BeforeAll
-    public static void init()
-    {
+    public static void init() {
         GeneratorConfiguration de = new GeneratorConfiguration();
         de.language = EnumLanguage.de;
         generatorDE = new Generator(de);
@@ -135,8 +134,7 @@ public class GeneratorTest {
     private void checkOftenUsedEnglish(Generator generator, EnumGender gender, String check) {
         int entries = generator.getNumberOfEntriesGivenName(gender);
         int count = 0;
-        for (int i = 0; i < entries; i++)
-        {
+        for (int i = 0; i < entries; i++) {
             String name = generator.randomGivenName(gender);
             if (check.equals(name)) {
                 count++;
@@ -151,7 +149,7 @@ public class GeneratorTest {
     public void checkRandomConstantValue() {
 
         try {
-            String[] values = new String[] { "one", "two" };
+            String[] values = new String[]{"one", "two"};
             List<String> valueList = Arrays.asList(values);
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.stringType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
@@ -165,7 +163,7 @@ public class GeneratorTest {
         }
 
         try {
-            String[] values = new String[] { "1", "2" };
+            String[] values = new String[]{"1", "2"};
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.integerType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);
@@ -179,7 +177,7 @@ public class GeneratorTest {
         }
 
         try {
-            String[] values = new String[] { "false", "true" };
+            String[] values = new String[]{"false", "true"};
             FieldSpec fieldSpec = new FieldSpec("field", values, EnumJsonDataType.booleanType);
             generatorEN.getConfiguration().constantFields.add(fieldSpec);
             Person person = generatorEN.randomPerson(0);

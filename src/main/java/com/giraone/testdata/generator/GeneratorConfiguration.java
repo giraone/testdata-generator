@@ -14,53 +14,82 @@ import java.util.List;
 
 public class GeneratorConfiguration {
 
-    /** the language for which the test data is generated (either "en" or "de") */
+    /**
+     * the language for which the test data is generated (either "en" or "de")
+     */
     public EnumLanguage language = EnumLanguage.de;
 
-    /** the country for which the test data is generated - a ISO 3166-Alpha-3 code - currently only DEU is supported */
+    /**
+     * the country for which the test data is generated - a ISO 3166-Alpha-3 code - currently only DEU is supported
+     */
     public String country = "DEU";
 
-    /** create also a sequence number (index) for each created item */
+    /**
+     * create also a sequence number (index) for each created item
+     */
     public boolean withIndex = false;
-    /** if withIndex is used, this is the start index */
+    /**
+     * if withIndex is used, this is the start index
+     */
     public int startIndex = 0;
 
-    /** type of additional person id: none, uuid, sequence */
+    /**
+     * type of additional person id: none, uuid, sequence
+     */
     public EnumIdType idType = EnumIdType.none;
 
-    /** set of additional fields - {@see FieldEnhancer} */
-    public List<AdditionalField> additionalFields = new ArrayList<>();
+    /**
+     * set of additional fields - {@see FieldEnhancer}
+     */
+    public final List<AdditionalField> additionalFields = new ArrayList<>();
 
-    /**constant fields, that are added randomly */
-    public List<FieldSpec> constantFields = new ArrayList<>();
+    /**
+     * constant fields, that are added randomly
+     */
+    public final List<FieldSpec> constantFields = new ArrayList<>();
 
-    /** configuration for company IDs - {@see FieldEnhancerCompany} */
-    public CompanyHierarchySpecification companySpec = CompanyHierarchySpecification.DEFAULT;
+    /**
+     * configuration for company IDs - {@see FieldEnhancerCompany}
+     */
+    public final CompanyHierarchySpecification companySpec = CompanyHierarchySpecification.DEFAULT;
 
-    /** the number of items, that should be produced in total or in a file */
+    /**
+     * the number of items, that should be produced in total or in a file
+     */
     public int numberOfItems = 1;
-    /** the number of files per directory */
+    /**
+     * the number of files per directory
+     */
     public int filesPerDirectory = -1;
-    /** the number of directories to be created for splitting the output */
+    /**
+     * the number of directories to be created for splitting the output
+     */
     public int numberOfDirectories = -1;
 
-    /** the root directory into which the data is generated */
+    /**
+     * the root directory into which the data is generated
+     */
     public File rootDirectory = new File(".");
 
-    /** an optional JSON alias file to map attribute names */
+    /**
+     * an optional JSON alias file to map attribute names
+     */
     public File aliasJsonFile = null;
 
-    /** an optional JSON format file to format attribute values */
+    /**
+     * an optional JSON format file to format attribute values
+     */
     public File formatJsonFile = null;
 
-    /** use snake_case output */
-    public boolean snakeCaseOutput = false;
-
-    /** use CSV output */
+    /**
+     * use CSV output
+     */
     public boolean csvOutput = false;
 
 
-    /** the writer class responsible for the output serialization: typically either json or csv */
+    /**
+     * the writer class responsible for the output serialization: typically either json or csv
+     */
     private PersonListWriter listWriter;
 
     private KeyValueReader aliasReader;
@@ -102,12 +131,12 @@ public class GeneratorConfiguration {
 
     public void addAdditionalField(String name, FieldEnhancer fieldEnhancer) {
 
-       this.additionalFields.add(new AdditionalField(name, fieldEnhancer));
+        this.additionalFields.add(new AdditionalField(name, fieldEnhancer));
     }
 
     public boolean containsAdditionalField(String name) {
 
-        for (AdditionalField field: additionalFields) {
+        for (AdditionalField field : additionalFields) {
             if (name.equals(field.getName())) {
                 return true;
             }

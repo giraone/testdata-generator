@@ -8,8 +8,7 @@ public class CompanyHierarchySpecification {
 
     public static final CompanyHierarchySpecification DEFAULT = new CompanyHierarchySpecification();
 
-    static
-    {
+    static {
         CompanyLevelSpecification companyLevelSpecification = new CompanyLevelSpecification();
         DEFAULT.setLevelSpecifications(Collections.singletonList(companyLevelSpecification));
 

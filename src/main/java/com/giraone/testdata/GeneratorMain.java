@@ -6,14 +6,27 @@ import com.giraone.testdata.fields.FieldEnhancer;
 import com.giraone.testdata.fields.FieldEnhancerCompany;
 import com.giraone.testdata.fields.company.CompanyHierarchySpecification;
 import com.giraone.testdata.fields.company.CompanyLevelSpecification;
-import com.giraone.testdata.generator.*;
+import com.giraone.testdata.generator.AdditionalField;
+import com.giraone.testdata.generator.EnumIdType;
+import com.giraone.testdata.generator.EnumJsonDataType;
+import com.giraone.testdata.generator.EnumLanguage;
+import com.giraone.testdata.generator.FieldSpec;
+import com.giraone.testdata.generator.Generator;
+import com.giraone.testdata.generator.GeneratorConfiguration;
 import com.giraone.testdata.output.PersonListWriterCsv;
-import org.apache.commons.cli.*;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.help.HelpFormatter;
+import org.jspecify.annotations.NonNull;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -45,6 +58,42 @@ public class GeneratorMain {
 
     private void run(String[] args) throws Exception {
 
+        Options options = createOptions();
+        CommandLineParser parser = new DefaultParser();
+        try {
+            CommandLine cmd = parser.parse(options, args);
+            if (cmd.hasOption("help")) {
+                usage(options);
+                return;
+            }
+            configuration.language = EnumLanguage.valueOf(cmd.getOptionValue("language", configuration.language.toString()));
+            configuration.country = cmd.getOptionValue("country", configuration.country);
+            configuration.withIndex = cmd.hasOption("withIndex");
+            configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
+            configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
+            parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
+            parseCompanySpec(cmd.getOptionValue("companySpec", (String) null), configuration.companySpec);
+            parseConstantFields(cmd.getOptionValue("constantFields", ""), configuration.constantFields);
+            configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
+            configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
+            configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
+            configuration.rootDirectory = new File(cmd.getOptionValue("rootDirectory", "."));
+            configuration.aliasJsonFile = cmd.getOptionValue("aliasJsonFile") != null ? new File(cmd.getOptionValue("aliasJsonFile")) : null;
+            configuration.formatJsonFile = cmd.getOptionValue("formatJsonFile") != null ? new File(cmd.getOptionValue("formatJsonFile")) : null;
+            configuration.csvOutput = "csv".equalsIgnoreCase(cmd.getOptionValue("serialize", "json"));
+
+            configuration.initializeWriter();
+
+            run();
+
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+            usage(options);
+        }
+    }
+
+    private static @NonNull Options createOptions() {
         Options options = new Options();
         options.addOption("h", "help", false, "print usage help");
         options.addOption("w", "withIndex", false, "create also a sequence number (index) for each created item");
@@ -63,40 +112,7 @@ public class GeneratorMain {
         options.addOption("a", "aliasJsonFile", true, "define an alias file (JSON array with name/alias) to map attribute names");
         options.addOption("o", "formatJsonFile", true, "define format file (JSON array with name/format) values, e.g. leading zeros for index");
         options.addOption("j", "snake_case", false, "use snake_case JSON output");
-
-        CommandLineParser parser = new DefaultParser();
-        try {
-            CommandLine cmd = parser.parse(options, args);
-            if (cmd.hasOption("help")) {
-                usage(options);
-                System.exit(1);
-            }
-            configuration.language = EnumLanguage.valueOf(cmd.getOptionValue("language", configuration.language.toString()));
-            configuration.country = cmd.getOptionValue("country", configuration.country);
-            configuration.withIndex = cmd.hasOption("withIndex");
-            configuration.startIndex = Integer.parseInt(cmd.getOptionValue("startIndex", "" + configuration.startIndex));
-            configuration.idType = EnumIdType.valueOf(cmd.getOptionValue("personId", configuration.idType.toString()));
-            parseAdditionalFields(cmd.getOptionValue("additionalFields", ""), configuration.additionalFields);
-            parseCompanySpec(cmd.getOptionValue("companySpec", null), configuration.companySpec);
-            parseConstantFields(cmd.getOptionValue("constantFields", ""), configuration.constantFields);
-            configuration.numberOfItems = Integer.parseInt(cmd.getOptionValue("numberOfItems", "" + configuration.numberOfItems));
-            configuration.filesPerDirectory = Integer.parseInt(cmd.getOptionValue("filesPerDirectory", "" + configuration.filesPerDirectory));
-            configuration.numberOfDirectories = Integer.parseInt(cmd.getOptionValue("numberOfDirectories", "" + configuration.numberOfDirectories));
-            configuration.rootDirectory = new File(cmd.getOptionValue("rootDirectory", "."));
-            configuration.aliasJsonFile = cmd.getOptionValue("aliasJsonFile") != null ? new File(cmd.getOptionValue("aliasJsonFile")) : null;
-            configuration.formatJsonFile = cmd.getOptionValue("formatJsonFile") != null ? new File(cmd.getOptionValue("formatJsonFile")) : null;
-            configuration.snakeCaseOutput = cmd.hasOption("snake_case");
-            configuration.csvOutput = "csv".equals(cmd.getOptionValue("serialize", "json").toLowerCase());
-
-            configuration.initializeWriter();
-
-            run();
-
-
-        } catch (ParseException e) {
-            e.printStackTrace();
-            usage(options);
-        }
+        return options;
     }
 
     private void run() throws Exception {
@@ -137,7 +153,7 @@ public class GeneratorMain {
                 }
                 final String fileName = String.format("f-%08d.%s", fileIndex, extension);
                 final File file = new File(directory, fileName);
-                try (PrintStream out = new PrintStream(new FileOutputStream(file))) {
+                try (PrintStream out = new PrintStream(Files.newOutputStream(file.toPath()), false, StandardCharsets.UTF_8.name())) {
                     runOneList(generator, out, false);
                 }
             }
@@ -163,7 +179,7 @@ public class GeneratorMain {
                 } else {
                     try {
                         fieldEnhancer = (FieldEnhancer) Class.forName("com.giraone.testdata.fields.FieldEnhancer" + className)
-                                .getDeclaredConstructor().newInstance();
+                            .getDeclaredConstructor().newInstance();
                     } catch (Exception e) {
                         e.printStackTrace();
                         return;
@@ -180,9 +196,11 @@ public class GeneratorMain {
         ObjectMapper objectMapper = new ObjectMapper();
         List<CompanyLevelSpecification> levelSpecifications;
         if (filePath != null) {
-            levelSpecifications = objectMapper.readValue(new File(filePath), new TypeReference<List<CompanyLevelSpecification>>(){});
-        }  else {
-            levelSpecifications = objectMapper.readValue(DEFAULT_COMPANY_SPEC, new TypeReference<List<CompanyLevelSpecification>>(){});
+            levelSpecifications = objectMapper.readValue(new File(filePath), new TypeReference<List<CompanyLevelSpecification>>() {
+            });
+        } else {
+            levelSpecifications = objectMapper.readValue(DEFAULT_COMPANY_SPEC, new TypeReference<List<CompanyLevelSpecification>>() {
+            });
         }
         companyHierarchySpecification.setLevelSpecifications(levelSpecifications);
     }
@@ -210,7 +228,7 @@ public class GeneratorMain {
                 int i = valuesList[0].indexOf("(");
                 int j = valuesList[0].indexOf(")");
                 if (i > 0 && j > 0) {
-                    isNullPercentage = Integer.parseInt(valuesList[0].substring(i+1, j));
+                    isNullPercentage = Integer.parseInt(valuesList[0].substring(i + 1, j));
                 }
                 valuesList = Arrays.copyOfRange(valuesList, 1, valuesList.length);
             }
@@ -218,25 +236,25 @@ public class GeneratorMain {
             // number=%0-10000|%05d
             if (valuesList[0].startsWith("%")) {
                 randomFormat = valuesList[0] = valuesList[0].substring(1);
-               isRandom = true;
-               int i = valuesList[1].indexOf("-");
-               if (i == -1) {
-                   throw new IllegalArgumentException("constantField \"" + fieldName
-                           + "\" has to from-to info in \"" + valuesList[1] + "\"");
-               }
-               randomMin = Integer.parseInt(valuesList[1].substring(0, i));
-               randomMax = Integer.parseInt(valuesList[1].substring(i + 1));
+                isRandom = true;
+                int i = valuesList[1].indexOf("-");
+                if (i == -1) {
+                    throw new IllegalArgumentException("constantField \"" + fieldName
+                        + "\" has to from-to info in \"" + valuesList[1] + "\"");
+                }
+                randomMin = Integer.parseInt(valuesList[1].substring(0, i));
+                randomMax = Integer.parseInt(valuesList[1].substring(i + 1));
             }
 
             EnumJsonDataType enumJsonDataType = EnumJsonDataType.stringType;
             if (valuesList[0].matches("[0-9]+I")) {
                 enumJsonDataType = EnumJsonDataType.integerType;
-                valuesList[0] = valuesList[0].substring(0, valuesList[0].length()-1);
+                valuesList[0] = valuesList[0].substring(0, valuesList[0].length() - 1);
             } else if (valuesList[0].matches("true|false")) {
                 enumJsonDataType = EnumJsonDataType.booleanType;
             }
             FieldSpec fieldSpec = new FieldSpec(fieldName, valuesList, enumJsonDataType, isNull, isNullPercentage,
-                    isRandom, randomMin, randomMax, randomFormat);
+                isRandom, randomMin, randomMax, randomFormat);
             //System.err.println(fieldSpec);
             result.add(fieldSpec);
         }
@@ -252,9 +270,9 @@ public class GeneratorMain {
         }
     }
 
-    private void usage(Options options) {
+    private void usage(Options options) throws IOException {
 
-        HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("java -jar testdata-generator.jar", options);
+        HelpFormatter formatter = HelpFormatter.builder().get();
+        formatter.printHelp("java -jar testdata-generator.jar", "", options, "", true);
     }
 }

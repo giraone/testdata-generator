@@ -1,6 +1,6 @@
 # A test data generator for persons
 
-This is a java library for generating realistic test data for person name and addresses.
+This is a Java library for generating realistic test data for person name and addresses.
 
 ## Goals
 

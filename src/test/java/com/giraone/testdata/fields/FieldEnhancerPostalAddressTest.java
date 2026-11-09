@@ -9,12 +9,11 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FieldEnhancerPostalAddressTest {
 
-    private static GeneratorConfiguration de = new GeneratorConfiguration();
-    private static GeneratorConfiguration en = new GeneratorConfiguration();
+    private static final GeneratorConfiguration de = new GeneratorConfiguration();
+    private static final GeneratorConfiguration en = new GeneratorConfiguration();
 
     @BeforeAll
-    public static void init()
-    {
+    public static void init() {
         de.language = EnumLanguage.de;
         en.language = EnumLanguage.en;
     }
@@ -32,8 +31,7 @@ public class FieldEnhancerPostalAddressTest {
     @Test
     public void testThatGermanPostalAddressStreetIsGenerated() {
 
-        FieldEnhancerPostalAddress f = new FieldEnhancerPostalAddress();
-        String value = f.randomStreet(de);
+        String value = FieldEnhancerPostalAddress.randomStreet(de);
         assertThat(value).isNotNull();
         assertThat(value).isNotEmpty();
     }

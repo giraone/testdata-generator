@@ -11,7 +11,7 @@ public class FieldEnhancerPostalAddress implements FieldEnhancer {
 
     public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 
-        final String[] randomCityAndPostCode= randomCityAndPostCode(configuration);
+        final String[] randomCityAndPostCode = randomCityAndPostCode(configuration);
         person.setAdditionalField(configuration, FieldConstants.city, randomCityAndPostCode[0]);
         person.setAdditionalField(configuration, FieldConstants.postalCode, randomCityAndPostCode[1]);
         person.setAdditionalField(configuration, FieldConstants.state, randomCityAndPostCode[2]);

@@ -25,9 +25,9 @@ class SsnGermanTest {
 
         assertThat(SsnGerman.build("14", "Wagner", LocalDate.parse("1939-12-31"), "00"))
             .isEqualTo("14311239W008");
-        assertThat(SsnGerman.build("14","Muster", LocalDate.parse("2000-01-01"), "00"))
+        assertThat(SsnGerman.build("14", "Muster", LocalDate.parse("2000-01-01"), "00"))
             .isEqualTo("14010100M007");
-        assertThat(SsnGerman.build("14","Ährens", LocalDate.parse("2000-01-01"), "00"))
+        assertThat(SsnGerman.build("14", "Ährens", LocalDate.parse("2000-01-01"), "00"))
             .isEqualTo("14010100A003");
     }
 }

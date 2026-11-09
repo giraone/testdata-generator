@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.giraone.testdata.fields.FieldConstants;
 import com.giraone.testdata.generator.EnumGender;
 import com.giraone.testdata.generator.GeneratorConfiguration;
-import com.google.common.base.CaseFormat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,9 +13,9 @@ public class Person {
 
     Long index;
     String id;
-    String givenName;
-    String surname;
-    EnumGender gender;
+    final String givenName;
+    final String surname;
+    final EnumGender gender;
     Map<String, Object> additionalFields;
 
     public Person(long index, String givenName, String surname, EnumGender gender) {
@@ -129,12 +128,12 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "givenName='" + givenName + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
-                ", index=" + index +
-                ", id='" + id + '\'' +
-                '}';
+            "givenName='" + givenName + '\'' +
+            ", surname='" + surname + '\'' +
+            ", gender=" + gender +
+            ", index=" + index +
+            ", id='" + id + '\'' +
+            '}';
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -150,7 +149,7 @@ public class Person {
         if (configuration.getAliasReader() != null) {
             fieldName = configuration.getAliasReader().getValue(fieldName, fieldName);
         }
-        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, fieldName);
+        return fieldName;
     }
 
     private String mapFieldName(GeneratorConfiguration configuration, String prefix, String suffix) {
@@ -159,18 +158,18 @@ public class Person {
             final String fieldName = prefix + '.' + suffix;
             final String aliasName = configuration.getAliasReader().getValue(fieldName, fieldName);
             int i;
-            if ((i = aliasName.indexOf('.')) ==  -1) {
+            if ((i = aliasName.indexOf('.')) == -1) {
                 throw new IllegalArgumentException("Alias " + aliasName + " must contain .");
             }
             suffix = aliasName.substring(i + 1);
         }
-        return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, suffix);
+        return suffix;
     }
 
     private Object mapValue(GeneratorConfiguration configuration, String field, Object value) {
 
         if (configuration.getFormatReader() == null) {
-           return value;
+            return value;
         }
         final String format = configuration.getFormatReader().getValue(field);
 

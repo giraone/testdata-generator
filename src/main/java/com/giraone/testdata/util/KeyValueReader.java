@@ -17,11 +17,8 @@ public class KeyValueReader {
 
     private Map<String, String> mapping = new HashMap<>();
 
-    public int convertToJsonMap(File jsonFile)
-        throws IOException {
-
+    public void convertToJsonMap(File jsonFile) throws IOException {
         mapping = mapper.readValue(jsonFile, mapTypeRef);
-        return mapping.size();
     }
 
     public String getValue(String name) {

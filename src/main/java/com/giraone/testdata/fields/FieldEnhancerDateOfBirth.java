@@ -14,9 +14,9 @@ import static java.time.temporal.ChronoUnit.DAYS;
 @SuppressWarnings("unused")
 public class FieldEnhancerDateOfBirth implements FieldEnhancer {
 
-    private static LocalDate fromLocalDate = LocalDate.parse("1930-01-01");
-    private static LocalDate toLocalDate = LocalDate.now().minusYears(16);
-    private static int dayLimit = (int) DAYS.between(fromLocalDate, toLocalDate);
+    private static final LocalDate fromLocalDate = LocalDate.parse("1930-01-01");
+    private static final LocalDate toLocalDate = LocalDate.now().minusYears(16);
+    private static final int dayLimit = (int) DAYS.between(fromLocalDate, toLocalDate);
 
     public void addFields(GeneratorConfiguration configuration, Person person, String field) {
 

@@ -9,7 +9,6 @@ public class NameNormalizeService {
 
     /**
      * Normalize a name by using trim, lowercase and umlaut replacement
-     *
      * @param input The input string
      * @return the normalized input string or null, if the input is ull or contains only whitespaces
      */
@@ -20,7 +19,7 @@ public class NameNormalizeService {
         }
         input = input.trim().toLowerCase();
         input = replaceUmlauts(input);
-        if (input.length() > 0) {
+        if (!input.isEmpty()) {
             return input;
         } else {
             return null;

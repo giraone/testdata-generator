@@ -3,14 +3,17 @@ package com.giraone.testdata.tools;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * This class was internally used to convert data from https://www.ssa.gov/OACT/babynames/names.zip
+ * This class was internally used to convert data from <a href="https://www.ssa.gov/OACT/babynames/names.zip">...</a>
  * to the built-in data files for US given names. The data from ssa.gov is basically "baby name per year".
  * My collection was built by using the data of yob1900.txt to yob2017.txt. The class will
  * <ul>
@@ -25,30 +28,23 @@ public class ReadUsSsaData {
         HashMap<String, Integer> m = new HashMap<>();
         HashMap<String, Integer> f = new HashMap<>();
 
-        File[] files = (new File("ssa.gov/names")).listFiles(new FilenameFilter() {
-            @Override
-            public boolean accept(File file, String s) {
-                return s.endsWith(".txt");
-            }
-        });
+        File[] files = (new File("ssa.gov/names")).listFiles((file, s) -> s.endsWith(".txt"));
         if (files == null) return;
 
         for (File file : files) {
             try (BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8)) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    if (line.trim().length() == 0 || line.startsWith("#")) continue;
+                    if (line.trim().isEmpty() || line.startsWith("#")) continue;
                     String[] pieces = line.split("[,]");
                     if (pieces.length == 3) {
                         String name = pieces[0];
                         String gender = pieces[1];
                         int count = Integer.parseInt(pieces[2]);
                         if ("F".equals(gender)) {
-                            Integer c = f.get(name);
-                            f.put(name, c == null ? count : c + count);
+                            f.compute(name, (k, c) -> c == null ? count : c + count);
                         } else {
-                            Integer c = m.get(name);
-                            m.put(name, c == null ? count : c + count);
+                            m.compute(name, (k, c) -> c == null ? count : c + count);
                         }
                     }
                 }
@@ -57,16 +53,16 @@ public class ReadUsSsaData {
 
         int limit = 500;
         List<Map.Entry<String, Integer>> ml = m.entrySet().stream()
-                .filter(e -> e.getValue() >= limit)
-                .sorted(Comparator.comparing(Map.Entry::getValue, Collections.reverseOrder()))
-                .map(e -> { e.setValue(e.getValue() / limit); return e; })
-                .collect(Collectors.toList());
+            .filter(e -> e.getValue() >= limit)
+            .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+            .peek(e -> e.setValue(e.getValue() / limit))
+            .collect(Collectors.toList());
 
         List<Map.Entry<String, Integer>> fl = f.entrySet().stream()
-                .filter(e -> e.getValue() >= limit)
-                .sorted(Comparator.comparing(Map.Entry::getValue, Collections.reverseOrder()))
-                .map(e -> { e.setValue(e.getValue() / limit); return e; })
-                .collect(Collectors.toList());
+            .filter(e -> e.getValue() >= limit)
+            .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+            .peek(e -> e.setValue(e.getValue() / limit))
+            .collect(Collectors.toList());
 
         File dataDirectory = new File("src/main/resources/data");
 

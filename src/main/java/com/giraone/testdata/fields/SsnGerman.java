@@ -12,9 +12,9 @@ import java.util.Random;
 public class SsnGerman {
 
     private static final Random RANDOM = new Random();
-    private static final Map<Character,Character> MAP_CHAR = new HashMap<>();
-    private static final int[] CHECKSUM_WEIGHT_DE = new int[]{ 2, 1, 2, 5, 7, 1, 2, 1, 2, 1, 2, 1 };
-    public static final String[] BEREICHSNUMMER = new String[]{
+    private static final Map<Character, Character> MAP_CHAR = new HashMap<>();
+    private static final int[] CHECKSUM_WEIGHT_DE = new int[]{2, 1, 2, 5, 7, 1, 2, 1, 2, 1, 2, 1};
+    private static final String[] BEREICHSNUMMER = new String[]{
         "02", "03", "04", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
         "21", "23", "24", "25", "26", "28", "29", "38", "39", "40", "42", "43", "44", "45", "46", "47",
         "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63",

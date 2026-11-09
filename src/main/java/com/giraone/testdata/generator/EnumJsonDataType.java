@@ -1,6 +1,5 @@
 package com.giraone.testdata.generator;
 
-public enum EnumJsonDataType
-{
-    stringType, integerType, booleanType;
+public enum EnumJsonDataType {
+    stringType, integerType, booleanType
 }

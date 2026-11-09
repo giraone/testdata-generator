@@ -4,8 +4,8 @@ import com.giraone.testdata.fields.FieldEnhancer;
 
 public class AdditionalField {
 
-    String name;
-    FieldEnhancer fieldEnhancer;
+    final String name;
+    final FieldEnhancer fieldEnhancer;
 
     public AdditionalField(String name, FieldEnhancer fieldEnhancer) {
         this.name = name;

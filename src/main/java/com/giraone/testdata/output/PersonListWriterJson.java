@@ -19,7 +19,7 @@ public class PersonListWriterJson implements PersonListWriter {
         ObjectMapper mapper = new ObjectMapper();
         //mapper.enable(SerializationFeature.INDENT_OUTPUT);
         mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
-        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        mapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
         mapper.writeValue(out, personList);
     }
 }

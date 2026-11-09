@@ -17,7 +17,7 @@ public class FieldSpec {
     public FieldSpec(String name, String[] values, EnumJsonDataType jsonDataType, boolean withNullValues,
                      int withNullPercentage, boolean randomNumber, int randomMin, int randomMax, String randomFormat) {
         this.name = name;
-        this.values = values;
+        this.values = values == null ? null : values.clone();
         this.jsonDataType = jsonDataType;
         this.withNullValues = withNullValues;
         this.withNullPercentage = withNullPercentage;
@@ -29,7 +29,7 @@ public class FieldSpec {
 
     public FieldSpec(String name, String[] values, EnumJsonDataType jsonDataType) {
         this.name = name;
-        this.values = values;
+        this.values = values == null ? null : values.clone();
         this.jsonDataType = jsonDataType;
         this.withNullValues = false;
         this.withNullPercentage = 50;
@@ -45,12 +45,12 @@ public class FieldSpec {
     }
 
     public String[] getValues() {
-        return values;
+        return values == null ? null : values.clone();
     }
 
     @SuppressWarnings("unused")
     public void setValues(String[] values) {
-        this.values = values;
+        this.values = values == null ? null : values.clone();
     }
 
     public EnumJsonDataType getJsonDataType() {
@@ -119,15 +119,15 @@ public class FieldSpec {
     @Override
     public String toString() {
         return "FieldSpec{" +
-                "name='" + name + '\'' +
-                ", values=" + Arrays.toString(values) +
-                ", jsonDataType=" + jsonDataType +
-                ", withNullValues=" + withNullValues +
-                ", withNullPercentage=" + withNullPercentage +
-                ", randomNumber=" + randomNumber +
-                ", randomMin=" + randomMin +
-                ", randomMax=" + randomMax +
-                ", randomFormat='" + randomFormat + '\'' +
-                '}';
+            "name='" + name + '\'' +
+            ", values=" + Arrays.toString(values) +
+            ", jsonDataType=" + jsonDataType +
+            ", withNullValues=" + withNullValues +
+            ", withNullPercentage=" + withNullPercentage +
+            ", randomNumber=" + randomNumber +
+            ", randomMin=" + randomMin +
+            ", randomMax=" + randomMax +
+            ", randomFormat='" + randomFormat + '\'' +
+            '}';
     }
 }
